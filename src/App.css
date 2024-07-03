@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+  color: white;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #2e323a;
+}
+
+.home_main {
+  padding: 10px;
+  /* display: flex; */
+}
+
+.home_main {
+  display: flex;
+  gap: 10px;
+}
+
+.about-section {
+  flex: 0 0 20%;
+}
+
+.body-section {
+  flex: 1;
+}
+
+.sideBar-section {
+  flex: 0 0 4%;
+}

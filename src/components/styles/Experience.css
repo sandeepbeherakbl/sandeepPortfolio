@@ -1,0 +1,70 @@
+.experience-div-main {
+  height: calc(100vh - 20px);
+  width: 100%;
+  background: #181525;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* justify-content: space-between; */
+}
+
+.exp-header-content {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 30px;
+  height: 30vh;
+  border-radius: 12px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.238),
+      rgba(0, 0, 0, 0.817)
+    ),
+    url(../../assets/exp3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0% 70%;
+}
+
+.exp-header-content{
+    display: flex;
+    align-items: end;
+}
+
+.exp-header-content h1{
+    padding: 0 40px;
+}
+
+.exp-body-main-div{
+    background-color: #22252D;
+    width: 96%;
+    margin-left: 2%;
+    border-radius: 12px;
+}
+
+.body-container{
+    padding: 40px;
+}
+
+.experience-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.experience-header p{
+    margin: 0;
+}
+
+.experience-header h3{
+    margin: 0;
+}
+
+.exp-location{
+    font-style: italic;
+}
+
+.experience-responsibilities p{
+    margin: 0   ;
+}

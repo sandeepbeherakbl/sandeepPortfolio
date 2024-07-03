@@ -1,0 +1,22 @@
+{
+    "professionalExperience": [
+      {
+        "title": "Associate Consultant",
+        "company": "Invincix Solution Private Limited",
+        "duration": "2022 – present",
+        "location": "Bhubaneswar, India",
+        "responsibilities": [
+          "Developed and maintained scalable, efficient, and modular front-end code for customer-facing e-commerce applications using React JS.",
+          "Designed and implemented user interfaces for business-sensitive consumer portals, enhancing user experience and engagement.",
+          "Collaborated with cross-functional teams throughout the SDLC to ensure cohesive and efficient project development.",
+          "Ensured adherence to coding standards, conducted unit testing, and participated in code reviews to maintain high-quality code.",
+          "Designed and implemented CICD pipelines, streamlining development cycles and deployment processes.",
+          "Performed platform integrations using REST to enhance data flow and system interoperability.",
+          "Ensured cross-browser compliance by writing clean HTML and Sass/CSS code, working closely with UX and Visual Designers.",
+          "Worked with server technologies, primarily NPM, to enhance application functionality and performance.",
+          "Built features and services with a focus on reliability, optimizing application uptime and performance."
+        ]
+      }
+    ]
+  }
+  

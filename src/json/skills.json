@@ -1,0 +1,7 @@
+{
+  "Programming Languages": ["JavaScript (ES6)", "HTML", "CSS/Sass"],
+  "Libraries & Frameworks": ["React JS", "Redux", "Next JS", "React Native"],
+  "Tools & Platforms": ["REST API", "NPM", "GIT Version Control"],
+  "UI Libraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"],
+  "Collaboration": ["UI/UX Collaboration", "Collaborative Teamwork"]
+}
