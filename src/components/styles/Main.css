@@ -119,6 +119,12 @@
   justify-content: space-around;
 }
 
+.social-icon:hover {
+  background-color: #783FEF; 
+  border-radius: 50%;
+  padding: 5px;
+}
+
 /* ********************* */
 /* right bar */
 /* ********************* */

@@ -21,11 +21,11 @@ function App() {
 
           <div className="body-section">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/experience" element={<Experience/>} />
+              <Route path="/" Component={<Dashboard />} />
+              <Route path="/experience" Component={<Experience />} />
               <Route
                 path="/projects"
-                element={
+                Component={
                   selectedProject ? (
                     <ProjectDetails
                       project={selectedProject}

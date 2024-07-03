@@ -1,8 +1,9 @@
 import "../styles/Main.css";
-import dummyImg from "../../assets/DummyImg.png";
-import propic from "../../assets/propic.png";
+// import dummyImg from "../../assets/DummyImg.png";
+// import propic from "../../assets/propic.png";
 import skillsData from "../../json/skills.json";
 import {
+  Circle,
   Github,
   Instagram,
   Linkedin,
@@ -57,6 +58,7 @@ export const About = () => {
           <LucideFacebook color="#3f444d" width={30} height={30} />
 
           <Instagram color="#3f444d" width={30} height={30} />
+
         </div>
       </div>
     </>

@@ -34,3 +34,13 @@ body {
 .sideBar-section {
   flex: 0 0 4%;
 }
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+  
+}
