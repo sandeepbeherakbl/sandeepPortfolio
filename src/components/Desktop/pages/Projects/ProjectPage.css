@@ -19,7 +19,7 @@
       rgba(0, 0, 0, 0.238),
       rgba(0, 0, 0, 0.831)
     ),
-    url(../../../assets/projectTitle.png);
+    url(../../../../assets/projectTitle.png);
   background-size: cover;
   background-position: 0% 50%;
 }
@@ -86,7 +86,7 @@
       rgba(0, 0, 0, 0.238),
       rgba(0, 0, 0, 0.831)
     ),
-    url(../../../assets/proCardHead.jpg);
+    url(../../../../assets/proCardHead.jpg);
   background-size: cover;
   background-position: center;
   display: flex;

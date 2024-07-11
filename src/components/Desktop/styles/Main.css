@@ -26,7 +26,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url(../../assets/propic.png);
+  background-image: url(../../../assets/propic.png);
   background-size: cover;
 }
 
@@ -87,12 +87,13 @@
 .skill-category p {
   margin: 0;
   margin-bottom: 8px;
-  font-size: 14px;
+  font-size: 16px;
+  color:#838383 ;
 }
 
 .skill-sets {
   display: flex;
-  gap: 5px;
+  gap: 3px;
   flex-wrap: wrap;
   /* justify-content: center; */
   align-items: center;
@@ -101,12 +102,12 @@
 
 .skill-sets p {
   margin: 0;
-  font-size: 16px;
-  /* background-color: #3f6bef; */
-  background-color: #181525;
-  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #1c1e22;
+  padding: 4px 10px;
   border-radius: 4px;
-  font-weight: 400;
+  /* font-weight: 500; */
+  color: white;
 }
 
 .social-main-div {
@@ -207,7 +208,7 @@ link{
       rgba(0, 0, 0, 0.238),
       rgba(0, 0, 0, 0.831)
     ),
-    url(../../assets/DashWallpaper.png);
+    url(../../../assets/DashWallpaper.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0% 35%;

@@ -1,9 +1,9 @@
 import "../styles/Main.css";
 import {useState} from "react"
-import Slogo from "../../assets/S.png";
+import Slogo from "../../../assets/S.png";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import Rocket  from "../../assets/anim.gif";
+import Rocket  from "../../../assets/anim.gif";
 import ContactPopup from "./ContackPopup"
 
 export const RightBar = ({ setSelectedProject }) => {

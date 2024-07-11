@@ -1,5 +1,5 @@
 import { File } from "lucide-react";
-import projectsData from "../../../json/project.json";
+import projectsData from "../../../../json/project.json";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
 import Typewriter from "typewriter-effect";

@@ -1,5 +1,5 @@
 import "../styles/Experience.css";
-import professionalExperience from "../../json/exp.json";
+import professionalExperience from "../../../json/exp.json";
 
 export const Experience = () => {
   return (

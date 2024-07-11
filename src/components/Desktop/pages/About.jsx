@@ -1,9 +1,8 @@
 import "../styles/Main.css";
 // import dummyImg from "../../assets/DummyImg.png";
 // import propic from "../../assets/propic.png";
-import skillsData from "../../json/skills.json";
+import skillsData from "../../../json/skills.json";
 import {
-  Circle,
   Github,
   Instagram,
   Linkedin,

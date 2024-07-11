@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { About } from "./components/pages/About";
-import { Dashboard } from "./components/pages/Dashboard";
-import { RightBar } from "./components/pages/RightBar";
-import { ProjectDetails } from "./components/pages/Projects/ProjectAbout";
-import { ProjectPage } from "./components/pages/Projects/ProjectPage";
-import { Experience } from "./components/pages/Experience";
+import { About } from "./components/Desktop/pages/About";
+import { Dashboard } from "./components/Desktop/pages/Dashboard";
+import { RightBar } from "./components/Desktop/pages/RightBar";
+import { ProjectDetails } from "./components/Desktop/pages/Projects/ProjectAbout";
+import { ProjectPage } from "./components/Desktop/pages/Projects/ProjectPage";
+import { Experience } from "./components/Desktop/pages/Experience";
+// import { MobileMain } from "./components/Mobile/MobileMain";
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -21,11 +22,11 @@ function App() {
 
           <div className="body-section">
             <Routes>
-              <Route path="/" Component={<Dashboard />} />
-              <Route path="/experience" Component={<Experience />} />
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/experience" element={<Experience/>}  />
               <Route
                 path="/projects"
-                Component={
+                element={
                   selectedProject ? (
                     <ProjectDetails
                       project={selectedProject}
@@ -44,6 +45,8 @@ function App() {
           </div>
         </div>
       </Router>
+
+      {/* <MobileMain/> */}
     </>
   );
 }
