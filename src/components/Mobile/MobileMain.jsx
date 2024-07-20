@@ -8,9 +8,12 @@ import { Experience } from "./Pages/Experience";
 import { Project } from "./Pages/Project";
 import { ProjectAbout } from "./Pages/ProjectAbout";
 import "./Styles/Mobile.css"
+import useViewportHeight from "../../hooks/useViewportHeight";
 
 export const MobileMain = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useViewportHeight();
 
   return (
     <Router>

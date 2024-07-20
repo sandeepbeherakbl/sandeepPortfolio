@@ -569,3 +569,25 @@
 .mob-project-details-head-content p {
   margin: 0;
 }
+
+
+/* ****************** */
+/* scrollbar */
+/* ****************** */
+
+::-webkit-scrollbar {
+  width: 0;  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;  /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;  /* Color of the scrollbar thumb */
+  border-radius: 0;  /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;  /* Color of the scrollbar thumb on hover */
+}
