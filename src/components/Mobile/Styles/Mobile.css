@@ -715,10 +715,10 @@
 /* ****************** */
 
 .pdf-viewer-container{
-  padding: 10px;
+  padding: 20px 10px;
 }
 
-.pdf-download-button{
+/* .pdf-download-button{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -730,7 +730,65 @@
   text-decoration: none;
 }
 
+.pdf-document{
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .pdf-viewer-container button{
+  background-color: #783fef;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 5px 10px;
+} */
+
+.pdf-viewer-container {
+  margin: auto; 
+}
+
+.pdf-document {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.page-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pdf-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pdf-navigation button {
+  background-color: #783fef;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pdf-navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.download-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.download-button button {
   background-color: #783fef;
   outline: none;
   border: none;
