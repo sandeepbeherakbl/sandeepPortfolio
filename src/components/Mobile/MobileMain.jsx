@@ -9,6 +9,7 @@ import { Project } from "./Pages/Project";
 import { ProjectAbout } from "./Pages/ProjectAbout";
 import "./Styles/Mobile.css"
 import useViewportHeight from "../../hooks/useViewportHeight";
+import PdfViewer from "./Pages/PdfViewer";
 
 export const MobileMain = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -27,6 +28,7 @@ export const MobileMain = () => {
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resume" element={<PdfViewer />} />
             <Route
               path="/projects"
               element={

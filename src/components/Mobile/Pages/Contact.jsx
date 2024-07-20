@@ -1,6 +1,5 @@
 import {
   FacebookIcon,
-  GitBranch,
   Github,
   Instagram,
   Linkedin,
@@ -58,7 +57,9 @@ export const Contact = () => {
                 </div>
                 <div className="mob-contact-content">
                   <p>Github</p>
-                  <p>+91 9556230850</p>
+                  <a href="https://github.com/sandeepbeherakbl" target="_blank">
+                    sandeepbeherakbl
+                  </a>
                 </div>
               </div>
             </div>
@@ -75,8 +76,9 @@ export const Contact = () => {
                 </div>
                 <div className="mob-contact-content">
                   <p>Linked in</p>
-                  <p>+91 9556230850</p>
-                  {/* <a href=""><p>+91 9556230850</p></a> */}
+                  <a href="https://www.linkedin.com/in/sandeep-kumar-behera-24051999/" target="_blank">
+                    sandeep-kumar-behera-24051999
+                  </a>
                 </div>
               </div>
 
@@ -86,7 +88,9 @@ export const Contact = () => {
                 </div>
                 <div className="mob-contact-content">
                   <p>Instagram</p>
-                  <p>sandeepbeherakbl@gmail.com</p>
+                  <a href="https://www.instagram.com/_blue.beast_/" target="_blank">
+                    _blue.beast_
+                  </a>
                 </div>
               </div>
 
@@ -99,7 +103,9 @@ export const Contact = () => {
                 </div>
                 <div className="mob-contact-content">
                   <p>Facebook</p>
-                  <p>sandeepbeherakbl@gmail.com</p>
+                  <a href="https://www.facebook.com/sandeepkumar.behera.142?mibextid=ZbWKwL" target="_blank">
+                    sandeepkumar.behera
+                  </a>
                 </div>
               </div>
             </div>
