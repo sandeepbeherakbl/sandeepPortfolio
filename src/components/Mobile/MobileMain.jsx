@@ -7,6 +7,7 @@ import { Contact } from "./Pages/Contact";
 import { Experience } from "./Pages/Experience";
 import { Project } from "./Pages/Project";
 import { ProjectAbout } from "./Pages/ProjectAbout";
+import "./Styles/Mobile.css"
 
 export const MobileMain = () => {
   const [selectedProject, setSelectedProject] = useState(null);
