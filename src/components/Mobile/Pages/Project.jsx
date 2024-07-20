@@ -1,7 +1,8 @@
 import { File } from "lucide-react";
 import projectsData from "../../../json/project.json";
+import PropTypes from "prop-types";
 
-export const Project = () => {
+export const Project = ({ setSelectedProject }) => {
   return (
     <>
       <div className="mob-body-container-height">
@@ -43,4 +44,8 @@ export const Project = () => {
       </div>
     </>
   );
+};
+
+Project.propTypes = {
+  setSelectedProject: PropTypes.func.isRequired,
 };

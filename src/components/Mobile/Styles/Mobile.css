@@ -2,14 +2,13 @@
   --vh: 100%;
 }
 
-.main-component-div{
+.main-component-div {
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
-
 
 /* ****************** */
 /* Common */
@@ -106,10 +105,10 @@
   padding: 5px;
 }
 
-.active p, .active svg {
-  color: #783FEF !important;
+.active p,
+.active svg {
+  color: #783fef !important;
 }
-
 
 /* ****************** */
 /* Home */
@@ -272,21 +271,21 @@
 /* Contact */
 /* ****************** */
 
-.mob-contact-sub-div{
+.mob-contact-sub-div {
   padding: 10px;
 }
 
-.mob-contact-sub-div p{
+.mob-contact-sub-div p {
   margin: 0;
 }
 
-.mob-contact-sub-div p:last-child{
+.mob-contact-sub-div p:last-child {
   padding: 10px 0;
   font-size: 14px;
   color: #76787b;
 }
 
-.mob-contact-email{
+.mob-contact-email {
   background-color: #22252d;
   width: 96%;
   margin-left: 2%;
@@ -295,11 +294,11 @@
   margin-bottom: 10px;
 }
 
-.mob-contact-email-body{
+.mob-contact-email-body {
   padding: 10px;
 }
 
-.mob-contact-social{
+.mob-contact-social {
   background-color: #22252d;
   width: 96%;
   margin-left: 2%;
@@ -307,22 +306,21 @@
   height: auto;
 }
 
-.mob-contact-social-body{
+.mob-contact-social-body {
   padding: 10px;
 }
 
-.mob-contact-main-div{
+.mob-contact-main-div {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.mob-contact-main-div:first-child{
+.mob-contact-main-div:first-child {
   margin-bottom: 20px;
 }
 
-
-.mob-contact-img{
+.mob-contact-img {
   background-color: #4f5053;
   padding: 10px;
   border-radius: 30px;
@@ -331,23 +329,23 @@
   justify-content: center;
 }
 
-.mob-linkedin{
+.mob-linkedin {
   background-color: #00aaff;
 }
 
-.mob-insta{
+.mob-insta {
   background-color: #ff00aa;
 }
 
-.mob-facebook{
+.mob-facebook {
   background-color: #1685f8;
 }
 
-.mob-contact-content p{
+.mob-contact-content p {
   margin: 0;
 }
 
-.mob-contact-content p:first-child{
+.mob-contact-content p:first-child {
   color: #838383;
   margin-bottom: 8px;
   font-size: 14px;
@@ -357,7 +355,7 @@
 /* Experience */
 /* ****************** */
 
-.mob-exp-header-content{
+.mob-exp-header-content {
   width: 96%;
   margin-left: 2%;
   margin-top: 10px;
@@ -374,23 +372,23 @@
   background-position: 0% 70%;
 }
 
-.mob-exp-header-content{
+.mob-exp-header-content {
   display: flex;
   align-items: end;
 }
 
-.mob-exp-header-content h1{
+.mob-exp-header-content h1 {
   padding: 0 20px;
 }
 
-.mob-exp-body-main-div{
-  background-color: #22252D;
+.mob-exp-body-main-div {
+  background-color: #22252d;
   width: 96%;
   margin-left: 2%;
   border-radius: 12px;
 }
 
-.mob-body-container{
+.mob-body-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -402,35 +400,35 @@
   margin-top: 20px;
 }
 
-.mob-experience-header{
+.mob-experience-header {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin-bottom: 20px;
 }
 
-.mob-exp-company h3{
+.mob-exp-company h3 {
   margin: 0;
   font-size: 18px;
 }
 
-.mob-exp-company p{
+.mob-exp-company p {
   font-size: 14px;
   color: #838383;
 }
 
-.mob-exp-company p{
+.mob-exp-company p {
   margin: 0;
 }
 
-.mob-exp-location p{
+.mob-exp-location p {
   margin: 0;
   font-size: 10px;
   font-style: italic;
   color: #838383;
 }
 
-.mob-experience-responsibilities p{
+.mob-experience-responsibilities p {
   margin: 0;
   margin-bottom: 10px;
   font-size: 12px;
@@ -457,7 +455,7 @@
   background-position: 0% 50%;
 }
 
-.mob-project-page-head{
+.mob-project-page-head {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -475,40 +473,42 @@
   border-radius: 12px;
   margin-top: 20px;
   margin-bottom: 20px;
+  height: 60vh;
+  overflow-y: scroll;
 }
 
-.mob-project-page{
+.mob-project-page {
   /* padding: 10px; */
 }
 
-.mob-project-card{
-  background-color: #2A2D34;
+.mob-project-card {
+  background-color: #2a2d34;
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
 
-.mob-project-card-img h3{
+.mob-project-card-img h3 {
   margin: 0;
   font-weight: 400;
 }
 
-.mob-tech-stack p{
+.mob-tech-stack p {
   margin: 0;
 }
 
-.mob-tech-stack p:first-child{
+.mob-tech-stack p:first-child {
   margin-bottom: 10px;
   font-size: 12px;
-  color: #783FEF;
+  color: #783fef;
 }
 
-.mob-tech-stack p:last-child{
+.mob-tech-stack p:last-child {
   font-size: 14px;
   color: #838383;
 }
 
-.mob-tech-stack{
+.mob-tech-stack {
   margin-top: 10px;
   border: 1px solid #838383;
   padding: 10px;
@@ -516,8 +516,8 @@
   color: white;
 }
 
-.mob-view-btn button{
-  background-color: #783FEF;
+.mob-view-btn button {
+  background-color: #783fef;
   border: none;
   outline: none;
   border-radius: 4px;
@@ -532,7 +532,11 @@
 /* ****************** */
 
 .mob-project-details-head {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.606)),
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.219),
+      rgba(0, 0, 0, 0.606)
+    ),
     url(../../../assets/proAbout.png);
   width: 96%;
   margin-left: 2%;
@@ -555,39 +559,146 @@
 
 .mob-project-details-head-content {
   transform: scale(-1, 1);
-  margin: 10px 20px;
+  margin: 10px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .mob-project-details-head-content h1 {
   margin: 0;
-  font-size: 56px;
+  font-size: 36px;
 }
 
 .mob-project-details-head-content p {
   margin: 0;
+  font-size: 12px;
 }
 
+.mob-project-body-container{
+  height: 50vh;
+  overflow-y:scroll ;
+  margin-top: 20px;
+}
+.mob-project-sub {
+  width: 96%;
+  margin-left: 2%;
+  background-color: #22252d;
+  border-radius: 8px;
+}
+
+.mob-project-sub p {
+  padding: 5px;
+  font-size: 12px;
+}
+
+.mob-project-about-body {
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 8px;
+  background-color: #22252d;
+}
+
+.mob-project-about-body-sub {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mob-project-about {
+  background-color: #2a2d34;
+  /* height: 150px; */
+  overflow-x: scroll;
+  border-radius: 8px;
+}
+
+.mob-project-about p{
+  font-size: 12px;
+}
+.mob-project-about button{
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #783fef;
+}
+
+.more-text {
+  margin-right: 5px; /* Adjust spacing between ellipsis and button */
+}
+
+.view-more-btn {
+  background-color: transparent; /* or any color you prefer */
+  border: none;
+  color: #007bff; /* button color */
+  cursor: pointer;
+  
+}
+
+.mob-project-about h4 {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.mob-project-about p {
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.mob-project-tech-stack {
+  background-color: #2a2d34;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mob-project-tech-stack p {
+  margin: 0;
+  background-color: #773fef7b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.mob-project-features{
+  background-color: #2a2d34;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.mob-project-features p{
+  margin: 0;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.mob-project-features h4 {
+  margin: 0;
+  padding: 5px 10px;
+}
 
 /* ****************** */
 /* scrollbar */
 /* ****************** */
 
 ::-webkit-scrollbar {
-  width: 0;  /* Width of the scrollbar */
+  width: 0; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;  /* Background of the scrollbar track */
+  background: transparent; /* Background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;  /* Color of the scrollbar thumb */
-  border-radius: 0;  /* Rounded corners */
+  background: transparent; /* Color of the scrollbar thumb */
+  border-radius: 0; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent;  /* Color of the scrollbar thumb on hover */
+  background: transparent; /* Color of the scrollbar thumb on hover */
 }
