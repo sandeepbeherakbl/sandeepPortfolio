@@ -1,3 +1,10 @@
+.main-component-div{
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* ****************** */
 /* Common */
 /* ****************** */
@@ -5,7 +12,6 @@
 .mob-body-container-height {
   width: 96%;
   margin-left: 2%;
-  margin-top: 85px;
   background-color: #181525;
   border-radius: 8px;
   height: 75vh;
@@ -26,7 +32,6 @@
 /* ****************** */
 
 .topbar-main-div {
-  position: fixed;
   width: 96%;
   margin-left: 2%;
   margin-top: 15px;
@@ -67,14 +72,14 @@
 /* ****************** */
 
 .mob-bottom-main-div {
-  position: fixed;
-  left: 2%;
-  bottom: 15px;
+  /* position: fixed; */
+  margin-left: 2%;
   width: 96%;
   background-color: #181525;
   border-radius: 8px;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 15px;
 }
 
 .mob-bottom-nav-icon p {
