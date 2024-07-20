@@ -43,17 +43,17 @@ const PdfViewer = () => {
         className="pdf-document"
         
       >
-        <Page pageNumber={pageNumber} width={350} canvasBackground="transparent"  />
+        <Page pageNumber={pageNumber} width={250} canvasBackground="transparent"  />
       </Document>
       <p className="page-info">
         Page {pageNumber} of {numPages}
       </p>
       <div className="pdf-navigation">
         <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
-          <StepBack/>
+          <StepBack height={15}/>
         </button>
         <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
-          <StepForward/>
+          <StepForward height={15}/>
         </button>
       </div>
       <div className="download-button">
