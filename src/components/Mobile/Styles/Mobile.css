@@ -1,7 +1,13 @@
+:root {
+  --vh: 100%;
+}
+
 .main-component-div{
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  justify-content:flex-start;
 }
 
 
@@ -14,7 +20,7 @@
   margin-left: 2%;
   background-color: #181525;
   border-radius: 8px;
-  height: 75vh;
+  height: 80vh;
   overflow: scroll;
 }
 
@@ -40,6 +46,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 45px;
 }
 
 .topbar-logo {
@@ -80,6 +87,7 @@
   display: flex;
   justify-content: space-around;
   margin-bottom: 15px;
+  height: 45px;
 }
 
 .mob-bottom-nav-icon p {
