@@ -9,12 +9,13 @@ export const Modal = ({ isOpen, onClose, children }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        
-        <button className="modal-close" onClick={onClose}>
-          <CircleX color="red"/>
+        <button className="modal-close" onClick={onClose} style={{marginBottom:"10px"}}>
+          <CircleX color="#E51E1E" />
         </button>
-        <h4>About</h4>
-        {children}
+        <div style={{overflowY: "scroll", height: "90%"}}>
+          <h4 style={{margin: 0}}>About</h4>
+          {children}
+        </div>
       </div>
     </div>
   );

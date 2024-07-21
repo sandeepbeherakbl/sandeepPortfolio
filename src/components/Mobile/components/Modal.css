@@ -11,7 +11,7 @@
 }
 
 .modal-content {
-  background: #22252d;
+  background: #22252db3;
   padding: 10px;
   border-radius: 8px;
   max-width: 500px;
@@ -23,13 +23,16 @@
 }
 
 .modal-close {
-  position: absolute;
-  top: 30px;
-  right: 35px;
   background: transparent;
   border: none;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+.modal-content button{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 

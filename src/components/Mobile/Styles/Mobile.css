@@ -425,11 +425,11 @@
 
 .mob-exp-company h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .mob-exp-company p {
-  font-size: 14px;
+  font-size: 12px;
   color: #838383;
 }
 
@@ -439,7 +439,7 @@
 
 .mob-exp-location p {
   margin: 0;
-  font-size: 10px;
+  font-size: 8px;
   font-style: italic;
   color: #838383;
 }
