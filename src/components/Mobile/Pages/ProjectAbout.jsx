@@ -11,7 +11,11 @@ export const ProjectAbout = ({ project, setSelectedProject }) => {
 
   return (
     <>
-      <div className="mob-body-container-height">
+      <div
+        className={`mob-body-container-height container-height ${
+          isModalOpen ? "blur-background" : ""
+        }`}
+      >
         <div className="mob-project-details-head">
           <button
             className="mob-back-button"
@@ -47,7 +51,7 @@ export const ProjectAbout = ({ project, setSelectedProject }) => {
               </div>
 
               <Modal isOpen={isModalOpen} onClose={handleModalClose}>
-                <h4>About</h4>
+    
                 <p>{project.about}</p>
               </Modal>
 

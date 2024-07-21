@@ -323,7 +323,9 @@
 
 .mob-contact-img {
   background-color: #4f5053;
-  padding: 10px;
+  padding: 5px;
+  height: 20px;
+  width: 20px;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -349,13 +351,20 @@
 .mob-contact-content p:first-child {
   color: #838383;
   /* margin-bottom: 8px; */
+  font-size: 12px;
+}
+
+.mob-contact-content p:last-child{
   font-size: 14px;
+  font-weight: 200;
 }
 
 .mob-contact-content a{
   margin: 0;
   font-weight: 200;
   text-decoration: none;
+  font-size: 14px;
+  color: white;
 }
 
 /* ****************** */
@@ -538,6 +547,22 @@
 /* Project About */
 /* ****************** */
 
+.blur-background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 999; /* Make sure it's below the modal's z-index */
+}
+
+.container-height{
+  position: relative;
+}
+
 .mob-project-details-head {
   background: linear-gradient(
       to bottom,
@@ -573,7 +598,7 @@
 
 .mob-project-details-head-content h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .mob-project-details-head-content p {
@@ -759,6 +784,7 @@
 .page-info {
   text-align: center;
   margin-top: 10px;
+  font-size: 12px;
 }
 
 .pdf-navigation {
@@ -772,7 +798,6 @@
   background-color: #783fef;
   color: white;
   border: none;
-  /* padding: 10px 20px; */
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
@@ -795,4 +820,32 @@
   border-radius: 4px;
   font-size: 14px;
   padding: 5px 10px;
+  text-align: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* width: 100%;
+  height: 100%; */
+  z-index: 10;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #783fef;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

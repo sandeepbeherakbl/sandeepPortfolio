@@ -4,7 +4,7 @@ import { Briefcase, Contact, Folder, Home } from "lucide-react";
 export const BottomBar = () => {
   return (
     <div className="mob-bottom-main-div">
-      <NavLink to="/" className="mob-bottom-nav-icon" activeClassName="active">
+      <NavLink to="/home" className="mob-bottom-nav-icon" activeClassName="active">
         {({ isActive }) => (
           <>
             <Home width={20} color={isActive ? "#783FEF" : "#2E323A"} />

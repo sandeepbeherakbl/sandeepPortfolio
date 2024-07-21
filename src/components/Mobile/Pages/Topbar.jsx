@@ -1,6 +1,6 @@
 import "../Styles/Mobile.css";
 import logo from "../../../assets/S.png";
-import { Download } from "lucide-react";
+import {  ViewIcon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Topbar = () => {
@@ -18,8 +18,8 @@ export const Topbar = () => {
         </div>
 
         <div className="mob-resume-download" onClick={handleViewResume}>
-          <p>Download Resume </p>
-          <Download width={15} height={15} color="#783fef" />
+          <p>Resume </p>
+          <ViewIcon width={15} height={15} color="#783fef" />
         </div>
       </div>
     </>

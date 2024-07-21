@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { useState } from "react";
 import { Home } from "./Pages/Home";
 import { BottomBar } from "./Pages/BottomBar";
@@ -7,7 +12,7 @@ import { Contact } from "./Pages/Contact";
 import { Experience } from "./Pages/Experience";
 import { Project } from "./Pages/Project";
 import { ProjectAbout } from "./Pages/ProjectAbout";
-import "./Styles/Mobile.css"
+import "./Styles/Mobile.css";
 import useViewportHeight from "../../hooks/useViewportHeight";
 import PdfViewer from "./Pages/PdfViewer";
 
@@ -25,7 +30,8 @@ export const MobileMain = () => {
 
         <div className="mob-body-section">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<PdfViewer />} />

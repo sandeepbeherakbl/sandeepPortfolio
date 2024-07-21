@@ -26,21 +26,23 @@ export const Contact = () => {
             <div>
               <div className="mob-contact-main-div">
                 <div className="mob-contact-img">
-                  <Phone width={25} />
+                  <Phone width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Contact Number</p>
-                  <p>+91 9556230850</p>
+                  <a href="tel:+919556230850">+91 9556230850</a>
                 </div>
               </div>
 
               <div className="mob-contact-main-div">
                 <div className="mob-contact-img">
-                  <Mail width={25} />
+                  <Mail width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Email</p>
-                  <p>sandeepbeherakbl@gmail.com</p>
+                  <a href="mailto:sandeepbeherakbl@gmail.com">
+                    sandeepbeherakbl@gmail.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -53,7 +55,7 @@ export const Contact = () => {
             <div>
               <div className="mob-contact-main-div" style={{ margin: 0 }}>
                 <div className="mob-contact-img">
-                  <Github width={25} />
+                  <Github width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Github</p>
@@ -72,11 +74,14 @@ export const Contact = () => {
             <div>
               <div className="mob-contact-main-div">
                 <div className="mob-contact-img mob-linkedin">
-                  <Linkedin width={25} />
+                  <Linkedin width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Linked in</p>
-                  <a href="https://www.linkedin.com/in/sandeep-kumar-behera-24051999/" target="_blank">
+                  <a
+                    href="https://www.linkedin.com/in/sandeep-kumar-behera-24051999/"
+                    target="_blank"
+                  >
                     sandeep-kumar-behera-24051999
                   </a>
                 </div>
@@ -84,11 +89,14 @@ export const Contact = () => {
 
               <div className="mob-contact-main-div">
                 <div className="mob-contact-img mob-insta">
-                  <Instagram width={25} />
+                  <Instagram width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Instagram</p>
-                  <a href="https://www.instagram.com/_blue.beast_/" target="_blank">
+                  <a
+                    href="https://www.instagram.com/_blue.beast_/"
+                    target="_blank"
+                  >
                     _blue.beast_
                   </a>
                 </div>
@@ -99,11 +107,14 @@ export const Contact = () => {
                 className="mob-contact-main-div"
               >
                 <div className="mob-contact-img mob-facebook">
-                  <FacebookIcon width={25} />
+                  <FacebookIcon width={20} />
                 </div>
                 <div className="mob-contact-content">
                   <p>Facebook</p>
-                  <a href="https://www.facebook.com/sandeepkumar.behera.142?mibextid=ZbWKwL" target="_blank">
+                  <a
+                    href="https://www.facebook.com/sandeepkumar.behera.142?mibextid=ZbWKwL"
+                    target="_blank"
+                  >
                     sandeepkumar.behera
                   </a>
                 </div>
