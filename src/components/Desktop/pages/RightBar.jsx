@@ -1,15 +1,15 @@
 import "../styles/Main.css";
-import {useState} from "react"
+import { useState } from "react";
 import Slogo from "../../../assets/S.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
-import Rocket  from "../../../assets/anim.gif";
-import ContactPopup from "./ContackPopup"
+import Rocket from "../../../assets/anim.gif";
+import ContactPopup from "./ContackPopup";
 
 export const RightBar = ({ setSelectedProject }) => {
-
   const [showPopup, setShowPopup] = useState(false);
-  
+  const location = useLocation();
+
   const openPopup = () => {
     setShowPopup(true);
   };
@@ -17,6 +17,8 @@ export const RightBar = ({ setSelectedProject }) => {
   const closePopup = () => {
     setShowPopup(false);
   };
+
+  const isActive = (path) => location.pathname === path;
 
   return (
     <>
@@ -33,6 +35,7 @@ export const RightBar = ({ setSelectedProject }) => {
               to="/"
               style={{ textDecoration: "none" }}
               onClick={() => setSelectedProject(null)}
+              className={isActive("/") ? "active-tab" : ""}
             >
               <p>Home</p>
             </Link>
@@ -41,6 +44,7 @@ export const RightBar = ({ setSelectedProject }) => {
               to="/experience"
               style={{ textDecoration: "none" }}
               onClick={() => setSelectedProject(null)}
+              className={isActive("/experience") ? "active-tab" : ""}
             >
               <p>Experience</p>
             </Link>
@@ -49,6 +53,7 @@ export const RightBar = ({ setSelectedProject }) => {
               to="/projects"
               style={{ textDecoration: "none" }}
               onClick={() => setSelectedProject(null)}
+              className={isActive("/projects") ? "active-tab" : ""}
             >
               <p>Projects</p>
             </Link>

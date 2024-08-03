@@ -60,7 +60,7 @@
   background-color: #22252d;
   border-radius: 12px;
   position: relative;
-  height: calc(100vh - 35vh);
+  height: calc(100vh - 40vh);
   overflow: auto;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .project-card {
-  width: 300px;
+  width: 200px;
   /* background-color: #2a2d34; */
   border: 1px solid #373a42;
   border-radius: 6px;
@@ -80,7 +80,7 @@
 }
 
 .project-card-img {
-  height: 200px;
+  height: 100px;
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.238),
@@ -97,7 +97,7 @@
 
 .project-card-img h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
 }
 
@@ -109,22 +109,22 @@
 }
 
 .tech-stack {
-  height: 80px;
+  height: 50px;
   background-color: #2a2d34;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
 }
 
 .tech-stack p:nth-child(1) {
   color: #838383;
-  font-size: 12px;
+  font-size: 8px;
 }
 
 .tech-stack p:nth-child(2) {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .project-content p {
@@ -135,12 +135,14 @@
 .project-content button {
   align-self: center;
   margin-top: 10px;
-  padding: 8px 16px;
+  padding: 2px 8px;
   border: none;
-  background-color: #007bff;
+  background-color: #783fef;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%;
+  font-size: 12px;
 }
 
 .project-content button:hover {
@@ -183,7 +185,7 @@
 
 .project-details-head {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.606)),
-    url(../../../assets/proAbout.png);
+    url(../../../../assets/proAbout.png);
   width: 96%;
   margin-left: 2%;
   margin-top: 30px;
@@ -206,7 +208,7 @@
 .project-details-head-content {
   transform: scale(-1, 1);
   height: 70%;
-  padding: 40px;
+  padding: 20px 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -287,4 +289,111 @@
   background-color: #007bff;
   padding: 10px 20px;
   border-radius: 50px;
+}
+
+
+
+
+
+/* hero cards */
+
+.project-cards-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero {
+  display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 270px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  background: url('https://www.transparenttextures.com/patterns/cubes.png');
+
+}
+
+.hero-profile-img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-description-bk {
+  background-image: linear-gradient(0deg, #6a3093, #a044ff);
+  border-radius: 50px;
+  position: absolute;
+  top: 60%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(25deg, -15deg);
+}
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg, #bb7413, #e7d25c);
+}
+
+.hero-logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.238),
+      rgba(0, 0, 0, 0.831)
+    ),
+    url(../../../../assets/proCardHead.jpg);
+  background-size: cover;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-description {
+  position: absolute;
+  color: #fff;
+  left: 100px;
+  bottom: 20%;
+}
+
+.hero-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  bottom: 10%;
+  padding: 5px 20px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.hero-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+
+.hero-title p{
+  font-size: 20px;
+  padding: 0 20px;
+  font-weight: 500;
 }

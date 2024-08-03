@@ -1,11 +1,12 @@
 .about-mian-div {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  /* background: #181525; */
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .about-profile-section {
@@ -13,7 +14,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #2e323a;
+  /* border-bottom: 2px solid #2e323a; */
+  background: #181525;
+  border-radius: 12px;
 }
 .about-profile-image {
   width: 120px;
@@ -60,11 +63,40 @@
 .about-container p:nth-child(2) {
   font-size: 16px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.resume-download {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.resume-flex-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #783fef;
+  /* margin: 20px 20px; */
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.resume-flex-div p {
+  margin: 0;
+  font-size: 10px;
+  color: #783fef;
 }
 
 .main-skills-section {
   height: 100%;
+  overflow-y: scroll;
+  border-radius: 12px;
+  background: #181525;
 }
 
 .skills-title {
@@ -79,16 +111,16 @@
 .skill-category {
   background-color: #2e323a;
   border-radius: 8px;
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 4px 8px;
+  margin-bottom: 5px;
   /* border-bottom: 1px solid #3f6bef; */
 }
 
 .skill-category p {
   margin: 0;
   margin-bottom: 8px;
-  font-size: 16px;
-  color:#838383 ;
+  font-size: 12px;
+  color: #838383;
 }
 
 .skill-sets {
@@ -102,7 +134,7 @@
 
 .skill-sets p {
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
   background-color: #1c1e22;
   padding: 4px 10px;
   border-radius: 4px;
@@ -114,16 +146,21 @@
   width: 100%;
   height: 80px;
   /* background-color: aliceblue; */
-  border-top: 1px solid #3f444d;
+  /* border-top: 1px solid #3f444d; */
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background: #181525;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.social-main-div a {
+  text-decoration: none;
 }
 
 .social-icon:hover {
-  background-color: #783FEF; 
-  border-radius: 50%;
-  padding: 5px;
+  border-bottom: 1px solid #783fef;
 }
 
 /* ********************* */
@@ -133,15 +170,18 @@
 .right-bar-main-section {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  /* background: #181525; */
   border-radius: 12px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .right-bar-head {
   padding: 20% 10%;
   border-bottom: 5px solid #2e323a;
+  background: #181525;
+  border-radius: 12px;
 }
 
 .right-bar-head img {
@@ -165,24 +205,30 @@
   cursor: pointer;
 }
 
-link{
+link {
   text-decoration: none;
 }
 
-.right-body-main{
+.right-body-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  background: #181525;
+  border-radius: 12px;
 }
 
-.gif{
+.gif {
   cursor: pointer;
 }
 
-.gif img{
+.gif img {
   width: 100%;
   cursor: pointer;
+}
+
+.nav-icons a.active-tab p {
+  border-left: 1px solid #783fef;
 }
 /* ********************* */
 /*  dashboard */
@@ -214,22 +260,22 @@ link{
   background-position: 0% 35%;
   border-radius: 12px;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
 }
 
 .dash-header-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .dash-header-section h1 {
-  font-size: 48px;
+  font-size: 44px;
 }
 
 .dash-header-section p {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .dash-header-section button {
@@ -240,28 +286,6 @@ link{
   border: none;
   outline: none;
   margin-top: 30px;
-}
-
-.resume-download {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.resume-flex-div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid white;
-  margin: 20px 20px;
-  padding: 5px 20px;
-  border-radius: 20px;
-}
-
-.resume-flex-div p {
-  margin: 0;
 }
 
 .intro-main-div {
@@ -279,14 +303,14 @@ link{
   right: 40%;
   bottom: 40%;
   transform: translate(50%, 50%);
-  font-size: 300px;
+  font-size: 200px;
   opacity: 0.05;
   -webkit-text-stroke: 1px white;
   font-weight: bold;
 }
 
 .intro-heading {
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
 .intro-heading p {
@@ -294,10 +318,10 @@ link{
 }
 
 .intro-heading p:nth-child(1) {
-  font-size: 28px;
+  font-size: 22px;
 }
 .intro-heading p:nth-child(2) {
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
 }
 
@@ -307,6 +331,47 @@ link{
 
 .intro-content p {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px;
   text-wrap: stable;
+}
+
+/* ***************** */
+/* resume popup */
+/* ***************** */
+/* ResumePopup.css */
+
+.resume-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.584);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.resume-popup {
+  background: #181525;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-viewer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-close-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  text-align: end;
+  cursor: pointer;
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-import { File } from "lucide-react";
+import { File, Folder } from "lucide-react";
 import projectsData from "../../../../json/project.json";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
@@ -31,7 +31,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
       </div>
 
       {/* project cards */}
-      <div className="project-cards-main">
+      {/* <div className="project-cards-main">
         <div className="project-page">
           {projectsData.map((project, index) => (
             <div key={index} className="project-card">
@@ -39,7 +39,6 @@ export const ProjectPage = ({ setSelectedProject }) => {
                 <h3>{project.title}</h3>
               </div>
               <div className="project-content">
-                {/* <h3>{project.title}</h3> */}
                 <div className="tech-stack">
                   <p>TechStack Used</p>
                   <p>{project.techStack.join(" | ")}</p>
@@ -49,6 +48,36 @@ export const ProjectPage = ({ setSelectedProject }) => {
                     View
                   </button>
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div> */}
+
+      <div className="project-cards-main">
+        <div className="project-page">
+          {projectsData.map((project, index) => (
+            <div
+              key={index}
+              className={`hero ${index % 2 === 0 ? "first" : "first"}`}
+            >
+              <div className="hero-title">
+                <p>{project.title}</p>
+              </div>
+              
+
+              <div className="hero-description-bk"></div>
+              <div className="hero-logo">
+                <Folder color="white" />
+              </div>
+              <div className="hero-description"></div>
+              <div className="hero-date">
+                <p>{project.date}</p>
+              </div>
+              <div className="hero-btn">
+                <a href="#" onClick={() => setSelectedProject(project)}>
+                  View
+                </a>
               </div>
             </div>
           ))}

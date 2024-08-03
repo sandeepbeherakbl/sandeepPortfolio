@@ -27,12 +27,7 @@ export const Dashboard = () => {
               />
             </p>
           </div>
-          <div className="resume-download">
-            <div className="resume-flex-div">
-              <p>Download Resume </p>
-              <Download />
-            </div>
-          </div>
+          
         </div>
 
         {/* intro */}
