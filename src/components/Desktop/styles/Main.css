@@ -1,7 +1,6 @@
 .about-mian-div {
   height: calc(100vh - 20px);
   width: 100%;
-  /* background: #181525; */
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -15,12 +14,16 @@
   justify-content: center;
   align-items: center;
   /* border-bottom: 2px solid #2e323a; */
-  background: #181525;
+  /* background: #181525; */
+  background: url(../../../assets/HeroPage.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border-radius: 12px;
 }
 .about-profile-image {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   background-color: #3f444d;
   border-radius: 50%;
   margin-bottom: 10px;
@@ -79,17 +82,34 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  border: 1px solid #783fef;
-  /* margin: 20px 20px; */
-  margin-bottom: 10px;
-  padding: 5px 20px;
-  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  background: radial-gradient(
+      83.26% 148.71% at 83.26% 142.62%,
+      rgba(255, 255, 255, 0.00116801) 79.1%,
+      rgba(255, 255, 255, 0.1) 100%
+    )
+    rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  border: 2px solid;
+
+  border-image-source: conic-gradient(
+    from 202.62deg at 50% 50%,
+    rgba(255, 255, 255, 0.2) -0.14deg,
+    #ffffff 44.61deg,
+    #ffffff 153.81deg,
+    rgba(255, 255, 255, 0.2) 180deg,
+    #ffffff 252deg,
+    rgba(255, 255, 255, 0.2) 359.86deg,
+    #ffffff 404.61deg
+  );
 }
 
 .resume-flex-div p {
   margin: 0;
   font-size: 10px;
-  color: #783fef;
+  color: rgba(255, 255, 255, 1);
 }
 
 .main-skills-section {
@@ -144,7 +164,8 @@
 
 .social-main-div {
   width: 100%;
-  height: 80px;
+  /* height: 80px; */
+  padding: 10px 0;
   /* background-color: aliceblue; */
   /* border-top: 1px solid #3f444d; */
   display: flex;
@@ -157,10 +178,6 @@
 
 .social-main-div a {
   text-decoration: none;
-}
-
-.social-icon:hover {
-  border-bottom: 1px solid #783fef;
 }
 
 /* ********************* */

@@ -39,7 +39,7 @@ export const About = () => {
           <div className="resume-download" onClick={openResumePopup}>
             <div className="resume-flex-div">
               <p>Download Resume </p>
-              <Download color="#783FEF" width={12} height={12} />
+              <Download color="#ffffff" width={12} height={12} />
             </div>
           </div>
           {showResumePopup && <ResumePopup onClose={closeResumePopup} />}
@@ -70,8 +70,8 @@ export const About = () => {
           <a href="https://github.com/sandeepbeherakbl" target="_blank">
             <Github
               color="#3f444d"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               className="social-icon"
             />
           </a>
@@ -82,8 +82,8 @@ export const About = () => {
           >
             <Linkedin
               color="#3f444d"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               className="social-icon"
             />
           </a>
@@ -91,8 +91,8 @@ export const About = () => {
           <a href="mailto:sandeepbeherakbl@gmail.com">
             <Mail
               color="#3f444d"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               className="social-icon"
             />
           </a>
@@ -103,8 +103,8 @@ export const About = () => {
           >
             <LucideFacebook
               color="#3f444d"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               className="social-icon"
             />
           </a>
@@ -112,11 +112,12 @@ export const About = () => {
           <a href="https://www.instagram.com/_blue.beast_/" target="_blank">
             <Instagram
               color="#3f444d"
-              width={30}
-              height={30}
+              width={25}
+              height={25}
               className="social-icon"
             />
           </a>
+
         </div>
       </div>
     </>

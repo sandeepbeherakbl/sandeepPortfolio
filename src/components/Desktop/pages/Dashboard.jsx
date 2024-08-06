@@ -10,7 +10,7 @@ export const Dashboard = () => {
           <div className="dash-header-content">
             <h1>
               Crafting Code with a Designer's Touch: Full Stack Developer &
-              Design Enthusiast
+              Design Enthusiast.
             </h1>
             <p>
               <Typewriter
