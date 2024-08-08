@@ -1,0 +1,79 @@
+.card p {
+  margin: 0;
+}
+
+.card {
+  padding: 30px 10px;
+  border-radius: 12px;
+  text-align: center;
+  transition: background-color 0.5s;
+  /* height: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-time {
+  width: 150px;
+  padding: 5px 10px;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
+.card-date {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card-date p {
+  margin: 0px;
+  font-size: 14px;
+  color: #181525;
+  font-weight: 500;
+}
+
+.card-date p:first-child {
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time p{
+  font-size: 30px;
+}
+
+.time p:last-child{
+  font-size: 12px;
+}
+
+.seconds {
+  margin-top: 10px !important;
+  padding-left: 5px;
+}
+
+.morning {
+  background: url(../../../assets/sunrise.png);
+  background-size: cover;
+}
+
+.afternoon {
+  background: url(../../../assets/afternoon.png);
+  background-size: cover;
+}
+
+.evening {
+  background: url(../../../assets/evening.png);
+  background-size: cover;
+}
+
+.night {
+  background: url(../../../assets/night.png);
+  background-size: cover;
+}

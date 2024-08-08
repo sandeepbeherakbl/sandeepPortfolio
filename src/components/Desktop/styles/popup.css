@@ -18,21 +18,23 @@
   visibility: visible;
 }
 
-.popup-main{
-    width: 40%;
-    
+.popup-main {
+  width: 40%;
 }
 
-.popup-head{
-    padding: 0 30px;
+.popup-head {
+  padding: 0 30px;
 }
 
-.popup-img-div{
-    height: 100%;
+.popup-img-div {
+  height: 100%;
 }
 
 .popup {
-  background-color: #22252d;
+  /* background-color: #22252d; */
+  background: url(../../../assets/HowitWorks.svg);
+  background-size: cover;
+  background-position: 50% 50%;
   border-radius: 12px;
   transform: scale(0.7);
   transition: transform 0.3s;
@@ -56,10 +58,9 @@
   margin-left: 4%;
 }
 
-form label{
-    font-size: 11px;
-    color: #838383;
-    
+form label {
+  font-size: 11px;
+  color: #ffffff;
 }
 
 form input,
@@ -73,29 +74,38 @@ form textarea {
   margin-bottom: 10px;
   border: none;
   outline: none;
-  background-color: #2E323A;
+  /* background-color: #2e323a69; */
   color: white;
   border-radius: 4px;
+  background: #8b5cf633;
+  border: 1px solid #8b5cf64d;
 }
 
-form textarea{
-    height: 100px;
-    resize: none;
+form textarea {
+  height: 100px;
+  resize: none;
 }
 
 form button {
-    width: 100%;
-    margin-bottom: 20px;
-    background-color: #208E59;
-    outline: none;
-    border: none;
-    border-radius:4px;
-    color: white;
-    padding: 6px 0;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    radial-gradient(
+        83.26% 148.71% at 83.26% 142.62%,
+        rgba(255, 255, 255, 0.001) 44.4%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+  border: 1px solid #ffffff66;
+  cursor: pointer;
 }
 
 .popup-head h2 {
-  color: #838383;
+  color: #ffffff;
 }
 
 .popup-head {

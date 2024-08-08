@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import ResumePopup from "./ResumePopup";
+import DateTimeCard from "./DateTime";
 
 export const About = () => {
   const [showResumePopup, setShowResumePopup] = useState(false);
@@ -43,6 +44,10 @@ export const About = () => {
             </div>
           </div>
           {showResumePopup && <ResumePopup onClose={closeResumePopup} />}
+        </div>
+
+        <div className="DateTimeCard">
+            <DateTimeCard/>
         </div>
 
         {/* skills section */}

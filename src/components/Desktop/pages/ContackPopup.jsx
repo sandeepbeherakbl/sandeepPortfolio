@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "../styles/popup.css";
 import PropTypes from "prop-types";
 import { CircleX } from "lucide-react";
-// import { ToastContainer, toast } from 'react-toastify';
 
 const ContactPopup = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -32,10 +31,12 @@ const ContactPopup = ({ onClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // toast("Wow so easy !");
-    handleClose();
+    const { name, email, message } = formData;
+    const mailtoLink = `mailto:sandeepbeherakbl@gmail.com?subject=Contact%20Form%20Submission&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
+    handleClose()
   };
 
   const handleClose = () => {
@@ -93,8 +94,6 @@ const ContactPopup = ({ onClose }) => {
           </div>
         </div>
       </div>
-
-      {/* <ToastContainer/> */}
     </>
   );
 };
