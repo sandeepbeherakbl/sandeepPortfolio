@@ -20,7 +20,7 @@
 }
 
 .popup-main {
-  width: auto;
+  width: 70%;
 }
 
 .popup-head {
@@ -29,12 +29,14 @@
   /* width: 100%; */
   height: 350px;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 60%;
   border-radius: 12px 12px 0 0;
 }
 
 .contact-title{
-  margin-left: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .popup-img-div {
@@ -42,8 +44,8 @@
 }
 
 .popup {
-  /* background-color: #22252d; */
-  background: url(../../../assets/HowitWorks.svg);
+  background-color: #22252d;
+  /* background: url(../../../assets/HowitWorks.svg); */
   background-size: cover;
   background-position: 50% 50%;
   border-radius: 12px;
@@ -70,7 +72,9 @@
 }
 
 .form-div {
-  width: 450px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin-left: 4%;
   padding: 20px 40px 0 0;
 }
@@ -136,7 +140,7 @@ form button {
 }
 
 .contact-card {
-  width: 280px;
+  width: 50%;
   height: 80vh;
   margin-top: -330px;
   background: rgba(34, 37, 45, 0.05);
@@ -144,8 +148,8 @@ form button {
   -webkit-backdrop-filter: blur(1px);
   padding: 20px 0;
   border-radius: 7px;
-  /* border: 1px solid; */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* border: 1px solid #181525; */
+  box-shadow: rgba(107, 107, 107, 0.2) 0px 2px 8px 0px;
 }
 
 .profile-img {

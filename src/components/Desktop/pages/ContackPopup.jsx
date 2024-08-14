@@ -9,7 +9,7 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import Bbsr from "../../../assets/dhauli.svg"
+import Bbsr from "../../../assets/dhauli.svg";
 
 const ContactPopup = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -67,7 +67,10 @@ const ContactPopup = ({ onClose }) => {
             <div className="popup-head">
               <div className="contact-title">
                 <h1>Contact Me</h1>
-
+                {/* <p>
+                  Curious about my work or interested in a collaboration? Get in
+                  touch – I&apos; d love to hear from you!
+                </p> */}
               </div>
 
               <button className="close-btn" onClick={handleClose}>
@@ -79,7 +82,11 @@ const ContactPopup = ({ onClose }) => {
               <div className="contact-card">
                 <div className="contact-head">
                   <div className="profile-img"></div>
-                  <p>Sandeep Kumar Behera</p>
+                  <div>
+                    <p>Sandeep Kumar</p>
+                    <p>Behera</p>
+                  </div>
+
                   <h3>Frontend Developer</h3>
                   <div className="location-card">
                     <div className="location-icon">
@@ -174,7 +181,7 @@ const ContactPopup = ({ onClose }) => {
                 </div>
               </div>
               <div className="form-div">
-                <form onSubmit={""}>
+                <form style={{ width: "450px" }} onSubmit={""}>
                   <label>Name</label>
                   <input
                     type="text"
