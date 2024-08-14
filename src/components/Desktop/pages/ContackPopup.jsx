@@ -18,7 +18,7 @@ const ContactPopup = ({ onClose }) => {
     message: "",
   });
 
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);

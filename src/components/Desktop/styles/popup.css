@@ -11,7 +11,7 @@
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s ease;
 }
 
 .popup-overlay.show {
@@ -45,10 +45,14 @@
   border-radius: 12px;
   transform: scale(0.7);
   transition: transform 0.3s;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  opacity: 0;
 }
 
 .popup.show {
   transform: scale(1);
+  opacity: 1;
 }
 
 .close-btn {
@@ -129,7 +133,7 @@ form button {
 }
 
 .contact-card {
-  width: 250px;
+  width: 280px;
   height: 80vh;
   margin-top: -330px;
   background: rgba(34, 37, 45, 0.05);
