@@ -10,6 +10,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import Bbsr from "../../../assets/dhauli.svg"
 
 const ContactPopup = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -65,7 +66,11 @@ const ContactPopup = ({ onClose }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="popup-head">
-              {/* <h2>Contact Form</h2> */}
+              <div className="contact-title">
+                <h1>Contact Me</h1>
+
+              </div>
+
               <button className="close-btn" onClick={handleClose}>
                 <CircleX color="#783FEF" />
               </button>
@@ -79,7 +84,8 @@ const ContactPopup = ({ onClose }) => {
                   <h3>Frontend Developer</h3>
                   <div className="location-card">
                     <div className="location-icon">
-                      <MapPin color="#0bff00" />
+                      {/* <MapPin color="#0bff00" /> */}
+                      <img src={Bbsr} alt="" />
                     </div>
                     <div className="location-titel">
                       <p>Patia, Bhubaneswar</p>
@@ -157,9 +163,12 @@ const ContactPopup = ({ onClose }) => {
                       </div>
                       <div className="social-title">
                         <p>GIT HUB</p>
-                        <a href="https://github.com/sandeepbeherakbl" target="_blank">
-                    sandeepbeherakbl
-                  </a>
+                        <a
+                          href="https://github.com/sandeepbeherakbl"
+                          target="_blank"
+                        >
+                          sandeepbeherakbl
+                        </a>
                       </div>
                     </div>
                   </div>
