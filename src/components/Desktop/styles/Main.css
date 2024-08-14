@@ -239,10 +239,14 @@ link {
 
 .gif {
   cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .gif img {
-  width: 100%;
+  width: 70%;
   cursor: pointer;
 }
 

@@ -40,7 +40,7 @@ function DateTimeCard() {
       </div>
 
       <div className="card-date">
-        <p>{format(currentTime, "d")}</p>
+        <p>{format(currentTime, "d")} </p>
         <p>{format(currentTime, "MMMM yyyy")}</p>
       </div>
       </div>

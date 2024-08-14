@@ -67,7 +67,7 @@ const ContactPopup = ({ onClose }) => {
             <div className="popup-head">
               {/* <h2>Contact Form</h2> */}
               <button className="close-btn" onClick={handleClose}>
-                <CircleX color="red" />
+                <CircleX color="#783FEF" />
               </button>
             </div>
 

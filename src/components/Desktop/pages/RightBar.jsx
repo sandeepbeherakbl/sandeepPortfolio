@@ -3,8 +3,8 @@ import { useState } from "react";
 import Slogo from "../../../assets/S.png";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
-import Rocket from "../../../assets/anim.gif";
 import ContactPopup from "./ContackPopup";
+import Contact from "../../../assets/contacticon.png"
 
 export const RightBar = ({ setSelectedProject }) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -60,7 +60,7 @@ export const RightBar = ({ setSelectedProject }) => {
           </div>
 
           <div className="gif">
-            <img src={Rocket} alt="loading..." onClick={openPopup} />
+            <img src={Contact} alt="loading..." onClick={openPopup} />
           </div>
           {showPopup && <ContactPopup onClose={closePopup} />}
         </div>

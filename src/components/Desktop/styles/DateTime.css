@@ -27,13 +27,14 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 2px;
 }
 
 .card-date p {
   margin: 0px;
   font-size: 14px;
   color: #181525;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .card-date p:first-child {
@@ -45,11 +46,13 @@
   align-items: center;
 }
 
-.time p{
+.time p {
   font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
 }
 
-.time p:last-child{
+.time p:last-child {
   font-size: 12px;
 }
 
