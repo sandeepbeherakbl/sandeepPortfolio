@@ -8,7 +8,6 @@ import {
   Instagram,
   Linkedin,
   Mail,
-  MapPin,
 } from "lucide-react";
 import Bbsr from "../../../assets/dhauli.svg"
 

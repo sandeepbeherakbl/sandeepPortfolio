@@ -275,27 +275,27 @@ margin: 0;
 }
 
 .email-container{
-  border: 1px solid #fe0000;
+  /* border: 1px solid #fe0000; */
   background-color: #fe00000e;
 }
 
 .insta-container{
-  border: 1px solid #fe00f6;
+  /* border: 1px solid #fe00f6; */
   background-color: #fe00f611;
 }
 
 .facebook-container{
-  border: 1px solid #00aaff;
+  /* border: 1px solid #00aaff; */
   background-color: #00aaff13;
 }
 
 .linkedin-container{
-  border: 1px solid #011efe;
+  /* border: 1px solid #011efe; */
   background-color: #011ffe18;
 }
 
 .github-container{
-  border: 1px solid #ab20fd;
+  /* border: 1px solid #ab20fd; */
   background-color: #ac20fd1a;
 }
 
