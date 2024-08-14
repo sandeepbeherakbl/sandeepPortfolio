@@ -4,7 +4,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.539);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,11 +20,17 @@
 }
 
 .popup-main {
-  width: 40%;
+  width: auto;
 }
 
 .popup-head {
   padding: 0 30px;
+  background: url(../../../assets/contact.gif);
+  /* width: 100%; */
+  height: 350px;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 12px 12px 0 0;
 }
 
 .popup-img-div {
@@ -45,6 +52,8 @@
 }
 
 .close-btn {
+  position: absolute;
+  right: 0;
   background: none;
   border: none;
   font-size: 20px;
@@ -54,8 +63,9 @@
 }
 
 .form-div {
-  width: 90%;
+  width: 450px;
   margin-left: 4%;
+  padding: 20px 40px 0 0;
 }
 
 form label {
@@ -96,10 +106,10 @@ form button {
   padding: 6px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
     radial-gradient(
-        83.26% 148.71% at 83.26% 142.62%,
-        rgba(255, 255, 255, 0.001) 44.4%,
-        rgba(255, 255, 255, 0.1) 100%
-      );
+      83.26% 148.71% at 83.26% 142.62%,
+      rgba(255, 255, 255, 0.001) 44.4%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
   border: 1px solid #ffffff66;
   cursor: pointer;
 }
@@ -111,4 +121,169 @@ form button {
 .popup-head {
   display: flex;
   justify-content: space-between;
+}
+
+.contact-details {
+  display: flex;
+  padding: 0 0 20px 20px;
+}
+
+.contact-card {
+  width: 250px;
+  height: 80vh;
+  margin-top: -330px;
+  background: rgba(34, 37, 45, 0.05);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(1px);
+  padding: 20px 0;
+  border-radius: 7px;
+  /* border: 1px solid; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.profile-img {
+  background: url(../../../assets/propic.png);
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.contact-head h3{
+  margin: 10px 0;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-weight: 100 ;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contact-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+.contact-head p {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.contact-social {
+  width: 100%;
+  height: 49%;
+  position: absolute;
+  bottom: 0;
+}
+
+.social-contact-details {
+  padding: 15px;
+  /* border-top: 2px solid;
+  border-image: linear-gradient(
+      to right,
+      transparent 0%,
+      #8a5cf6da 50%,
+      transparent 100%
+    )
+    1; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 20px;
+    height: 90%;
+}
+
+.social-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.social-logo{
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  background-color: #00000058;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.social-title p{
+margin: 0;
+}
+
+.social-title p:first-child{
+  font-size: 10px;
+  color: #838383;
+}
+
+.social-title p:last-child{
+  font-size: 12px;
+  color: white;
+}
+
+.social-title a{
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+}
+
+.location-titel p{
+  font-size: 12px ;
+}
+
+.location-card{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.location-titel{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.email{
+  /* border: 1px solid #fe0000; */
+  
+}
+
+.email-container{
+  border: 1px solid #fe0000;
+  background-color: #fe00000e;
+}
+
+.insta-container{
+  border: 1px solid #fe00f6;
+  background-color: #fe00f611;
+}
+
+.facebook-container{
+  border: 1px solid #00aaff;
+  background-color: #00aaff13;
+}
+
+.linkedin-container{
+  border: 1px solid #011efe;
+  background-color: #011ffe18;
+}
+
+.github-container{
+  border: 1px solid #ab20fd;
+  background-color: #ac20fd1a;
 }
