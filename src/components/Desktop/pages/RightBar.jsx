@@ -57,6 +57,16 @@ export const RightBar = ({ setSelectedProject }) => {
             >
               <p>Projects</p>
             </Link>
+
+            {/* <Link
+              to="/projects"
+              style={{ textDecoration: "none" }}
+              onClick={() => setSelectedProject(null)}
+              className={isActive("/projects") ? "active-tab" : ""}
+            >
+            <p>Blogs</p>
+            </Link> */}
+
           </div>
 
           <div className="gif">

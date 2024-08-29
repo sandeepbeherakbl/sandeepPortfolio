@@ -170,6 +170,16 @@
   bottom: 5px;
   right: 10%;
   transform: translateX(10%);
+  animation: pulse-animation 1.3s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+      box-shadow: 0 0 0 0px rgba(0, 249, 30, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 0 10px rgba(249, 179, 0, 0);
+  }
 }
 
 /* ****************** */

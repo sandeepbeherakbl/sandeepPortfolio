@@ -66,7 +66,7 @@ const ContactPopup = ({ onClose }) => {
           >
             <div className="popup-head">
               <div className="contact-title">
-                <h1>Contact Me</h1>
+                {/* <h1>Contact Me</h1> */}
                 {/* <p>
                   Curious about my work or interested in a collaboration? Get in
                   touch – I&apos; d love to hear from you!
@@ -181,7 +181,9 @@ const ContactPopup = ({ onClose }) => {
                 </div>
               </div>
               <div className="form-div">
+               
                 <form style={{ width: "450px" }} onSubmit={""}>
+                   <p>Contact Me</p>
                   <label>Name</label>
                   <input
                     type="text"
@@ -210,7 +212,9 @@ const ContactPopup = ({ onClose }) => {
                     onChange={handleChange}
                     required
                   ></textarea>
-                  <button type="submit">Send</button>
+                  <div className="button-div">
+                    <button type="submit">SEND</button>
+                  </div>
                 </form>
               </div>
             </div>
