@@ -1,6 +1,4 @@
 import "../styles/Main.css";
-// import dummyImg from "../../assets/DummyImg.png";
-// import propic from "../../assets/propic.png";
 import skillsData from "../../../json/skills.json";
 import {
   Download,
@@ -10,12 +8,18 @@ import {
   LucideFacebook,
   Mail,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ResumePopup from "./ResumePopup";
 import DateTimeCard from "./DateTime";
 
 export const About = () => {
   const [showResumePopup, setShowResumePopup] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setFadeIn(true), 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const openResumePopup = () => {
     setShowResumePopup(true);
@@ -26,7 +30,7 @@ export const About = () => {
   };
   return (
     <>
-      <div className={`about-mian-div ${showResumePopup ? "blurred" : ""}`}>
+      <div className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${fadeIn ? 'fade-in' : ''}`}>
         {/*  heading section*/}
         <div className="about-profile-section">
           <div className="about-profile-image">

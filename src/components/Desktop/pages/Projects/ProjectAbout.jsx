@@ -48,7 +48,7 @@ export const ProjectDetails = ({ project, setSelectedProject }) => {
               </div>
             </div>
           </div>
-          <div className="project-feature">
+          <div className="project-feature"> 
             <div className="feature-container">
               Features
               {project.details.map((detail, index) => (

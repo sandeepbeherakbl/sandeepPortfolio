@@ -17,7 +17,6 @@ export const DesktopMain = () => {
           <div className="about-section">
             <About />
           </div>
-
           <div className="body-section">
             <Routes>
               <Route path="/" element={<Dashboard />} />
@@ -37,7 +36,6 @@ export const DesktopMain = () => {
               />
             </Routes>
           </div>
-
           <div className="sideBar-section">
             <RightBar />
           </div>

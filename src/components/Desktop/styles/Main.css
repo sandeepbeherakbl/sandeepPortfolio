@@ -409,3 +409,7 @@ link {
   cursor: pointer;
   width: 100%;
 }
+
+.hidden {
+  display: none;
+}

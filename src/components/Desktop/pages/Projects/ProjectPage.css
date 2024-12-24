@@ -66,9 +66,14 @@
 
 .project-page {
   padding: 40px;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 20px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .project-card {
@@ -203,6 +208,7 @@
   border: none;
   outline: none;
   margin: 10px 10px 0;
+  cursor: pointer;
 }
 
 .project-details-head-content {
@@ -271,12 +277,12 @@
 
 .project-feature {
   background-color: #22252d;
-  height: 40vh;
+  height: auto;
   width: 100%;
   border-radius: 12px;
 }
 
-.tech-div{
+.tech-div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -284,35 +290,30 @@
   margin-top: 20px;
 }
 
-.tech-p{
+.tech-p {
   margin: 0;
   background-color: #007bff;
   padding: 10px 20px;
   border-radius: 50px;
 }
 
-
-
-
-
 /* hero cards */
 
 .project-cards-main {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 }
 
 .hero {
   display: inline-block;
   position: relative;
-  width: 230px;
-  height: 270px;
+  width: 100%;
+  height: 180px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-  background: url('https://www.transparenttextures.com/patterns/cubes.png');
-
+  background: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 .hero-profile-img {
@@ -348,8 +349,8 @@
     url(../../../../assets/proCardHead.jpg);
   background-size: cover;
   position: absolute;
-  bottom: 30%;
-  left: 30px;
+  bottom: 15%;
+  left: 20px;
   overflow: hidden;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
   display: flex;
@@ -392,7 +393,7 @@
   bottom: 10%;
 }
 
-.hero-title p{
+.hero-title p {
   font-size: 20px;
   padding: 0 20px;
   font-weight: 500;
