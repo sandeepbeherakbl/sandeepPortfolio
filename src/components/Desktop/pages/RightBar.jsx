@@ -1,7 +1,7 @@
 import "../styles/Main.css";
 import { useState } from "react";
 import Slogo from "../../../assets/S.png";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import ContactPopup from "./ContackPopup";
 import Contact from "../../../assets/contacticon.png"
@@ -31,32 +31,26 @@ export const RightBar = ({ setSelectedProject }) => {
         {/* body */}
         <div className="right-body-main">
           <div className="nav-icons">
-            <Link
-              to="/"
-              style={{ textDecoration: "none" }}
-              onClick={() => setSelectedProject(null)}
-              className={isActive("/") ? "active-tab" : ""}
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
             >
               <p>Home</p>
-            </Link>
+            </NavLink>
 
-            <Link
-              to="/experience"
-              style={{ textDecoration: "none" }}
-              onClick={() => setSelectedProject(null)}
-              className={isActive("/experience") ? "active-tab" : ""}
+            <NavLink 
+              to="/experience" 
+              className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
             >
               <p>Experience</p>
-            </Link>
+            </NavLink>
 
-            <Link
-              to="/projects"
-              style={{ textDecoration: "none" }}
-              onClick={() => setSelectedProject(null)}
-              className={isActive("/projects") ? "active-tab" : ""}
+            <NavLink 
+              to="/projects" 
+              className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
             >
               <p>Projects</p>
-            </Link>
+            </NavLink>
 
             {/* <Link
               to="/projects"

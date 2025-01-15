@@ -22,14 +22,13 @@ export const MobileMain = () => {
   useViewportHeight();
 
   return (
-    <Router>
       <div className="main-component-div">
         <div className="mob-top-bar">
           <Topbar />
         </div>
 
         <div className="mob-body-section">
-          <Routes>
+          <Routes> 
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
@@ -55,6 +54,5 @@ export const MobileMain = () => {
           <BottomBar />
         </div>
       </div>
-    </Router>
   );
 };

@@ -1,7 +1,7 @@
 {
   "Programming Languages": ["JavaScript (ES6)", "HTML", "CSS/Sass"],
-  "Libraries & Frameworks": ["React JS", "Redux", "Next JS", "React Native"],
-  "Tools & Platforms": ["REST API", "NPM", "GIT Version Control"],
+  "Libraries & Frameworks": ["React JS", "Redux", "Next JS", "React Native", "REST APIs"],
+  "Tools & Platforms": ["NPM", "GIT Version Control", "Jira", "Postman"],
   "UI Libraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"]
 }
 

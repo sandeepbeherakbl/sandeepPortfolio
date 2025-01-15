@@ -30,7 +30,11 @@ export const About = () => {
   };
   return (
     <>
-      <div className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${fadeIn ? 'fade-in' : ''}`}>
+      <div
+        className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${
+          fadeIn ? "fade-in" : ""
+        }`}
+      >
         {/*  heading section*/}
         <div className="about-profile-section">
           <div className="about-profile-image">
@@ -51,7 +55,7 @@ export const About = () => {
         </div>
 
         <div className="DateTimeCard">
-            <DateTimeCard/>
+          <DateTimeCard />
         </div>
 
         {/* skills section */}
@@ -126,7 +130,6 @@ export const About = () => {
               className="social-icon"
             />
           </a>
-
         </div>
       </div>
     </>

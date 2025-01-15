@@ -28,23 +28,23 @@ function DateTimeCard() {
   const seconds = currentTime.getSeconds();
 
   return (
-    <div className={`card ${timeOfDay}`}>
+    <div className="date-time-card">
+      <div className={`card ${timeOfDay}`}>
+        <div className="date-time">
+          <div className="time">
+            <p>{String(hours).padStart(2, "0")}</p>
+            <p>:</p>
+            <p>{String(minutes).padStart(2, "0")}</p>
+            <p> </p>
+            <p className="seconds">{String(seconds).padStart(2, "0")}</p>
+          </div>
 
-      <div className="date-time">
-      <div className="time">
-        <p>{String(hours).padStart(2, "0")}</p>
-        <p>:</p>
-        <p>{String(minutes).padStart(2, "0")}</p>
-        <p> </p>
-        <p className="seconds">{String(seconds).padStart(2, "0")}</p>
+          <div className="card-date">
+            <p>{format(currentTime, "d")} </p>
+            <p>{format(currentTime, "MMMM yyyy")}</p>
+          </div>
+        </div>
       </div>
-
-      <div className="card-date">
-        <p>{format(currentTime, "d")} </p>
-        <p>{format(currentTime, "MMMM yyyy")}</p>
-      </div>
-      </div>
-      
     </div>
   );
 }
