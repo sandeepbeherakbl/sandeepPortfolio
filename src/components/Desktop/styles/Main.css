@@ -136,43 +136,162 @@
   margin-top: 5px;
 }
 .skills-list {
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .skill-category {
-  /* background-color: #2e323a; */
-  border-radius: 8px;
-  padding: 4px 8px;
-  margin-bottom: 5px;
-  /* border-bottom: 1px solid #3f6bef; */
-  border: 1px solid #8B5CF64D
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: visible; /* Changed from hidden to visible */
+  margin-top: 1rem; /* Add space for the badge */
 }
 
-.skill-category p {
-  margin: 0;
-  margin-bottom: 8px;
-  font-size: 10px;
-  color: #838383;
+.category-badge {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  transform: translateY(-50%);
+  padding: 0.2rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  color: white;
+  /* background-color: #783fef; */
+  background: linear-gradient(
+    90deg,
+    #783fef,
+    #b997ff,
+    #783fef
+  );
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+  /* box-shadow: 0 4px 15px rgba(120, 63, 239, 0.3); */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  z-index: 2; /* Increased z-index */
+}
+
+.category-badge::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 21px;
+  background-color: #b997ff,;
+  /* background: linear-gradient(
+    90deg,
+    #783fef,
+    #b997ff,
+    #783fef
+  ); */
+  background-size: 200% 100%;
+  animation: gradientMove 3s linear infinite;
+  opacity: 0.5;
+  filter: blur(8px);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 100% 0%; }
+  100% { background-position: -100% 0%; }
+}
+
+/* Remove the existing category title */
+.skill-category p:first-child {
+  display: none;
+}
+
+.skill-sets {
+  margin-top: 0.5rem;
 }
 
 .skill-sets {
   display: flex;
-  gap: 3px;
   flex-wrap: wrap;
-  /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 10px;
+  gap: 10px;
+  position: relative;
 }
 
-.skill-sets p {
-  margin: 0;
-  font-size: 10px;
-  /* background-color: #1c1e22; */
-  background: #8B5CF633;
-  padding: 2px 8px;
-  border-radius: 4px;
-  /* font-weight: 500; */
-  color: white;
+.skill-item {
+  position: relative;
+  padding: 0.5rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Specific colors for different skills */
+.skill-item[data-skill="React JS"] {
+  --glow-color: rgb(97, 218, 251);
+}
+
+.skill-item[data-skill="JavaScript (ES6)"] {
+  --glow-color: rgb(247, 223, 30);
+}
+
+.skill-item[data-skill="TypeScript"] {
+  --glow-color: rgb(49, 120, 198);
+}
+
+.skill-item[data-skill="HTML"] {
+  --glow-color: rgb(241, 101, 41);
+}
+
+.skill-item[data-skill="CSS"] {
+  --glow-color: rgb(41, 101, 241);
+}
+
+.skill-item[data-skill="CSS/Sass"] {
+  --glow-color: rgb(204, 102, 153);
+}
+
+.skill-item[data-skill="Next JS"] {
+  --glow-color: rgb(0, 0, 0);
+}
+
+/* Default glow color for other skills */
+.skill-item {
+  --glow-color: rgb(120, 63, 239);
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glow-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.skill-item:hover {
+  color: var(--glow-color);
+  text-shadow: 0 0 10px var(--glow-color);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.skill-item:hover::before {
+  opacity: 0.15;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.floating-skills {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: var(--delay);
 }
 
 .social-main-div {

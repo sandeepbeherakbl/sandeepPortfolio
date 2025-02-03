@@ -1,64 +1,77 @@
-import { CircleArrowLeft } from "lucide-react";
+import { CircleArrowLeft, Info, Code, Layers } from "lucide-react";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
 
 export const ProjectDetails = ({ project, setSelectedProject }) => {
   return (
-    <>
-      <div className="project-details-main">
-        {/* head */}
-        <div className="project-details-head">
-          <button
-            className="back-button"
-            onClick={() => setSelectedProject(null)}
-          >
-            <CircleArrowLeft width={30} height={30} />
-          </button>
+    <div className="project-details-main">
+      {/* head */}
+      <div className="project-details-head">
+        <button
+          className="back-button"
+          onClick={() => setSelectedProject(null)}
+        >
+          <CircleArrowLeft width={30} height={30} />
+        </button>
 
-          <div className="project-details-head-content">
-            <h1>{project.title}</h1>
-            <p>{project.subtitle}</p>
-          </div>
+        <div className="project-details-head-content">
+          <h1>{project.title}</h1>
+          <p>{project.subtitle}</p>
         </div>
+      </div>
 
-        {/* body */}
-        <div className="project-body">
-          <div className="project-body-content">
-            <div className="project-body-about">
-              <div className="About-container">
-                About
-                {/* {project.about.map((detail, index) => (
-                  <p key={index}>{detail}</p>
-                ))} */}
-                <div className="about-div">
-                  <p> {project.about}</p>
-                </div>
+      <div className="project-body">
+        <div className="project-body-content">
+          {/* About Section */}
+          <div className="project-body-about">
+            <div className="About-container">
+              <div className="about-header">
+                <Info size={20} color="#783fef" />
+                <h3>About</h3>
               </div>
-            </div>
-            <div className="project-body-tech">
-              <div className="tech-container">
-                Tech Stack
-                <div className="tech-div">
-                  {project.techStack.map((detail, index) => (
-                    <>
-                      <p className="tech-p" key={index}>{detail}</p>
-                    </>
-                  ))}
-                </div>
+              <div className="about-div">
+                <p>{project.about}</p>
               </div>
             </div>
           </div>
-          <div className="project-feature"> 
+          
+          {/* Tech Stack Section */}
+          <div className="project-body-tech">
+            <div className="tech-container">
+              <div className="tech-header">
+                <Code size={20} color="#783fef" />
+                <h3>Tech Stack</h3>
+              </div>
+              <div className="tech-div">
+                {project.techStack.map((tech, index) => (
+                  <span key={index} className="tech-p">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="project-feature">
             <div className="feature-container">
-              Features
-              {project.details.map((detail, index) => (
-                <p key={index}> - {detail}</p>
-              ))}
+              <div className="feature-header">
+                <Layers size={20} color="#783fef" />
+                <h3>Features</h3>
+              </div>
+              <div className="feature-list">
+                {project.details.map((detail, index) => (
+                  <div key={index} className="feature-item">
+                    <span className="feature-bullet">•</span>
+                    <p className="feature-text">{detail}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

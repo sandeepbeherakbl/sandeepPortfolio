@@ -3,7 +3,7 @@
 }
 
 .card {
-  padding: 30px 10px;
+  padding: 20px 10px;
   border-radius: 12px;
   text-align: center;
   transition: background-color 0.5s;
@@ -11,38 +11,64 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .date-time {
-  width: 150px;
-  padding: 5px 10px;
-  background: rgba(24, 21, 37, 0.4);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  background: rgba(24, 21, 37, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .card-date {
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  gap: 2px;
+  gap: 8px;
+  margin-top: 5px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
 }
 
 .card-date p {
   margin: 0px;
   font-size: 14px;
-  color: #181525;
+  color: #f6f6f6;
   font-weight: 800;
 }
 
 .card-date p:first-child {
 }
 
+.time-wrapper {
+  position: relative;
+  padding: 10px 0;
+}
+
+.weather-icon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 24px;
+  color: #783fef;
+  filter: drop-shadow(0 0 8px rgba(120, 63, 239, 0.5));
+}
+
 .time {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(120, 63, 239, 0.1);
+  border-radius: 8px;
+  /* border: 1px solid rgba(120, 63, 239, 0.2); */
 }
 
 .time p {
@@ -55,9 +81,42 @@
   font-size: 12px;
 }
 
+.time-unit {
+  position: relative;
+}
+
+.time-unit p {
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(120, 63, 239, 0.5);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.colon {
+  font-size: 18px;
+  color: #783fef;
+  animation: blink 1s infinite;
+  margin: 0 2px;
+  line-height: 1;
+}
+
 .seconds {
-  margin-top: 10px !important;
-  padding-left: 5px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.seconds p {
+  font-size: 18px !important;
+}
+
+.date-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .morning {
@@ -78,4 +137,49 @@
 .night {
   background: url(../../../assets/night.png);
   background-size: cover;
+}
+
+/* Firefly Animation */
+.firefly {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: firefly 6s ease-in-out infinite;
+  opacity: 0;
+}
+
+.firefly:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.firefly:nth-child(2) { top: 40%; left: 60%; animation-delay: 1s; }
+.firefly:nth-child(3) { top: 60%; left: 40%; animation-delay: 2s; }
+.firefly:nth-child(4) { top: 80%; left: 70%; animation-delay: 3s; }
+.firefly:nth-child(5) { top: 30%; left: 80%; animation-delay: 4s; }
+
+@keyframes firefly {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px) translateX(5px) scale(1.2);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

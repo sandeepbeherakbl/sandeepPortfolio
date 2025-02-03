@@ -1,13 +1,32 @@
-import { File, Folder } from "lucide-react";
+import { File, ArrowRight } from "lucide-react";
 import projectsData from "../../../../json/project.json";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
 import Typewriter from "typewriter-effect";
+import { useState } from "react";
+import MacBook from "./MacBook";
 
 export const ProjectPage = ({ setSelectedProject }) => {
+  const [isLaptopOpen, setIsLaptopOpen] = useState(false);
+  const [selectedProjectData, setSelectedProjectData] = useState(null);
+
+  const handleProjectClick = (project) => {
+    setSelectedProjectData(project);
+    setIsLaptopOpen(true);
+    setTimeout(() => {
+      setSelectedProject(project);
+    }, 5000); // Set to 5000ms (5 seconds) to match the progress bar
+  };
+
+  const handleClose = () => {
+    setIsLaptopOpen(false);
+    setTimeout(() => {
+      setSelectedProjectData(null);
+    }, 500);
+  };
+
   return (
     <div className="project-main-div">
-      {/* header */}
       <div className="project-main-head">
         <div className="project-head-content">
           <div className="project-page-head">
@@ -30,59 +49,57 @@ export const ProjectPage = ({ setSelectedProject }) => {
         </div>
       </div>
 
-      {/* project cards */}
-      {/* <div className="project-cards-main">
-        <div className="project-page">
-          {projectsData.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-card-img">
-                <h3>{project.title}</h3>
+      <div className="project-grid">
+        {projectsData.map((project, index) => (
+          <div key={index} className="project-item">
+            <div className="project-content-wrapper">
+              <div className="project-header">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-subtitle">{project.subtitle}</p>
               </div>
-              <div className="project-content">
-                <div className="tech-stack">
-                  <p>TechStack Used</p>
-                  <p>{project.techStack.join(" | ")}</p>
-                </div>
-                <div>
-                  <button onClick={() => setSelectedProject(project)}>
-                    View
-                  </button>
+              <div className="tech-stack-wrapper">
+                <div className="tech-stack-title">Technologies</div>
+                <div className="project-tech">
+                  {project.techStack.map((tech, i) => (
+                    <span key={i} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div> */}
-
-      <div className="project-cards-main">
-        <div className="project-page">
-          {projectsData.map((project, index) => (
-            <div
-              key={index}
-              className={`hero ${index % 2 === 0 ? "first" : "first"}`}
+            <button
+              className="view-btn"
+              onClick={() => handleProjectClick(project)}
             >
-              <div className="hero-title">
-                <p>{project.title}</p>
-              </div>
-              
+              View Project <ArrowRight size={16} />
+            </button>
+          </div>
+        ))}
+      </div>
 
-              <div className="hero-description-bk"></div>
-              <div className="hero-logo">
-                <Folder color="white" />
-              </div>
-              <div className="hero-description"></div>
-              <div className="hero-date">
-                <p>{project.date}</p>
-              </div>
-              <div className="hero-btn">
-                <a href="#" onClick={() => setSelectedProject(project)}>
-                  View
-                </a>
+      <MacBook isOpen={isLaptopOpen} onClose={handleClose}>
+        {selectedProjectData && (
+          <div className="project-details">
+            <h2>{selectedProjectData.title}</h2>
+            <div className="project-info">
+              <p>{selectedProjectData.description}</p>
+              <div className="project-links">
+                {selectedProjectData.liveLink && (
+                  <a href={selectedProjectData.liveLink} target="_blank" rel="noopener noreferrer">
+                    View Live
+                  </a>
+                )}
+                {selectedProjectData.githubLink && (
+                  <a href={selectedProjectData.githubLink} target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                )}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        )}
+      </MacBook>
     </div>
   );
 };

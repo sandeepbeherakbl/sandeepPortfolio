@@ -12,7 +12,8 @@
       "User-friendly design for easy scheduling and organization.",
       "Promotes collaboration, productivity, and accessibility on various devices.",
       "Simplifies daily routines for professionals and group coordinators."
-    ]
+    ],
+    "shortDescription": "Brief compelling description of your project"
   },
   {
     "title": "Whiteboard Application",
@@ -26,7 +27,8 @@
       "Versatile Use Cases: Suitable for a range of applications.",
       "Continuous Updates: Regular enhancements and reliability through the CICD pipeline.",
       "User-Friendly: Provides a secure platform for interactive visual communication and idea-sharing."
-    ]
+    ],
+    "shortDescription": "Brief compelling description of your project"
   },
   {
     "title": "GDC Mapbox",
@@ -41,7 +43,8 @@
       "Empowers administrators with invaluable tools for strategic project management and decision-making.",
       "Maintains application reliability and ensures regular enhancements through a CICD pipeline.",
       "Provides a powerful resource for overseeing and managing projects on a global scale."
-    ]
+    ],
+    "shortDescription": "Brief compelling description of your project"
   },
   {
     "title": "Office Management System",
@@ -54,7 +57,8 @@
       "Utilized graphical data representation to visually present key insights and analytics, enhancing decision-making processes and providing stakeholders with clear insights into organizational performance.",
       "Created a user-friendly interface with features such as note addition, company updates display, and employee milestone tracking (birthdays, anniversaries), fostering a dynamic and engaging workplace culture while promoting efficient communication and engagement.",
       "Enabled transition towards a paperless office environment by centralizing operations and streamlining processes, offering a scalable solution that optimizes workflow efficiency and productivity."
-    ]
+    ],
+    "shortDescription": "Brief compelling description of your project"
   },
   {
     "title": "Blood Donation App",
@@ -68,6 +72,7 @@
       "Ensured the app supported multiple languages.",
       "Conducted unit testing using Jest and Enzyme.",
       "Emphasized collaborative teamwork to deliver a user-friendly and accessible application."
-    ]
+    ],
+    "shortDescription": "Brief compelling description of your project"
   }
 ]
