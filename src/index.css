@@ -1,0 +1,36 @@
+* {
+  cursor: none !important;
+}
+
+body {
+  cursor: none !important;
+}
+
+/* Override any potential cursor styles */
+a, 
+button, 
+[role="button"], 
+input[type="submit"], 
+.clickable,
+input,
+textarea,
+select,
+label,
+[onclick],
+[role="link"] {
+  cursor: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Disable cursor for iframes and embeds */
+iframe, embed {
+  pointer-events: none;
+}
+
+/* Ensure text selection still works */
+::selection {
+  background: rgba(120, 63, 239, 0.2);
+  color: inherit;
+}
+
+/* ...existing styles... */

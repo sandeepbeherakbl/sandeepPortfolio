@@ -1,0 +1,34 @@
+.custom-cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  background: rgba(120, 63, 239, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s ease,
+              transform 0.1s ease;
+  z-index: 9999;
+  will-change: transform, width, height;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.custom-cursor.clickable {
+  width: 30px;
+  height: 30px;
+  background: rgba(120, 63, 239, 0.3);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(120, 63, 239, 0.5);
+  animation: scaleAnimation 1s infinite;
+}
+
+@keyframes scaleAnimation {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
