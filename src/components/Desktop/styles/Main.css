@@ -445,48 +445,97 @@ link {
   width: 96%;
   margin-left: 2%;
   height: calc(100vh - 65vh);
-  background-color: #2e323a;
+  background: rgba(46, 50, 58, 0.95);
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   position: relative;
+  border: 1px solid rgba(120, 63, 239, 0.1);
 }
 
-.intro-main-div::after {
-  content: "ABOUT";
-  position: absolute;
-  right: 40%;
-  bottom: 40%;
-  transform: translate(50%, 50%);
-  font-size: 200px;
-  opacity: 0.05;
-  -webkit-text-stroke: 1px white;
-  font-weight: bold;
+.intro-content-wrapper {
+  position: relative;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro-heading {
-  padding: 20px 20px;
+  margin-bottom: 15px;
 }
 
-.intro-heading p {
+.digital-text {
+  font-size: 1.8rem;
   margin: 0;
+  background: linear-gradient(45deg, #fff, #783fef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
-.intro-heading p:nth-child(1) {
-  font-size: 22px;
+.subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0;
 }
-.intro-heading p:nth-child(2) {
-  font-size: 16px;
-  font-style: italic;
+
+.experience-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: rgba(120, 63, 239, 0.1);
+  border: 1px solid rgba(120, 63, 239, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #783fef;
 }
 
 .intro-content {
-  padding: 20px;
+  position: relative;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .intro-content p {
   margin: 0;
-  font-size: 18px;
-  text-wrap: stable;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
 }
+
+/* Remove all animation related styles */
+
+@keyframes moveGlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(50px, 25px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(100px, 50px) scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Remove the existing ABOUT pseudo-element */
+.intro-main-div::after {
+  display: none;
+}
+
+/* ... rest of existing styles ... */
 
 /* ***************** */
 /* resume popup */
