@@ -175,7 +175,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 500;
-  z-index: 2; /* Increased z-index */
+  /* z-index: ;  */
 }
 
 .category-badge::before {
