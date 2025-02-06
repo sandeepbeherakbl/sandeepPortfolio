@@ -10,6 +10,8 @@ import {
   Mail,
 } from "lucide-react";
 import Bbsr from "../../../assets/dhauli.svg";
+import emailjs from "@emailjs/browser";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactPopup = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,9 @@ const ContactPopup = ({ onClose }) => {
   });
 
   const [isVisible, setIsVisible] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -51,6 +56,52 @@ const ContactPopup = ({ onClose }) => {
   //   handleClose();
   // };
 
+  const SERVICE_ID = "service_vbai69q";
+  const TEMPLATE_ID = "template_nc5wpdx";
+  const THANK_YOU_TEMPLATE_ID = "template_7eopaqr";
+  const PUBLIC_KEY = "xOb1kL7ya4qPOFlyg";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(false);
+    setShowSuccess(false);
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "sandeepbeherakbl@gmail.com",
+        },
+        PUBLIC_KEY
+      );
+
+      await emailjs.send(
+        SERVICE_ID,
+        THANK_YOU_TEMPLATE_ID,
+        {
+          to_name: formData.name,
+          to_email: formData.email,
+        },
+        PUBLIC_KEY
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+      setShowSuccess(true);
+      setTimeout(() => {
+        handleClose();
+      }, 3000);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleClose = () => {
     setIsVisible(false);
     setTimeout(() => onClose(), 300);
@@ -73,7 +124,7 @@ const ContactPopup = ({ onClose }) => {
                 </p> */}
               </div>
 
-              <button className="close-btn" onClick={handleClose}>
+              <button className="con-close-btn" onClick={handleClose}>
                 <CircleX color="#783FEF" />
               </button>
             </div>
@@ -181,9 +232,12 @@ const ContactPopup = ({ onClose }) => {
                 </div>
               </div>
               <div className="form-div">
-               
-                <form style={{ width: "450px" }} onSubmit={""}>
-                   <p>Contact Me</p>
+                <form style={{ width: "450px" }} onSubmit={handleSubmit}>
+                  <h3>Contact Me</h3>
+                  <h1>
+                    Curious about my work or interested in a collaboration? Get
+                    in touch – I&apos; d love to hear from you!
+                  </h1>
                   <label>Name</label>
                   <input
                     type="text"
@@ -213,8 +267,20 @@ const ContactPopup = ({ onClose }) => {
                     required
                   ></textarea>
                   <div className="button-div">
-                    <button type="submit">SEND</button>
+                    <button type="submit" disabled={isLoading}>
+                      {isLoading ? "Sending..." : "SEND"}
+                    </button>
                   </div>
+                  {showSuccess && (
+                    <p className="success-message">
+                      Message sent successfully!
+                    </p>
+                  )}
+                  {error && (
+                    <p className="error-message">
+                      Failed to send email. Please try again.
+                    </p>
+                  )}
                 </form>
               </div>
             </div>

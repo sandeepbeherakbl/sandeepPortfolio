@@ -16,10 +16,8 @@ function App() {
     setIsLoading(false);
   };
 
-  // Ensure all assets are loaded before hiding splash screen
   useEffect(() => {
     window.onload = () => {
-      // Add any additional loading logic here if needed
     };
   }, []);
 
