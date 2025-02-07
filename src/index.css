@@ -3,7 +3,7 @@
 }
 
 body {
-  /* cursor: none !important; */
+  cursor: auto ;
 }
 
 /* Override any potential cursor styles */
@@ -18,7 +18,7 @@ select,
 label,
 [onclick],
 [role="link"] {
-  cursor: none !important;
+  /* cursor: none !important; */
   -webkit-tap-highlight-color: transparent;
 }
 

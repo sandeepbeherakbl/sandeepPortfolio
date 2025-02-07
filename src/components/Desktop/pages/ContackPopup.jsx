@@ -125,7 +125,7 @@ const ContactPopup = ({ onClose }) => {
               </div>
 
               <button className="con-close-btn" onClick={handleClose}>
-                <CircleX color="#783FEF" />
+                <CircleX color="red" />
               </button>
             </div>
 

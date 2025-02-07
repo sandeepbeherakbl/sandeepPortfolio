@@ -96,13 +96,6 @@ export const Dashboard = () => {
           >
             <h2 className="digital-text">My Digital Journey</h2>
             <p className="subtitle">Empowering Innovation as a JavaScript Developer</p>
-            <motion.div 
-              className="experience-badge"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              {yearsOfExperience} Years of Expertise
-            </motion.div>
           </motion.div>
 
           <motion.div 
