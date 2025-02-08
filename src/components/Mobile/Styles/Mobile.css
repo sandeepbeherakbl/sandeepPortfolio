@@ -52,7 +52,7 @@
   padding: 5px;
 }
 
-.mob-resume-download  {
+.mob-resume-download {
   margin: 0;
   display: flex;
   align-items: center;
@@ -70,7 +70,7 @@
   gap: 5px;
 }
 
-.mob-resume-download p{
+.mob-resume-download p {
   margin: 0;
 }
 
@@ -135,13 +135,19 @@
 .mob-about-img-div h1 {
   width: 70%;
   font-size: 16px;
+  text-align: end;
 }
 
 .mob-about-sub-div {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 10px;
+}
+
+.mob-home-main-container{
+  width: 100%;
 }
 
 .mob-typewritter {
@@ -175,10 +181,10 @@
 
 @keyframes pulse-animation {
   0% {
-      box-shadow: 0 0 0 0px rgba(0, 249, 30, 0.5);
+    box-shadow: 0 0 0 0px rgba(0, 249, 30, 0.5);
   }
   100% {
-      box-shadow: 0 0 0 10px rgba(249, 179, 0, 0);
+    box-shadow: 0 0 0 10px rgba(249, 179, 0, 0);
   }
 }
 
@@ -276,11 +282,42 @@
 .mob-intro-content p {
   font-size: 12px;
   font-weight: 200;
+  text-align: justify;
 }
 
 /* ****************** */
 /* Contact */
 /* ****************** */
+
+.phn-cnt-form {
+  padding: 10px 10px 10px 0px;
+}
+
+.phn-cnt-form input {
+  background-color: #2d3139;
+  border: none;
+  outline: none;
+}
+
+.phn-cnt-form textarea {
+  background-color: #2d3139;
+  border: none;
+  outline: none;
+  height: 100px;
+}
+
+.phn-button-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.phn-button-div button {
+  width: 50%;
+  background: #783fef;
+  padding: 5px;
+  font-size: 14px;
+}
 
 .mob-contact-sub-div {
   padding: 10px;
@@ -364,12 +401,12 @@
   font-size: 12px;
 }
 
-.mob-contact-content p:last-child{
+.mob-contact-content p:last-child {
   font-size: 14px;
   font-weight: 200;
 }
 
-.mob-contact-content a{
+.mob-contact-content a {
   margin: 0;
   font-weight: 200;
   text-decoration: none;
@@ -478,7 +515,8 @@
     ),
     url(../../../assets/projectTitle.png);
   background-size: cover;
-  background-position: 0% 50%;}
+  background-position: 0% 50%;
+}
 
 .mob-project-page-head {
   display: flex;
@@ -505,7 +543,11 @@
 
 .mob-project-card {
   position: relative;
-  background: linear-gradient(145deg, rgba(46, 50, 58, 0.95), rgba(28, 30, 35, 0.95));
+  background: linear-gradient(
+    145deg,
+    rgba(46, 50, 58, 0.95),
+    rgba(28, 30, 35, 0.95)
+  );
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -659,7 +701,7 @@
 /* ****************** */
 
 .blur-background::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;
@@ -670,7 +712,7 @@
   z-index: 999; /* Make sure it's below the modal's z-index */
 }
 
-.container-height{
+.container-height {
   position: relative;
 }
 
@@ -717,9 +759,9 @@
   font-size: 12px;
 }
 
-.mob-project-body-container{
+.mob-project-body-container {
   height: 50vh;
-  overflow-y:scroll ;
+  overflow-y: scroll;
   margin-top: 20px;
 }
 .mob-project-sub {
@@ -755,10 +797,10 @@
   border-radius: 8px;
 }
 
-.mob-project-about p{
+.mob-project-about p {
   font-size: 12px;
 }
-.mob-project-about button{
+.mob-project-about button {
   margin-bottom: 10px;
   background-color: transparent;
   border: none;
@@ -775,7 +817,6 @@
   border: none;
   color: #007bff; /* button color */
   cursor: pointer;
-  
 }
 
 .mob-project-about h4 {
@@ -808,13 +849,13 @@
   font-weight: 300;
 }
 
-.mob-project-features{
+.mob-project-features {
   background-color: #2a2d34;
   border-radius: 8px;
   padding: 10px;
 }
 
-.mob-project-features p{
+.mob-project-features p {
   margin: 0;
   padding: 5px 0;
   font-size: 14px;
@@ -850,7 +891,7 @@
 /* PDF Viewer */
 /* ****************** */
 
-.pdf-viewer-container{
+.pdf-viewer-container {
   padding: 20px 10px;
 }
 
@@ -883,7 +924,7 @@
 } */
 
 .pdf-viewer-container {
-  margin: auto; 
+  margin: auto;
 }
 
 .pdf-document {

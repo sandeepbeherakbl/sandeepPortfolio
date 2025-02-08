@@ -84,7 +84,7 @@ const MacBook = ({ isOpen, onClose, children }) => {
                     </div>
                     <div className="project-title-wrapper">
                       {children}
-                      <div className="loading-container">
+                      <div className="loading-container-pro">
                         <div className="loading-bar">
                           <motion.div
                             className="loading-progress"

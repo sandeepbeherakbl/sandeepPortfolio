@@ -6,8 +6,65 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const SERVICE_ID = "service_vbai69q";
+  const TEMPLATE_ID = "template_nc5wpdx";
+  const THANK_YOU_TEMPLATE_ID = "template_7eopaqr";
+  const PUBLIC_KEY = "xOb1kL7ya4qPOFlyg";
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(false);
+    setShowSuccess(false);
+
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "sandeepbeherakbl@gmail.com",
+        },
+        PUBLIC_KEY
+      );
+
+      await emailjs.send(
+        SERVICE_ID,
+        THANK_YOU_TEMPLATE_ID,
+        {
+          to_name: formData.name,
+          to_email: formData.email,
+        },
+        PUBLIC_KEY
+      );
+
+      setFormData({ name: "", email: "", message: "" });
+      setShowSuccess(true);
+    } catch (error) {
+      setError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <>
       <div className="mob-body-container-height">
@@ -24,7 +81,7 @@ export const Contact = () => {
           <div className="mob-contact-email-body">
             {/* <p>email</p> */}
             <div>
-              <div className="mob-contact-main-div">
+              {/* <div className="mob-contact-main-div">
                 <div className="mob-contact-img">
                   <Phone width={20} />
                 </div>
@@ -44,14 +101,59 @@ export const Contact = () => {
                     sandeepbeherakbl@gmail.com
                   </a>
                 </div>
-              </div>
+              </div> */}
+              
             </div>
+            <form className="phn-cnt-form" onSubmit={handleSubmit}>
+                <label>Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+
+                <label>Enter Your Message</label>
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+
+                <div className="phn-button-div">
+                  <button type="submit" disabled={isLoading}>
+                    {isLoading ? "Sending..." : "SEND"}
+                  </button>
+                </div>
+                {showSuccess && (
+                  <p className="success-message">Message sent successfully!</p>
+                )}
+                {error && (
+                  <p className="error-message">
+                    Failed to send email. Please try again.
+                  </p>
+                )}
+              </form>
           </div>
         </div>
 
         <div className="mob-contact-email">
           <div className="mob-contact-email-body">
-            {/* <p>email</p> */}
+            {/* <p>git hub</p> */}
             <div>
               <div className="mob-contact-main-div" style={{ margin: 0 }}>
                 <div className="mob-contact-img">

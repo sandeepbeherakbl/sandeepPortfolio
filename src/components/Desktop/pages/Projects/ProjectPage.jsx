@@ -5,17 +5,21 @@ import PropTypes from "prop-types";
 import Typewriter from "typewriter-effect";
 import { useState } from "react";
 import MacBook from "./MacBook";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectPage = ({ setSelectedProject }) => {
   const [isLaptopOpen, setIsLaptopOpen] = useState(false);
   const [selectedProjectData, setSelectedProjectData] = useState(null);
+  const navigate = useNavigate();
 
   const handleProjectClick = (project) => {
+    console.log({project})
     setSelectedProjectData(project);
     setIsLaptopOpen(true);
     setTimeout(() => {
       setSelectedProject(project);
-    }, 5000); // Set to 5000ms (5 seconds) to match the progress bar
+      navigate(`/${project.title}`);
+    }, 5000);
   };
 
   const handleClose = () => {
@@ -86,12 +90,20 @@ export const ProjectPage = ({ setSelectedProject }) => {
               <p>{selectedProjectData.description}</p>
               <div className="project-links">
                 {selectedProjectData.liveLink && (
-                  <a href={selectedProjectData.liveLink} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={selectedProjectData.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     View Live
                   </a>
                 )}
                 {selectedProjectData.githubLink && (
-                  <a href={selectedProjectData.githubLink} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={selectedProjectData.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     GitHub
                   </a>
                 )}

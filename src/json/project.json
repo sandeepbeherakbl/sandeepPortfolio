@@ -74,5 +74,33 @@
       "Emphasized collaborative teamwork to deliver a user-friendly and accessible application."
     ],
     "shortDescription": "Brief compelling description of your project"
+  },
+  {
+    "title": "Vendor Management System",
+    "techStack": ["React", "NPM", "REST API"],
+    "subtitle": "A vendor management system designed for hotels to manage furniture purchase orders efficiently.",
+    "about": "The Vendor Management System is an application built to streamline the process of furniture procurement for hotels. Using React, NPM, and REST APIs, the platform allows hotels to create purchase orders (POs) and send them to multiple vendors. Vendors then respond with their best offers, and hotels can finalize purchases based on cost and availability. This ensures an optimized and transparent procurement process. The system supports multiple hotels under the same platform, providing a centralized solution for managing furniture procurement. Admins have access to a dashboard where they can oversee projects, track purchase orders, and manage vendor relationships efficiently.",
+    "details": [
+      "Developed a purchase order PDF generation feature using the ReactPDF NPM package.",
+      "Integrated APIs for vendor listing and product listing.",
+      "Built an admin dashboard for project and task management.",
+      "Facilitates procurement by allowing hotels to compare vendor offers and make informed purchasing decisions.",
+      "Streamlined communication between hotels and vendors for enhanced efficiency."
+    ],
+    "shortDescription": "A vendor management system helping hotels manage furniture procurement seamlessly."
+  },
+  {
+    "title": "Garage Application",
+    "techStack": ["React", "Tailwind", "NPM", "REST API"],
+    "subtitle": "A digital garage management application for vehicle inspection, repair tracking, and customer notifications.",
+    "about": "The Garage Application is a complete solution for managing vehicle repair processes in an organized and efficient manner. Built using React, Tailwind, NPM, and REST APIs, the application allows garages to register incoming vehicles, assign mechanics to specific tasks, and track repair progress. Once a car is inspected, the admin registers it in the system and assigns a mechanic, who can then view task details on their dashboard. Upon completion of repairs, the mechanic updates the status to 'Done,' notifying the admin. The admin then informs the customer via message or email that their car is ready for pickup. This system enhances efficiency, improves communication, and provides a streamlined workflow for garage operations.",
+    "details": [
+      "Designed and developed a fully responsive UI based on Figma design.",
+      "Integrated authentication APIs and listing APIs for seamless data management.",
+      "Created an intuitive dashboard for mechanics to track assigned vehicles and repairs.",
+      "Implemented an admin interface for registering, assigning, and tracking vehicle repairs.",
+      "Automated customer notifications via SMS or email when the vehicle is ready for pickup."
+    ],
+    "shortDescription": "A garage management system streamlining vehicle inspection and repair tracking."
   }
 ]

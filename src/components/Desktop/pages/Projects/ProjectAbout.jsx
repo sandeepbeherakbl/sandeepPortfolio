@@ -1,15 +1,20 @@
 import { CircleArrowLeft, Info, Code, Layers } from "lucide-react";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 export const ProjectDetails = ({ project, setSelectedProject }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="project-details-main">
       {/* head */}
       <div className="project-details-head">
         <button
           className="back-button"
-          onClick={() => setSelectedProject(null)}
+          onClick={() => {
+            navigate(`/projects`);
+          }}
         >
           <CircleArrowLeft width={30} height={30} />
         </button>
@@ -34,7 +39,7 @@ export const ProjectDetails = ({ project, setSelectedProject }) => {
               </div>
             </div>
           </div>
-          
+
           {/* Tech Stack Section */}
           <div className="project-body-tech">
             <div className="tech-container">

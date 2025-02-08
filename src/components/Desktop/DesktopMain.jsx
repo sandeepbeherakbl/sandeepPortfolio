@@ -9,7 +9,7 @@ import { useState, Suspense } from "react";
 
 export const DesktopMain = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  
+
   const LoadingSpinner = () => (
     <div className="loading-spinner">
       <div className="spinner"></div>
@@ -28,6 +28,20 @@ export const DesktopMain = () => {
             <Route path="/experience" element={<Experience />} />
             <Route
               path="/projects"
+              element={<ProjectPage setSelectedProject={setSelectedProject} />}
+            />
+            <Route
+              path="/:selectedProject"
+              element={
+                <ProjectDetails
+                  project={selectedProject}
+                  setSelectedProject={setSelectedProject}
+                />
+              }
+            />
+
+            {/* <Route
+              path="/projects"
               element={
                 selectedProject ? (
                   <ProjectDetails
@@ -38,7 +52,7 @@ export const DesktopMain = () => {
                   <ProjectPage setSelectedProject={setSelectedProject} />
                 )
               }
-            />
+            /> */}
           </Routes>
         </Suspense>
       </div>
