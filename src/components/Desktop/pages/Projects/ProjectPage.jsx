@@ -1,4 +1,4 @@
-import { File, ArrowRight } from "lucide-react";
+import { File, ArrowRight, FileCode } from "lucide-react";
 import projectsData from "../../../../json/project.json";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
@@ -13,7 +13,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
   const navigate = useNavigate();
 
   const handleProjectClick = (project) => {
-    console.log({project})
+    // console.log({project})
     setSelectedProjectData(project);
     setIsLaptopOpen(true);
     setTimeout(() => {
@@ -58,7 +58,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
           <div key={index} className="project-item">
             <div className="project-content-wrapper">
               <div className="project-header">
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project-title"> <span><FileCode color="#783fef"/> </span> {project.title}</h3>
                 <p className="project-subtitle">{project.subtitle}</p>
               </div>
               <div className="tech-stack-wrapper">
@@ -76,7 +76,9 @@ export const ProjectPage = ({ setSelectedProject }) => {
               className="view-btn"
               onClick={() => handleProjectClick(project)}
             >
-              View Project <ArrowRight size={16} />
+              View Project 
+              {/* <ArrowRight size={16} /> */}
+              <span className="arrow">→</span>
             </button>
           </div>
         ))}

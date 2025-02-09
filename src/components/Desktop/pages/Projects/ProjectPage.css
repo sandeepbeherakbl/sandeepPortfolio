@@ -337,7 +337,11 @@
 .tech-p {
   margin: 0;
   padding: 0.6rem 1.2rem;
-  background: linear-gradient(135deg, rgba(120, 63, 239, 0.1), rgba(120, 63, 239, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(120, 63, 239, 0.1),
+    rgba(120, 63, 239, 0.2)
+  );
   border: 1px solid rgba(120, 63, 239, 0.2);
   border-radius: 12px;
   font-size: 0.9rem;
@@ -346,7 +350,11 @@
 
 .tech-p:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, rgba(120, 63, 239, 0.2), rgba(120, 63, 239, 0.3));
+  background: linear-gradient(
+    135deg,
+    rgba(120, 63, 239, 0.2),
+    rgba(120, 63, 239, 0.3)
+  );
   border-color: rgba(120, 63, 239, 0.4);
 }
 
@@ -521,7 +529,7 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
   padding: 0 1.5rem;
   height: calc(100vh - 40vh);
@@ -553,7 +561,10 @@
 }
 
 .project-title {
-  font-size: 1.25rem; /* Smaller title */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
   background: linear-gradient(45deg, #fff, #b997ff);
@@ -602,7 +613,7 @@
 }
 
 .view-btn {
-  margin-top: 0.5rem; 
+  margin-top: 0.5rem;
   align-self: flex-end;
   background: linear-gradient(90deg, #783fef, #b18bff);
   color: #fff;
@@ -615,6 +626,23 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+
+.view-btn .arrow {
+  display: inline-block;
+  animation: arrowMove 1s infinite linear;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Hover Effects */
