@@ -1,4 +1,3 @@
-// src/hooks/useViewportHeight.js
 import { useEffect } from 'react';
 
 const setVhProperty = () => {

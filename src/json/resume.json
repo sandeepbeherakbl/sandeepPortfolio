@@ -1,0 +1,99 @@
+{
+    "name": "Sandeep Kumar Behera",
+    "contact": {
+      "location": "Bhubaneswar, India",
+      "email": "sandeepbeherakbl@gmail.com"
+    },
+    "profile": "Dedicated and skilled Frontend Engineer with 2.8 years of experience in ReactJS and modern web technologies. Proficient in designing scalable, efficient, and modular user interfaces for web and mobile platforms. Adept at collaborating with cross-functional teams to deliver user-centric products. Passionate about creating seamless user experiences and solving complex challenges with innovative solutions.",
+    "education": [
+      {
+        "institution": "Indira Gandhi Institute of Technology, Sarang",
+        "year": "2021",
+        "degree": "B-tech in Metallurgical and Materials Engineering",
+        "grade": "8.02 CGPA"
+      }
+    ],
+    "skills": {
+      "languages": ["JavaScript (ES6)", "HTML5", "CSS3/Sass"],
+      "frameworks": ["ReactJS", "Redux", "Next.js", "React Native", "AngularJS"],
+      "tools": ["AWS", "REST APIs", "NPM", "GIT", "CI/CD pipelines"],
+      "uiLibraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"],
+      "methodologies": ["Agile Development", "TDD", "UX Collaboration"],
+      "softSkills": [
+        "Excellent communication",
+        "Self-direction",
+        "Adaptability to dynamic environments"
+      ]
+    },
+    "workExperience": [
+      {
+        "title": "Associate Consultant",
+        "company": "Invincix Solution Private Limited",
+        "duration": "2022 – present",
+        "location": "Bhubaneswar, India",
+        "responsibilities": [
+          "Developed high-performance web applications using ReactJS, adhering to modular and scalable architecture principles.",
+          "Led the creation of user-friendly interfaces for carrier and business-focused portals, enhancing usability and engagement.",
+          "Collaborated with cross-functional teams to integrate systems and streamline workflows, ensuring reliable and seamless project execution.",
+          "Implemented CI/CD pipelines, ensuring efficient delivery cycles and optimizing application performance.",
+          "Conducted code reviews and enforced coding standards to maintain high-quality deliverables.",
+          "Developed dynamic, real-time features using AWS-based services to handle data-intensive applications.",
+          "Built responsive, cross-browser compliant designs, integrating with UX and design teams for consistent user experiences."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Scheduler Application",
+        "stack": ["React", "CSS", "NPM", "API integration"],
+        "description": [
+          "Developed a scheduling application with Month, Day, and Week views.",
+          "Features include recurring events, daily agendas, and notifications for streamlined meeting management.",
+          "Promotes collaboration and accessibility across various devices."
+        ]
+      },
+      {
+        "name": "Whiteboard Application",
+        "stack": ["React", "CSS", "NPM", "API integration", "CICD pipeline"],
+        "description": [
+          "Created a dynamic whiteboard for real-time collaboration, supporting drawing, typing, and sticky notes.",
+          "Ideal for remote teams and virtual classrooms, with continuous updates for reliability.",
+          "Enhances interactive visual communication."
+        ]
+      },
+      {
+        "name": "GDC Mapbox",
+        "stack": ["React", "CSS", "NPM", "API integration with Mapbox"],
+        "description": [
+          "Developed an interactive map showcasing global projects with real-time status monitoring.",
+          "Provides detailed data visualization and intuitive navigation for strategic project management.",
+          "Ensures regular enhancements through a CICD pipeline."
+        ]
+      },
+      {
+        "name": "Office Management System",
+        "stack": ["Next JS", "CSS", "Tailwind", "NPM", "API integration"],
+        "description": [
+          "Developed an office management system with role-based access control and graphical data representation.",
+          "Features include note addition and milestone tracking, promoting efficient communication and collaboration.",
+          "Supports a paperless office environment."
+        ]
+      },
+      {
+        "name": "Blood Donation App",
+        "stack": ["React Native", "SASS", "NPM", "API integration"],
+        "description": [
+          "Built a blood donation app for requesting and donating blood, connecting donors within a 20 km range.",
+          "Features multi-language support and seamless login authentication.",
+          "Emphasizes user-friendliness and accessibility, with unit testing for reliability."
+        ]
+      }
+    ],
+    "personalQualities": [
+      "Strong problem-solving skills",
+      "Excellent communication and teamwork abilities",
+      "Adaptability to fast-paced development environments",
+      "Detail-oriented with a focus on delivering high-quality code",
+      "Passion for continuous learning and self-improvement"
+    ]
+  }

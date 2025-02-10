@@ -1,349 +1,405 @@
 import { usePDF } from "react-to-pdf";
+import { useEffect, useRef, useState } from "react";
+import resumeData from "../../../json/resume.json"; // Import the JSON data
 
 export const DesktopPDFViewer = () => {
   const { toPDF, targetRef } = usePDF({
     filename: "cv.pdf",
   });
 
+  const [visibleSections, setVisibleSections] = useState({});
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+  const sectionRefs = useRef([]);
+
+  // Fade-in animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => ({
+              ...prev,
+              [entry.target.id]: true,
+            }));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Carousel navigation
+  const handleNextProject = () => {
+    setCurrentProjectIndex((prev) =>
+      prev === resumeData.projects.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const handlePrevProject = () => {
+    setCurrentProjectIndex((prev) =>
+      prev === 0 ? resumeData.projects.length - 1 : prev - 1
+    );
+  };
+
   const styles = {
     container: {
-      maxWidth: "800px",
+      maxWidth: "1200px",
       margin: "0 auto",
-      padding: "20px",
-      fontFamily: "Arial, sans-serif",
-      borderRadius: "10px",
-      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      padding: "40px",
+      fontFamily: "'Roboto', sans-serif",
+      background: "linear-gradient(145deg, #1e1e2f, #2a2a40)",
+      color: "#fff",
+      borderRadius: "15px",
+      boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+      height: "80%",
+      overflowY:"scroll",
     },
     header: {
       textAlign: "center",
-      marginBottom: "20px",
+      marginBottom: "40px",
+      padding: "20px",
+      background: "rgba(255, 255, 255, 0.05)",
+      borderRadius: "10px",
+      border: "1px solid rgba(255, 255, 255, 0.1)",
     },
     name: {
+      fontSize: "48px",
+      fontWeight: "bold",
+      color: "#783fef",
+      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+    },
+    contact: {
+      fontSize: "18px",
+      marginTop: "10px",
+      color: "#ccc",
+    },
+    sectionTitle: {
       fontSize: "32px",
       fontWeight: "bold",
       color: "#783fef",
+      borderBottom: "2px solid #783fef",
+      paddingBottom: "10px",
+      marginBottom: "20px",
+      textShadow: "1px 1px 2px rgba(0, 0, 0, 0.2)",
     },
-    contact: {
-      fontSize: "14px",
-      //   color: "#555",
-      marginTop: "5px",
+    section: {
+      opacity: 0,
+      transform: "translateY(20px)",
+      transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
     },
-    sectionTitle: {
-      fontSize: "24px",
-      fontWeight: "bold",
-      color: "#783fef",
-      borderBottom: "1px solid #783fef",
-      paddingBottom: "5px",
-      marginBottom: "15px",
+    visible: {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
+    card: {
+      background: "rgba(255, 255, 255, 0.05)",
+      padding: "20px",
+      borderRadius: "10px",
+      border: "1px solid rgba(255, 255, 255, 0.1)",
+      marginBottom: "20px",
     },
     table: {
       width: "100%",
       borderCollapse: "collapse",
       marginBottom: "20px",
     },
-    tableRow: {
-      //   borderBottom: "1px solid #ddd",
-    },
     tableCell: {
       padding: "10px",
       textAlign: "left",
+      color: "#ccc",
     },
     list: {
       listStyleType: "disc",
       paddingLeft: "20px",
-      marginBottom: "15px",
     },
     listItem: {
-      marginBottom: "5px",
+      marginBottom: "10px",
+      color: "#ccc",
     },
     button: {
-      backgroundColor: "#3498db",
+      background: "#783fef",
       color: "#fff",
       padding: "10px 20px",
       border: "none",
       borderRadius: "5px",
       cursor: "pointer",
       fontSize: "16px",
-      marginBottom: "20px",
-      textAlign: "center",
+      transition: "background 0.3s ease",
     },
     buttonHover: {
-      backgroundColor: "#2980b9",
+      background: "#5a2dbf",
     },
-    downloadbtn:{
-        width:"100%",
-    }
+    carousel: {
+      position: "relative",
+      overflow: "hidden",
+      borderRadius: "10px",
+      border: "1px solid rgba(255, 255, 255, 0.1)",
+    },
+    carouselContent: {
+      display: "flex",
+      transition: "transform 0.5s ease-in-out",
+    },
+    carouselItem: {
+      minWidth: "100%",
+      boxSizing: "border-box",
+      padding: "20px",
+      background: "rgba(255, 255, 255, 0.05)",
+    },
+    carouselNav: {
+      position: "absolute",
+      bottom: "5px",
+      background: "rgba(227, 227, 227, 0.17)",
+      border: "1px solid white",
+      color: "#fff",
+    //   border: "none",
+      padding: " 5px 10px",
+      cursor: "pointer",
+      fontSize: "14px",
+      transition: "background 0.3s ease",
+      borderRadius:'25px',
+    },
+    carouselNavHover: {
+      background: "rgba(0, 0, 0, 0.8)",
+    },
   };
 
   return (
-    <>
-      <div style={styles.container}>
-        <div ref={targetRef}>
-          {/* Header Section */}
-          <div style={styles.header}>
-            <h1 style={styles.name}>Sandeep Kumar Behera</h1>
-            <p style={styles.contact}>Bhubaneswar, India</p>
-            <p style={styles.contact}>
-              sandeepbeherakbl@gmail.com | 9556230850 | sandeepbeherakbl
-            </p>
-          </div>
+    <div style={styles.container}>
+      <div ref={targetRef}>
+        {/* Header Section */}
+        <div
+          id="header"
+          ref={(el) => (sectionRefs.current[0] = el)}
+          style={{
+            ...styles.header,
+            ...styles.section,
+            ...(visibleSections.header && styles.visible),
+          }}
+        >
+          <h1 style={styles.name}>{resumeData.name}</h1>
+          <p style={styles.contact}>{resumeData.contact.location}</p>
+          <p style={styles.contact}>
+            {resumeData.contact.email} 
+          </p>
+        </div>
 
-          {/* Profile Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>PROFILE</h2>
-            <p>
-              Dedicated and skilled Frontend Engineer with{" "}
-              <strong>2.8 years</strong> of experience in ReactJS and modern web
-              technologies. Proficient in designing scalable, efficient, and
-              modular user interfaces for web and mobile platforms. Adept at
-              collaborating with cross-functional teams to deliver user-centric
-              products. Passionate about creating seamless user experiences and
-              solving complex challenges with innovative solutions.
-            </p>
+        {/* Profile Section */}
+        <div
+          id="profile"
+          ref={(el) => (sectionRefs.current[1] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.profile && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>PROFILE</h2>
+          <div style={styles.card}>
+            <p>{resumeData.profile}</p>
           </div>
+        </div>
 
-          {/* Education Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>EDUCATION</h2>
+        {/* Education Section */}
+        <div
+          id="education"
+          ref={(el) => (sectionRefs.current[2] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.education && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>EDUCATION</h2>
+          <div style={styles.card}>
             <table style={styles.table}>
-              <tr style={styles.tableRow}>
-                <td style={styles.tableCell}>
-                  Indira Gandhi Institute of Technology, Sarang
-                </td>
-                <td style={styles.tableCell}>2021</td>
-              </tr>
-              <tr style={styles.tableRow}>
-                <td style={styles.tableCell}>
-                  B-tech in Metallurgical and Materials Engineering
-                </td>
-                <td style={styles.tableCell}>8.02 CGPA</td>
-              </tr>
+              {resumeData.education.map((edu, index) => (
+                <tbody key={index}>
+                  <tr>
+                    <td style={styles.tableCell}>{edu.institution}</td>
+                    <td style={styles.tableCell}>{edu.year}</td>
+                  </tr>
+                  <tr>
+                    <td style={styles.tableCell}>{edu.degree}</td>
+                    <td style={styles.tableCell}>{edu.grade}</td>
+                  </tr>
+                </tbody>
+              ))}
             </table>
           </div>
+        </div>
 
-          {/* Skills Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>SKILLS</h2>
+        {/* Skills Section */}
+        <div
+          id="skills"
+          ref={(el) => (sectionRefs.current[3] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.skills && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>SKILLS</h2>
+          <div style={styles.card}>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                <strong>Programming Languages:</strong> JavaScript (ES6), HTML5,
-                CSS3/Sass
+                <strong>Programming Languages:</strong>{" "}
+                {resumeData.skills.languages.join(", ")}
               </li>
               <li style={styles.listItem}>
-                <strong>Frameworks & Libraries:</strong> ReactJS, Redux,
-                Next.js, React Native, AngularJS
+                <strong>Frameworks & Libraries:</strong>{" "}
+                {resumeData.skills.frameworks.join(", ")}
               </li>
               <li style={styles.listItem}>
-                <strong>Tools & Platforms:</strong> AWS, REST APIs, NPM, GIT,
-                CI/CD pipelines
+                <strong>Tools & Platforms:</strong>{" "}
+                {resumeData.skills.tools.join(", ")}
               </li>
               <li style={styles.listItem}>
-                <strong>UI Libraries:</strong> Material Design, Chakra UI,
-                Tailwind, Bootstrap
+                <strong>UI Libraries:</strong>{" "}
+                {resumeData.skills.uiLibraries.join(", ")}
               </li>
               <li style={styles.listItem}>
-                <strong>Methodologies:</strong> Agile Development, TDD, UX
-                Collaboration
+                <strong>Methodologies:</strong>{" "}
+                {resumeData.skills.methodologies.join(", ")}
               </li>
               <li style={styles.listItem}>
-                <strong>Soft Skills:</strong> Excellent communication,
-                self-direction, adaptability to dynamic environments
-              </li>
-            </ul>
-          </div>
-
-          {/* Work Experience Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>WORK EXPERIENCE</h2>
-            <h3>Associate Consultant</h3>
-            <p>Invincix Solution Private Limited</p>
-            <p>2022 – present | Bhubaneswar, India</p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Developed high-performance web applications using ReactJS,
-                adhering to modular and scalable architecture principles.
-              </li>
-              <li style={styles.listItem}>
-                Led the creation of user-friendly interfaces for carrier and
-                business-focused portals, enhancing usability and engagement.
-              </li>
-              <li style={styles.listItem}>
-                Collaborated with cross-functional teams to integrate systems
-                and streamline workflows, ensuring reliable and seamless project
-                execution.
-              </li>
-              <li style={styles.listItem}>
-                Implemented CI/CD pipelines, ensuring efficient delivery cycles
-                and optimizing application performance.
-              </li>
-              <li style={styles.listItem}>
-                Conducted code reviews and enforced coding standards to maintain
-                high-quality deliverables.
-              </li>
-              <li style={styles.listItem}>
-                Developed dynamic, real-time features using AWS-based services
-                to handle data-intensive applications.
-              </li>
-              <li style={styles.listItem}>
-                Built responsive, cross-browser compliant designs, integrating
-                with UX and design teams for consistent user experiences.
-              </li>
-            </ul>
-          </div>
-
-          {/* Projects Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>PROJECTS</h2>
-            <h3>Scheduler Application</h3>
-            <p>
-              <strong>Technology Stack:</strong> React, CSS, NPM, API
-              integration
-            </p>
-            <p>
-              <strong>Description:</strong>
-            </p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Developed a scheduling application with Month, Day, and Week
-                views.
-              </li>
-              <li style={styles.listItem}>
-                Features include recurring events, daily agendas, and
-                notifications for streamlined meeting management.
-              </li>
-              <li style={styles.listItem}>
-                Promotes collaboration and accessibility across various devices.
-              </li>
-            </ul>
-
-            <h3>Whiteboard Application</h3>
-            <p>
-              <strong>Technology Stack:</strong> React, CSS, NPM, API
-              integration, CICD pipeline
-            </p>
-            <p>
-              <strong>Description:</strong>
-            </p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Created a dynamic whiteboard for real-time collaboration,
-                supporting drawing, typing, and sticky notes.
-              </li>
-              <li style={styles.listItem}>
-                Ideal for remote teams and virtual classrooms, with continuous
-                updates for reliability.
-              </li>
-              <li style={styles.listItem}>
-                Enhances interactive visual communication.
-              </li>
-            </ul>
-
-            <h3>GDC Mapbox</h3>
-            <p>
-              <strong>Technology Stack:</strong> React, CSS, NPM, API
-              integration with Mapbox
-            </p>
-            <p>
-              <strong>Description:</strong>
-            </p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Developed an interactive map showcasing global projects with
-                real-time status monitoring.
-              </li>
-              <li style={styles.listItem}>
-                Provides detailed data visualization and intuitive navigation
-                for strategic project management.
-              </li>
-              <li style={styles.listItem}>
-                Ensures regular enhancements through a CICD pipeline.
-              </li>
-            </ul>
-
-            <h3>Office Management System</h3>
-            <p>
-              <strong>Technology Stack:</strong> Next JS, CSS, Tailwind, NPM,
-              API integration
-            </p>
-            <p>
-              <strong>Description:</strong>
-            </p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Developed an office management system with role-based access
-                control and graphical data representation.
-              </li>
-              <li style={styles.listItem}>
-                Features include note addition and milestone tracking, promoting
-                efficient communication and collaboration.
-              </li>
-              <li style={styles.listItem}>
-                Supports a paperless office environment.
-              </li>
-            </ul>
-
-            <h3>Blood Donation App</h3>
-            <p>
-              <strong>Technology Stack:</strong> React Native, SASS, NPM, API
-              integration
-            </p>
-            <p>
-              <strong>Description:</strong>
-            </p>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>
-                Built a blood donation app for requesting and donating blood,
-                connecting donors within a 20 km range.
-              </li>
-              <li style={styles.listItem}>
-                Features multi-language support and seamless login
-                authentication.
-              </li>
-              <li style={styles.listItem}>
-                Emphasizes user-friendliness and accessibility, with unit
-                testing for reliability.
-              </li>
-            </ul>
-          </div>
-
-          {/* Personal Qualities Section */}
-          <div>
-            <h2 style={styles.sectionTitle}>PERSONAL QUALITIES</h2>
-            <ul style={styles.list}>
-              <li style={styles.listItem}>Strong problem-solving skills</li>
-              <li style={styles.listItem}>
-                Excellent communication and teamwork abilities
-              </li>
-              <li style={styles.listItem}>
-                Adaptability to fast-paced development environments
-              </li>
-              <li style={styles.listItem}>
-                Detail-oriented with a focus on delivering high-quality code
-              </li>
-              <li style={styles.listItem}>
-                Passion for continuous learning and self-improvement
+                <strong>Soft Skills:</strong>{" "}
+                {resumeData.skills.softSkills.join(", ")}
               </li>
             </ul>
           </div>
         </div>
 
-        <div style={{display:"flex", justifyContent:"center", marginTop:"50px", width:"100%"}}>
-          <a href="/cv.pdf" download>
-            <button
-              style={styles.button}
-              onMouseEnter={(e) =>
-                (e.target.style.backgroundColor =
-                  styles.buttonHover.backgroundColor)
-              }
-              onMouseLeave={(e) =>
-                (e.target.style.backgroundColor = styles.button.backgroundColor)
-              }
+        {/* Work Experience Section */}
+        <div
+          id="workExperience"
+          ref={(el) => (sectionRefs.current[4] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.workExperience && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>WORK EXPERIENCE</h2>
+          {resumeData.workExperience.map((work, index) => (
+            <div style={styles.card} key={index}>
+              <h3>{work.title}</h3>
+              <p>{work.company}</p>
+              <p>
+                {work.duration} | {work.location}
+              </p>
+              <ul style={styles.list}>
+                {work.responsibilities.map((resp, i) => (
+                  <li key={i} style={styles.listItem}>
+                    {resp}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Projects Section */}
+        <div
+          id="projects"
+          ref={(el) => (sectionRefs.current[5] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.projects && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>PROJECTS</h2>
+          <div style={styles.carousel}>
+            <div
+              style={{
+                ...styles.carouselContent,
+                transform: `translateX(-${currentProjectIndex * 100}%)`,
+              }}
             >
-              Download Resume as PDF
+              {resumeData.projects.map((project, index) => (
+                <div style={styles.carouselItem} key={index}>
+                  <h3>{project.name}</h3>
+                  <p>
+                    <strong>Technology Stack:</strong> {project.stack.join(", ")}
+                  </p>
+                  <p>
+                    <strong>Description:</strong>
+                  </p>
+                  <ul style={styles.list}>
+                    {project.description.map((desc, i) => (
+                      <li key={i} style={styles.listItem}>
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <button
+              style={{
+                ...styles.carouselNav,
+                left: "10px",
+              }}
+              onClick={handlePrevProject}
+            >
+              &#10094;
             </button>
-          </a>
+            <button
+              style={{
+                ...styles.carouselNav,
+                right: "10px",
+              }}
+              onClick={handleNextProject}
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        {/* Personal Qualities Section */}
+        <div
+          id="personalQualities"
+          ref={(el) => (sectionRefs.current[6] = el)}
+          style={{
+            ...styles.section,
+            ...(visibleSections.personalQualities && styles.visible),
+          }}
+        >
+          <h2 style={styles.sectionTitle}>PERSONAL QUALITIES</h2>
+          <div style={styles.card}>
+            <ul style={styles.list}>
+              {resumeData.personalQualities.map((quality, index) => (
+                <li key={index} style={styles.listItem}>
+                  {quality}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </>
+      <div
+        style={{
+          display: "flex",
+          width: "100%",
+          justifyContent: "center",
+          marginBottom: "20px",
+          marginTop: "50px",
+        }}
+      >
+        <button
+          style={styles.button}
+          onClick={toPDF}
+          onMouseEnter={(e) =>
+            (e.target.style.background = styles.buttonHover.background)
+          }
+          onMouseLeave={(e) =>
+            (e.target.style.background = styles.button.background)
+          }
+        >
+          Download Resume as PDF
+        </button>
+      </div>
+    </div>
   );
 };
