@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import PdfViewer from "../../Mobile/Pages/PdfViewer";
 import { CircleX } from "lucide-react";
+import { DesktopPDFViewer } from "./DesktopPDFViewer";
 
 const ResumePopup = ({ onClose }) => (
   <div className="resume-popup-overlay">
@@ -8,7 +9,8 @@ const ResumePopup = ({ onClose }) => (
       <button onClick={onClose} className="resume-close-button">
         <CircleX color="#d9534f" />
       </button>
-      <PdfViewer />
+      {/* <PdfViewer /> */}
+      <DesktopPDFViewer/>
     </div>
   </div>
 );
