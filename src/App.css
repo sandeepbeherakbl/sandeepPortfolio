@@ -5,12 +5,13 @@
   font-family: "Bitter", serif;
     font-optical-sizing: auto;
   color: white;
+  
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #2e323a;
+  background-color: #2e323a !important;
 }
 
 .home_main {
