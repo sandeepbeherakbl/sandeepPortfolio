@@ -1,6 +1,8 @@
 import { usePDF } from "react-to-pdf";
 import { useEffect, useRef, useState } from "react";
 import resumeData from "../../../json/resume.json"; // Import the JSON data
+import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
+import '@coreui/coreui/dist/css/coreui.min.css'
 
 export const DesktopPDFViewer = () => {
   const { toPDF, targetRef } = usePDF({
@@ -58,7 +60,7 @@ export const DesktopPDFViewer = () => {
       borderRadius: "15px",
       boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
       height: "80%",
-      overflowY:"scroll",
+      overflowY: "scroll",
     },
     header: {
       textAlign: "center",
@@ -148,8 +150,10 @@ export const DesktopPDFViewer = () => {
     carouselItem: {
       minWidth: "100%",
       boxSizing: "border-box",
-      padding: "20px",
+      padding: "20px 120px",
       background: "rgba(255, 255, 255, 0.05)",
+      borderRadius: "10px",
+      border: "1px solid rgba(255, 255, 255, 0.1)",
     },
     carouselNav: {
       position: "absolute",
@@ -157,12 +161,12 @@ export const DesktopPDFViewer = () => {
       background: "rgba(227, 227, 227, 0.17)",
       border: "1px solid white",
       color: "#fff",
-    //   border: "none",
+      //   border: "none",
       padding: " 5px 10px",
       cursor: "pointer",
       fontSize: "14px",
       transition: "background 0.3s ease",
-      borderRadius:'25px',
+      borderRadius: "25px",
     },
     carouselNavHover: {
       background: "rgba(0, 0, 0, 0.8)",
@@ -184,9 +188,7 @@ export const DesktopPDFViewer = () => {
         >
           <h1 style={styles.name}>{resumeData.name}</h1>
           <p style={styles.contact}>{resumeData.contact.location}</p>
-          <p style={styles.contact}>
-            {resumeData.contact.email} 
-          </p>
+          <p style={styles.contact}>{resumeData.contact.email}</p>
         </div>
 
         {/* Profile Section */}
@@ -310,8 +312,34 @@ export const DesktopPDFViewer = () => {
           }}
         >
           <h2 style={styles.sectionTitle}>PROJECTS</h2>
-          <div style={styles.carousel}>
-            <div
+          <div>
+            <CCarousel controls transition="crossfade">
+              {resumeData.projects.map((project, index) => (
+                <CCarouselItem key={index}>
+                  <div style={styles.carouselItem}>
+                    <h3>{project.name}</h3>
+                    <p>
+                      <strong>Technology Stack:</strong>{" "}
+                      {project.stack.join(", ")}
+                    </p>
+                    <p>
+                      <strong>Description:</strong>
+                    </p>
+                    <ul style={styles.list}>
+                      {project.description.map((desc, i) => (
+                        <li key={i} style={styles.listItem}>
+                          {desc}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </CCarouselItem>
+              ))}
+            </CCarousel>
+          </div>
+
+          {/* <div style={styles.carousel}> */}
+          {/* <div
               style={{
                 ...styles.carouselContent,
                 transform: `translateX(-${currentProjectIndex * 100}%)`,
@@ -335,8 +363,9 @@ export const DesktopPDFViewer = () => {
                   </ul>
                 </div>
               ))}
-            </div>
-            <button
+            </div> */}
+
+          {/* <button
               style={{
                 ...styles.carouselNav,
                 left: "10px",
@@ -353,8 +382,8 @@ export const DesktopPDFViewer = () => {
               onClick={handleNextProject}
             >
               &#10095;
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </div>
 
         {/* Personal Qualities Section */}
