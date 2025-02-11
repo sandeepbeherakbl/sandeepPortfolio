@@ -103,7 +103,7 @@ export const Dashboard = () => {
             variants={itemVariants}
           >
             <p>Dive into the world of seamless digital experiences with a
-              dedicated JavaScript Developer armed with {yearsOfExperience}{" "}
+              dedicated JavaScript Developer armed with 3
               years of hands-on expertise. From mastering ES6 and React to
               integrating cutting-edge platforms via REST and GIT, I thrive on
               transforming designs into pixel-perfect HTML and Sass/CSS

@@ -10,7 +10,7 @@ export const Intro = () => {
           <div className="mob-intro-content">
             <p>
               Dive into the world of seamless digital experiences with a
-              dedicated JavaScript Developer armed with 2 years of hands-on
+              dedicated JavaScript Developer armed with 3 years of hands-on
               expertise. From mastering ES6 and React to integrating
               cutting-edge platforms via REST and GIT, I thrive on transforming
               designs into pixel-perfect HTML and Sass/CSS creations. With a

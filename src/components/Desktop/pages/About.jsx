@@ -1,6 +1,7 @@
 import "../styles/Main.css";
 import skillsData from "../../../json/skills.json";
 import {
+  Dock,
   Download,
   Github,
   Instagram,
