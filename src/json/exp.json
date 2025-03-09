@@ -1,22 +1,23 @@
 {
-    "professionalExperience": [
-      {
-        "title": "Associate Consultant",
-        "company": "Invincix Solution Private Limited",
-        "duration": "2022 – present",
-        "location": "Bhubaneswar, India",
-        "responsibilities": [
-          "Developed and maintained scalable, efficient, and modular front-end code for customer-facing e-commerce applications using React JS.",
-          "Designed and implemented user interfaces for business-sensitive consumer portals, enhancing user experience and engagement.",
-          "Collaborated with cross-functional teams throughout the SDLC to ensure cohesive and efficient project development.",
-          "Ensured adherence to coding standards, conducted unit testing, and participated in code reviews to maintain high-quality code.",
-          "Designed and implemented CICD pipelines, streamlining development cycles and deployment processes.",
-          "Performed platform integrations using REST to enhance data flow and system interoperability.",
-          "Ensured cross-browser compliance by writing clean HTML and Sass/CSS code, working closely with UX and Visual Designers.",
-          "Worked with server technologies, primarily NPM, to enhance application functionality and performance.",
-          "Built features and services with a focus on reliability, optimizing application uptime and performance."
-        ]
-      }
-    ]
-  }
-  
+  "professionalExperience": [
+    {
+      "title": "Associate Consultant",
+      "company": "Invincix Solution Private Limited",
+      "duration": "2022 – present",
+      "location": "Bhubaneswar, India",
+      "responsibilities": [
+        "Led user experience design initiatives, creating intuitive and visually appealing interfaces for e-commerce applications",
+        "Conducted comprehensive user research, personas development, and user journey mapping to inform design decisions",
+        "Created high-fidelity wireframes, mockups, and interactive prototypes using Figma for stakeholder review and development handoff",
+        "Performed usability testing and gathered user feedback to iterate and improve design solutions",
+        "Collaborated with visual designers to establish and maintain consistent design systems and style guides",
+        "Translated UI/UX designs into responsive frontend implementations using React JS and modern CSS frameworks",
+        "Implemented pixel-perfect designs while ensuring cross-browser compatibility and accessibility standards",
+        "Optimized user interfaces for maximum performance and seamless user experience across different devices",
+        "Participated in design sprints and agile ceremonies to ensure design and development alignment",
+        "Mentored junior designers and developers on UI/UX best practices and modern frontend development patterns",
+        "Contributed to continuous improvement of development workflows and design processes"
+      ]
+    }
+  ]
+}

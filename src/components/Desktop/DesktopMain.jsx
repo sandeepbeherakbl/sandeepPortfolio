@@ -6,6 +6,8 @@ import { ProjectDetails } from "./pages/Projects/ProjectAbout";
 import { ProjectPage } from "./pages/Projects/ProjectPage";
 import { RightBar } from "./pages/RightBar";
 import { useState, Suspense } from "react";
+import UiProjects from "./pages/Projects/UiProjects";
+import UiProjectView from "./pages/Projects/UiProjectView";
 
 export const DesktopMain = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -39,6 +41,9 @@ export const DesktopMain = () => {
                 />
               }
             />
+
+            <Route path="/projects/ui" element={<UiProjects />} />
+            <Route path="/projects/ui/:id" element={<UiProjectView />} />
 
             {/* <Route
               path="/projects"

@@ -3,8 +3,13 @@ import "./ProjectPage.css";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-export const ProjectDetails = ({ project, setSelectedProject }) => {
+export const ProjectDetails = ({ project }) => {
   const navigate = useNavigate();
+
+  const handleBack = () => {
+    const category = project.category || 'dev';
+    navigate(`/projects?tab=${category}`);
+  };
 
   return (
     <div className="project-details-main">
@@ -12,9 +17,7 @@ export const ProjectDetails = ({ project, setSelectedProject }) => {
       <div className="project-details-head">
         <button
           className="back-button"
-          onClick={() => {
-            navigate(`/projects`);
-          }}
+          onClick={handleBack}
         >
           <CircleArrowLeft width={30} height={30} />
         </button>
@@ -87,6 +90,7 @@ ProjectDetails.propTypes = {
     techStack: PropTypes.string.isRequired,
     details: PropTypes.arrayOf(PropTypes.string).isRequired,
     about: PropTypes.arrayOf(PropTypes.string).isRequired,
+    category: PropTypes.string,  // Add this prop type
   }).isRequired,
   setSelectedProject: PropTypes.func.isRequired,
 };

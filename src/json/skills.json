@@ -1,8 +1,13 @@
 {
+  "UI/UX": ["Figma", "Wireframing", "Prototyping", "User Research"],
   "Programming Languages": ["JavaScript (ES6)", "HTML", "CSS/Sass"],
-  "Libraries & Frameworks": ["React JS", "Redux", "Next JS", "React Native", "REST APIs"],
+  "Libraries & Frameworks": [
+    "React JS",
+    "Redux",
+    "Next JS",
+    "React Native",
+    "REST APIs"
+  ],
   "Tools & Platforms": ["NPM", "GIT Version Control", "Jira", "Postman"],
   "UI Libraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"]
 }
-
-

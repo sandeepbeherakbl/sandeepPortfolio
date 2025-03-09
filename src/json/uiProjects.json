@@ -1,0 +1,149 @@
+{
+  "projects": [
+    {
+      "id": "ui-1",
+      "name": "InstaBlood",
+      "shortDescription": "Emergency blood donation platform connecting donors with recipients in real-time",
+      "longDescription": "A life-saving mobile application designed to bridge the critical gap between blood donors and recipients. The interface prioritizes emergency requests while maintaining a seamless donation process, featuring real-time location tracking and instant notifications.",
+      "features": [
+        "Real-time blood request management",
+        "Intelligent donor-recipient matching",
+        "Emergency alert system with proximity detection",
+        "Gamified donation tracking and rewards",
+        "Integrated hospital network dashboard"
+      ],
+      "tools": ["Figma", "Protopie", "User Research", "Material Design"],
+      "imageFlag": "instablood",
+      "urls": {
+        "figma": "https://figma.com/instablood",
+        "prototype": "https://prototype.instablood.com"
+      }
+    },
+    {
+      "id": "ui-2",
+      "name": "GDC Mapbox Dashboard",
+      "shortDescription": "Global project tracking dashboard with interactive visualization",
+      "longDescription": "A sophisticated dashboard solution that provides real-time visualization of global projects using advanced mapping technology. The interface offers intuitive project tracking, resource allocation, and status monitoring across different geographical locations.",
+      "features": [
+        "Interactive 3D globe visualization",
+        "Real-time project status tracking",
+        "Custom filtering and search capabilities",
+        "Advanced analytics and reporting",
+        "Multi-level access control system"
+      ],
+      "tools": ["Figma", "Mapbox", "D3.js", "Data Visualization"],
+      "imageFlag": "gdcmap",
+      "urls": {
+        "figma": "https://figma.com/gdc-mapbox"
+      }
+    },
+    {
+      "id": "ui-3",
+      "name": "Invincix Website",
+      "shortDescription": "Corporate website with innovative user experience",
+      "longDescription": "A modern, dynamic corporate website that showcases the company's technological prowess through innovative interactions and seamless navigation. The design emphasizes brand identity while maintaining optimal user engagement and information hierarchy.",
+      "features": [
+        "Immersive scroll experiences",
+        "Interactive case study presentations",
+        "Dynamic service showcases",
+        "Integrated blog platform",
+        "Advanced contact and query system"
+      ],
+      "tools": ["Figma", "After Effects", "Principle", "Webflow"],
+      "imageFlag": "invincix",
+      "urls": {
+        "figma": "https://figma.com/invincix"
+      }
+    },
+    {
+      "id": "ui-4",
+      "name": "AjileOffice Web Platform",
+      "shortDescription": "Comprehensive office management system with intuitive interface",
+      "longDescription": "An enterprise-grade CRM solution that revolutionizes office management through intelligent automation and user-centric design. The platform streamlines workflows while maintaining robust functionality for complex business operations.",
+      "features": [
+        "Customizable dashboard widgets",
+        "Automated workflow management",
+        "Resource allocation tracker",
+        "Advanced reporting system",
+        "Integration hub for third-party tools"
+      ],
+      "tools": ["Figma", "Adobe XD", "User Testing", "Design Systems"],
+      "imageFlag": "ajileweb",
+      "urls": {
+        "figma": "https://figma.com/ajile-office"
+      }
+    },
+    {
+      "id": "ui-5",
+      "name": "AjileOffice Mobile",
+      "shortDescription": "Mobile-first office management solution",
+      "longDescription": "A powerful mobile companion to the AjileOffice web platform, offering on-the-go access to critical office management tools. The app focuses on essential features while maintaining consistency with the web experience.",
+      "features": [
+        "Biometric authentication",
+        "Offline capability",
+        "Push notification system",
+        "Quick action shortcuts",
+        "Mobile-optimized workflows"
+      ],
+      "tools": ["Figma", "Protopie", "Mobile Patterns", "iOS/Android Guidelines"],
+      "imageFlag": "ajilemobile",
+      "urls": {
+        "figma": "https://figma.com/ajile-mobile"
+      }
+    },
+    {
+      "id": "ui-6",
+      "name": "Telto Garage Platform",
+      "shortDescription": "Revolutionary garage management system website",
+      "longDescription": "A comprehensive web platform that transforms traditional garage operations into a streamlined digital experience. The solution provides powerful management tools while maintaining an accessible interface for both garage owners and customers.",
+      "features": [
+        "Real-time service tracking",
+        "Inventory management system",
+        "Customer relationship portal",
+        "Automated billing system",
+        "Service history analytics"
+      ],
+      "tools": ["Figma", "Adobe XD", "User Research", "Analytics Tools"],
+      "imageFlag": "teltoweb",
+      "urls": {
+        "figma": "https://figma.com/telto-web"
+      }
+    },
+    {
+      "id": "ui-7",
+      "name": "Telto Mobile App",
+      "shortDescription": "User-centric garage management mobile application",
+      "longDescription": "A feature-rich mobile application that puts garage management in users' pockets. The app simplifies complex garage operations through an intuitive interface, enabling efficient service delivery and customer communication.",
+      "features": [
+        "Service booking and tracking",
+        "Real-time status updates",
+        "Digital payment integration",
+        "Service history management",
+        "Emergency service requests"
+      ],
+      "tools": ["Figma", "Protopie", "User Testing", "Material Design"],
+      "imageFlag": "teltoapp",
+      "urls": {
+        "figma": "https://figma.com/telto-mobile"
+      }
+    },
+    {
+      "id": "ui-8",
+      "name": "Hazardous Waste Management System",
+      "shortDescription": "Industrial waste tracking and management solution",
+      "longDescription": "An innovative system designed to monitor and manage hazardous waste in industrial settings. The interface combines complex data visualization with intuitive controls, ensuring efficient waste tracking while maintaining regulatory compliance.",
+      "features": [
+        "Real-time waste monitoring",
+        "Compliance tracking dashboard",
+        "Environmental impact analytics",
+        "Automated reporting system",
+        "Risk assessment tools"
+      ],
+      "tools": ["Figma", "Data Visualization", "UX Research", "Enterprise Design"],
+      "imageFlag": "hwms",
+      "urls": {
+        "figma": "https://figma.com/hwms"
+      }
+    }
+  ]
+}

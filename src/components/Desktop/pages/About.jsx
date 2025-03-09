@@ -1,7 +1,6 @@
 import "../styles/Main.css";
 import skillsData from "../../../json/skills.json";
 import {
-  Dock,
   Download,
   Github,
   Instagram,
@@ -36,32 +35,40 @@ export const About = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { 
-      opacity: 1, 
+    show: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
-        damping: 15
-      }
-    }
+        damping: 15,
+      },
+    },
   };
 
   return (
-    <div className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${fadeIn ? "fade-in" : ""}`}>
+    <div
+      className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${
+        fadeIn ? "fade-in" : ""
+      }`}
+    >
       <div className="about-profile-section">
         <div className="about-profile-image">
           <div className="active-circle"></div>
         </div>
         <div className="about-container">
           <p>Sandeep Kumar Behera</p>
-          <p>Frontend Developer</p>
+          <div className="title-tag">
+            <span className="role">UI/UX Designer</span>
+            <span className="separator">|</span>
+            <span className="role">Frontend Developer</span>
+          </div>
         </div>
         <div className="resume-download" onClick={openResumePopup}>
           <div className="resume-flex-div">
@@ -80,16 +87,10 @@ export const About = () => {
         <div className="skills-list">
           {Object.keys(skillsData).map((category) => (
             <div key={category} className="skill-category">
-              <div className="category-badge">
-                {category}
-              </div>
+              <div className="category-badge">{category}</div>
               <div className="skill-sets">
                 {skillsData[category].map((skill, index) => (
-                  <div
-                    key={index}
-                    className="skill-item"
-                    data-skill={skill}
-                  >
+                  <div key={index} className="skill-item" data-skill={skill}>
                     {skill}
                   </div>
                 ))}
