@@ -5,22 +5,23 @@ export const Intro = () => {
         <div className="mob-intro-sub-div">
           <div className="mob-intro-header">
             <p>My Digital Journey:</p>
-            <p>Empowering Innovation as a JavaScript Developer.</p>
+            <p>Empowering Innovation as a UI/UX & Frontend Developer.</p>
           </div>
           <div className="mob-intro-content">
             <p>
-              Dive into the world of seamless digital experiences with a
-              dedicated JavaScript Developer armed with 3 years of hands-on
-              expertise. From mastering ES6 and React to integrating
-              cutting-edge platforms via REST and GIT, I thrive on transforming
-              designs into pixel-perfect HTML and Sass/CSS creations. With a
-              passion for server technologies like NPM, I collaborate closely
-              with UX and Visual Designers, sculpting reliable features that
-              elevate user interactions. My journey is defined by a relentless
-              pursuit of innovation, leveraging technology to drive impactful
-              solutions that shape the future of digital experiences. Let's
-              innovate together to power your next-generation customer
-              interactions and exceed expectations.
+            Dive into the world of intuitive and visually compelling digital
+              experiences with a UI/UX Designer & Frontend Developer armed with
+              3 years of hands-on expertise. From designing user-centric
+              interfaces in Figma to developing responsive and interactive
+              applications using React, ES6, and modern CSS/Sass, I thrive on
+              transforming ideas into seamless, engaging experiences. With a
+              keen eye for design, usability, and performance, I collaborate
+              closely with UX researchers, visual designers, and developers to
+              create pixel-perfect, accessible, and high-performance web
+              applications. My journey is driven by a passion for
+              innovation—leveraging technology to craft intuitive, scalable, and
+              future-ready user experiences. Let’s collaborate to build products
+              that captivate users and redefine digital interactions!
             </p>
           </div>
         </div>

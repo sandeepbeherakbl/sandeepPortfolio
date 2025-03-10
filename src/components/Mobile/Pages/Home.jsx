@@ -9,8 +9,8 @@ export const Home = () => {
         <div className="mob-about-img-div">
           <div className="mob-about-sub-div">
             <h1>
-              Crafting Code with a Designer's Touch: Full Stack Developer &
-              Design Enthusiast
+              Crafting Experiences with a Designer’s Touch: UI/UX & Frontend
+              Developer
             </h1>
 
             <div className="mob-home-main-container">
