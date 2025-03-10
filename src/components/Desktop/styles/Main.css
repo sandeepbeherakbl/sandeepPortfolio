@@ -781,6 +781,9 @@ section {
   border-radius: 12px;
   margin-bottom: 2rem;
   object-fit: cover;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .project-description {
@@ -922,8 +925,68 @@ section {
   transition: all 0.3s ease;
 }
 
-.ui-project-name{
+.ui-project-name {
   /* position: absolute; */
+}
+
+.ui-project-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-bg{
+  padding: 10px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-bg h2{
+  padding: 10px 0;
+  border-bottom:1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nda-section{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  background: rgba(55, 171, 61, 0.192);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.nda-section p{
+  margin: 0;
+  padding: 0;
+}
+
+.project-type button {
+  padding: 15px 10px;
+  background: rgba(120, 63, 239, 0.05);
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(120, 63, 239, 0.1);
 }
 
 .ui-back-button {

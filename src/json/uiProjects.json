@@ -6,14 +6,20 @@
       "shortDescription": "Emergency blood donation platform connecting donors with recipients in real-time",
       "longDescription": "A life-saving mobile application designed to bridge the critical gap between blood donors and recipients. The interface prioritizes emergency requests while maintaining a seamless donation process, featuring real-time location tracking and instant notifications.",
       "features": [
-        "Real-time blood request management",
-        "Intelligent donor-recipient matching",
-        "Emergency alert system with proximity detection",
-        "Gamified donation tracking and rewards",
-        "Integrated hospital network dashboard"
+        "Advanced Emergency Response System: Implements a sophisticated priority-based queuing algorithm that considers multiple factors including urgency level, blood type compatibility, and donor proximity. The system automatically adjusts queue positions based on real-time changes in emergency levels.",
+        "Intelligent Donor Matching Engine: Utilizes machine learning algorithms to create optimal donor-recipient pairs based on comprehensive criteria including blood type compatibility, medical history, donation frequency, and real-time availability. The system maintains a dynamic pool of potential donors to ensure quick response times.",
+        "Real-time Location Intelligence: Features an advanced GPS-based tracking system that provides live monitoring of both donors and emergency vehicles, complete with ETA calculations, route optimization, and automatic rerouting based on traffic conditions.",
+        "Comprehensive Donation Rewards Platform: Incorporates a sophisticated gamification system that encourages regular donations through a combination of achievement badges, community recognition features, and partnership rewards, while maintaining the integrity of emergency services.",
+        "Hospital Network Integration Hub: Provides a robust dashboard for healthcare facilities to manage blood inventory, track donations, and coordinate emergency requests across multiple locations. Includes predictive analytics for inventory management.",
+        "Smart Notification Framework: Employs an intelligent notification system that balances urgency with user preferences, featuring customizable alert channels, priority-based message delivery, and automated follow-up mechanisms.",
+        "Health Monitoring Suite: Implements a comprehensive donor health tracking system with automated eligibility calculations, personalized donation schedules, and integration with healthcare providers for real-time health status updates.",
+        "Emergency Response Protocol: Features a sophisticated SOS system with one-tap emergency activation, automated multi-channel alerts, and instant connection to nearest available resources.",
+        "Resilient Offline Architecture: Maintains critical functionality during network outages through advanced caching mechanisms and local data synchronization, ensuring continuous operation in emergency situations."
       ],
+      "requirements": "The project demands a highly intuitive emergency blood request system capable of performing efficiently under high-stress situations, with a streamlined onboarding process for both donors and recipients. The platform must maintain reliable real-time tracking across various devices and network conditions while implementing a balanced reward system that encourages regular donations without compromising emergency services. The solution requires a comprehensive admin dashboard for hospital inventory management, robust performance in areas with limited connectivity, and support for multiple languages to ensure broader accessibility. Critical emphasis is placed on maintaining strict data privacy standards for handling sensitive medical information, with the system designed to scale effectively as the user base grows.",
       "tools": ["Figma", "Protopie", "User Research", "Material Design"],
       "imageFlag": "instablood",
+      "type": "mobile",
       "urls": {
         "figma": "https://figma.com/instablood",
         "prototype": "https://prototype.instablood.com"
@@ -25,14 +31,20 @@
       "shortDescription": "Global project tracking dashboard with interactive visualization",
       "longDescription": "A sophisticated dashboard solution that provides real-time visualization of global projects using advanced mapping technology. The interface offers intuitive project tracking, resource allocation, and status monitoring across different geographical locations.",
       "features": [
-        "Interactive 3D globe visualization",
-        "Real-time project status tracking",
-        "Custom filtering and search capabilities",
-        "Advanced analytics and reporting",
-        "Multi-level access control system"
+        "Dynamic Global Visualization Engine: Implements a sophisticated 3D globe interface with real-time project status updates, featuring interactive layers for different project metrics and customizable data visualization options that adapt to user preferences and role-specific requirements.",
+        "Advanced Project Analytics System: Incorporates a comprehensive filtering mechanism with machine learning-powered search capabilities, allowing users to create and save complex search patterns while maintaining instant response times across large datasets.",
+        "Interactive Timeline Management: Features a dynamic project timeline interface with drag-and-drop milestone management, automatic dependency tracking, and smart conflict resolution for multi-timezone project scheduling.",
+        "Global Resource Optimization Platform: Provides an intelligent resource allocation system that considers team availability, skill sets, time zones, and project requirements to suggest optimal team compositions and workload distribution.",
+        "Real-time Performance Analytics: Delivers customizable KPI dashboards with predictive analytics, automated reporting, and interactive data visualization tools that adapt to different management levels and project requirements.",
+        "Integrated Document Management: Features a location-aware document system with version control, automated tagging, and smart search capabilities that understand project context and user permissions.",
+        "Collaborative Workspace Environment: Implements real-time team collaboration tools with integrated communication channels, shared workspaces, and automated task synchronization across different time zones.",
+        "Automated Reporting Engine: Generates comprehensive reports with location-based insights, custom visualization options, and automated data aggregation from multiple project sources.",
+        "Multi-timezone Project Coordination: Provides intelligent scheduling tools with automatic time conversion, optimal meeting time suggestions, and smart notifications that respect team members' working hours."
       ],
+      "requirements": "The project necessitates creating an intuitive interface capable of managing global projects across multiple time zones while maintaining responsive performance across various device types and screen sizes. The system must efficiently visualize complex project metrics and facilitate seamless resource allocation for distributed teams. The platform requires robust search and filtering capabilities to handle large-scale project management, along with real-time collaboration features that enhance team productivity. Special attention must be given to data visualization efficiency, multi-view project management, and optimal performance with large datasets, ensuring the system remains responsive and user-friendly regardless of project scale or complexity.",
       "tools": ["Figma", "Mapbox", "D3.js", "Data Visualization"],
       "imageFlag": "gdcmap",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/gdc-mapbox"
       }
@@ -49,8 +61,10 @@
         "Integrated blog platform",
         "Advanced contact and query system"
       ],
+      "requirements": "Design a visually appealing and user-friendly interface that reflects the company's brand identity. Create interactive elements that enhance user engagement and provide a memorable browsing experience. Ensure seamless navigation and information hierarchy for easy access to key content. Implement a responsive design that works well on various devices and screen sizes. Develop a content management system for easy updates and maintenance. Include SEO best practices to improve search engine visibility. Ensure fast loading times and optimal performance. Implement robust security measures to protect user data.",
       "tools": ["Figma", "After Effects", "Principle", "Webflow"],
       "imageFlag": "invincix",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/invincix"
       }
@@ -67,8 +81,10 @@
         "Advanced reporting system",
         "Integration hub for third-party tools"
       ],
+      "requirements": "Design an intuitive and customizable dashboard for managing office operations. Implement automated workflows to streamline business processes. Develop a resource allocation tracker for efficient resource management. Create an advanced reporting system for data-driven decision making. Ensure seamless integration with third-party tools and services. Implement robust security measures to protect sensitive business data. Ensure the platform is scalable to accommodate growing business needs. Provide multi-language support for global accessibility.",
       "tools": ["Figma", "Adobe XD", "User Testing", "Design Systems"],
       "imageFlag": "ajileweb",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/ajile-office"
       }
@@ -85,8 +101,16 @@
         "Quick action shortcuts",
         "Mobile-optimized workflows"
       ],
-      "tools": ["Figma", "Protopie", "Mobile Patterns", "iOS/Android Guidelines"],
+      "requirements": "Design a mobile-first interface that provides easy access to critical office management tools. Implement biometric authentication for secure access. Ensure offline capability for uninterrupted access to essential features. Develop a push notification system for timely updates and alerts. Create quick action shortcuts for frequently used functions. Optimize workflows for mobile devices. Ensure consistency with the web platform for a seamless user experience. Implement robust security measures to protect sensitive business data.",
+
+      "tools": [
+        "Figma",
+        "Protopie",
+        "Mobile Patterns",
+        "iOS/Android Guidelines"
+      ],
       "imageFlag": "ajilemobile",
+      "type": "mobile",
       "urls": {
         "figma": "https://figma.com/ajile-mobile"
       }
@@ -103,15 +127,18 @@
         "Automated billing system",
         "Service history analytics"
       ],
+      "requirements": "Design an intuitive interface for managing garage operations. Implement real-time service tracking for efficient service delivery. Develop an inventory management system for tracking parts and supplies. Create a customer relationship portal for managing customer interactions. Implement an automated billing system for streamlined payment processing. Develop service history analytics for data-driven decision making. Ensure the platform is scalable to accommodate growing business needs. Implement robust security measures to protect sensitive business data.",
+
       "tools": ["Figma", "Adobe XD", "User Research", "Analytics Tools"],
       "imageFlag": "teltoweb",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/telto-web"
       }
     },
     {
       "id": "ui-7",
-      "name": "Telto Mobile App",
+      "name": "Telto App",
       "shortDescription": "User-centric garage management mobile application",
       "longDescription": "A feature-rich mobile application that puts garage management in users' pockets. The app simplifies complex garage operations through an intuitive interface, enabling efficient service delivery and customer communication.",
       "features": [
@@ -121,8 +148,10 @@
         "Service history management",
         "Emergency service requests"
       ],
+      "requirements": "Design a user-friendly mobile interface for managing garage operations. Implement service booking and tracking for efficient service delivery. Develop real-time status updates for timely information. Create digital payment integration for seamless transactions. Implement service history management for tracking past services. Develop emergency service request functionality for urgent needs. Ensure the app is scalable to accommodate growing business needs. Implement robust security measures to protect sensitive business data.",
       "tools": ["Figma", "Protopie", "User Testing", "Material Design"],
       "imageFlag": "teltoapp",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/telto-mobile"
       }
@@ -139,8 +168,16 @@
         "Automated reporting system",
         "Risk assessment tools"
       ],
-      "tools": ["Figma", "Data Visualization", "UX Research", "Enterprise Design"],
+      "requirements": "Design an intuitive interface for monitoring and managing hazardous waste. Implement real-time waste monitoring for efficient tracking. Develop a compliance tracking dashboard for regulatory adherence. Create environmental impact analytics for data-driven decision making. Implement an automated reporting system for streamlined reporting. Develop risk assessment tools for identifying potential hazards. Ensure the system is scalable to accommodate growing business needs. Implement robust security measures to protect sensitive business data.",
+
+      "tools": [
+        "Figma",
+        "Data Visualization",
+        "UX Research",
+        "Enterprise Design"
+      ],
       "imageFlag": "hwms",
+      "type": "web",
       "urls": {
         "figma": "https://figma.com/hwms"
       }

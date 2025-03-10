@@ -1,4 +1,4 @@
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Smartphone, MonitorIcon } from "lucide-react";
 import { useNavigate, useParams } from "react-router-dom";
 import projectsData from "../../../../json/uiProjects.json";
 import instablood from "../../../../assets/uiImage/instablood.svg";
@@ -53,9 +53,34 @@ const UiProjectView = () => {
 
       <div className="ui-project-content">
         <div className="relative">
-          <div className="absolute bottom-8 left-8 z-10">
-            <h1 className="ui-project-name">{project.name}</h1>
-            <p className="text-lg">{project.shortDescription}</p>
+          <div className="ui-project-info">
+            <div className="ui-project-title">
+              <h1 className="ui-project-name">{project.name}</h1>
+              <p className="text-lg">{project.shortDescription}</p>
+            </div>
+            <div className="project-type">
+              {project.type === "web" ? (
+                <button className="application-type-btn">
+                  <MonitorIcon
+                    size={24}
+                    style={{
+                      marginRight: "0.5rem",
+                    }}
+                  />
+                  <span>Web Application</span>
+                </button>
+              ) : (
+                <button className="application-type-btn">
+                  <Smartphone
+                    size={24}
+                    style={{
+                      marginRight: "0.5rem",
+                    }}
+                  />
+                  <span>Mobile Application</span>
+                </button>
+              )}
+            </div>
           </div>
           <img
             src={getProjectImage(project.imageFlag)}
@@ -64,12 +89,17 @@ const UiProjectView = () => {
           />
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 project-bg">
           <h2 className="text-xl font-semibold mb-4">Overview</h2>
           <p className="project-description">{project.longDescription}</p>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 project-bg">
+          <h2 className="text-xl font-semibold mb-4">Requirements</h2>
+          <p className="project-description">{project.requirements}</p>
+        </div>
+
+        <div className="mt-8 project-bg">
           <h2 className="text-xl font-semibold mb-4">Features</h2>
           <ul className="features-list">
             {project.features.map((feature, index) => (
@@ -80,7 +110,7 @@ const UiProjectView = () => {
           </ul>
         </div>
 
-        <div className="tools-section">
+        {/* <div className="tools-section">
           <h3>Tools Used</h3>
           <div className="tools-list">
             {project.tools.map((tool) => (
@@ -89,6 +119,15 @@ const UiProjectView = () => {
               </span>
             ))}
           </div>
+        </div> */}
+
+        <div className="nda-section">
+          <p>
+            Note: Due to a Non-Disclosure Agreement (NDA), I can only share
+            limited details about this project. However, I am happy to discuss
+            my role, the project's outcomes, and showcase related work upon
+            request. Please feel free to contact me for more information.
+          </p>
         </div>
       </div>
     </div>

@@ -33,11 +33,8 @@ const UiProjects = () => {
           key={project.id}
           className="project-item"
           variants={item}
-          whileHover={{ 
-            translateY: -8,
-            transition: { duration: 0.2 }
-          }}
-          whileTap={{ translateY: -2 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
           <div className="project-content-wrapper">
             <div className="project-header">
