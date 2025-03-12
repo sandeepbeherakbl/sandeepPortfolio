@@ -1,7 +1,7 @@
 import { usePDF } from "react-to-pdf";
 import { useEffect, useRef, useState } from "react";
 import resumeData from "../../../json/resume.json"; // Import the JSON data
-import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
+import { CCarousel, CCarouselItem } from "@coreui/react";
 import '@coreui/coreui/dist/css/coreui.min.css'
 
 export const DesktopPDFViewer = () => {
@@ -10,7 +10,6 @@ export const DesktopPDFViewer = () => {
   });
 
   const [visibleSections, setVisibleSections] = useState({});
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const sectionRefs = useRef([]);
 
   // Fade-in animation on scroll
@@ -35,19 +34,6 @@ export const DesktopPDFViewer = () => {
 
     return () => observer.disconnect();
   }, []);
-
-  // Carousel navigation
-  const handleNextProject = () => {
-    setCurrentProjectIndex((prev) =>
-      prev === resumeData.projects.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const handlePrevProject = () => {
-    setCurrentProjectIndex((prev) =>
-      prev === 0 ? resumeData.projects.length - 1 : prev - 1
-    );
-  };
 
   const styles = {
     container: {
@@ -248,27 +234,27 @@ export const DesktopPDFViewer = () => {
             <ul style={styles.list}>
               <li style={styles.listItem}>
                 <strong>Programming Languages:</strong>{" "}
-                {resumeData.skills.languages.join(", ")}
+                {resumeData.skills?.languages?.join(", ") || ""}
               </li>
               <li style={styles.listItem}>
                 <strong>Frameworks & Libraries:</strong>{" "}
-                {resumeData.skills.frameworks.join(", ")}
+                {resumeData.skills?.frameworks?.join(", ") || ""}
               </li>
               <li style={styles.listItem}>
                 <strong>Tools & Platforms:</strong>{" "}
-                {resumeData.skills.tools.join(", ")}
+                {resumeData.skills?.tools?.join(", ") || ""}
               </li>
               <li style={styles.listItem}>
                 <strong>UI Libraries:</strong>{" "}
-                {resumeData.skills.uiLibraries.join(", ")}
+                {resumeData.skills?.uiLibraries?.join(", ") || ""}
               </li>
               <li style={styles.listItem}>
                 <strong>Methodologies:</strong>{" "}
-                {resumeData.skills.methodologies.join(", ")}
+                {resumeData.skills?.methodologies?.join(", ") || ""}
               </li>
               <li style={styles.listItem}>
                 <strong>Soft Skills:</strong>{" "}
-                {resumeData.skills.softSkills.join(", ")}
+                {resumeData.skills?.softSkills?.join(", ") || ""}
               </li>
             </ul>
           </div>
@@ -337,53 +323,6 @@ export const DesktopPDFViewer = () => {
               ))}
             </CCarousel>
           </div>
-
-          {/* <div style={styles.carousel}> */}
-          {/* <div
-              style={{
-                ...styles.carouselContent,
-                transform: `translateX(-${currentProjectIndex * 100}%)`,
-              }}
-            >
-              {resumeData.projects.map((project, index) => (
-                <div style={styles.carouselItem} key={index}>
-                  <h3>{project.name}</h3>
-                  <p>
-                    <strong>Technology Stack:</strong> {project.stack.join(", ")}
-                  </p>
-                  <p>
-                    <strong>Description:</strong>
-                  </p>
-                  <ul style={styles.list}>
-                    {project.description.map((desc, i) => (
-                      <li key={i} style={styles.listItem}>
-                        {desc}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div> */}
-
-          {/* <button
-              style={{
-                ...styles.carouselNav,
-                left: "10px",
-              }}
-              onClick={handlePrevProject}
-            >
-              &#10094;
-            </button>
-            <button
-              style={{
-                ...styles.carouselNav,
-                right: "10px",
-              }}
-              onClick={handleNextProject}
-            >
-              &#10095;
-            </button> */}
-          {/* </div> */}
         </div>
 
         {/* Personal Qualities Section */}

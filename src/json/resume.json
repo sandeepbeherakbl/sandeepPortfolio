@@ -1,99 +1,144 @@
 {
-    "name": "Sandeep Kumar Behera",
-    "contact": {
-      "location": "Bhubaneswar, India",
-      "email": "sandeepbeherakbl@gmail.com"
-    },
-    "profile": "Dedicated and skilled Frontend Engineer with 3 years of experience in ReactJS and modern web technologies. Proficient in designing scalable, efficient, and modular user interfaces for web and mobile platforms. Adept at collaborating with cross-functional teams to deliver user-centric products. Passionate about creating seamless user experiences and solving complex challenges with innovative solutions.",
-    "education": [
-      {
-        "institution": "Indira Gandhi Institute of Technology, Sarang",
-        "year": "2021",
-        "degree": "B-tech in Metallurgical and Materials Engineering",
-        "grade": "8.02 CGPA"
-      }
+  "name": "Sandeep Kumar Behera",
+  "contact": {
+    "location": "Bhubaneswar, India",
+    "email": "sandeepbeherakbl@gmail.com"
+  },
+  "profile": "I am a dedicated and skilled UI/UX Designer with 3 years of experience in crafting intuitive and visually  appealing user interfaces. Proficient in designing scalable, user-centric, and efficient digital experiences for  web and mobile platforms. Adept at conducting user research, wireframing, prototyping, and collaborating with cross-functional teams to deliver seamless interactions. Passionate about enhancing user experiences through design thinking and innovative solutions.",
+  "education": [
+    {
+      "institution": "Indira Gandhi Institute of Technology, Sarang",
+      "year": "2021",
+      "degree": "B-tech in Metallurgical and Materials Engineering",
+      "grade": "8.02 CGPA"
+    }
+  ],
+  "skills": {
+    "design": [
+      "Ideation",
+      "Userflows",
+      "Information Architecture",
+      "Design thinking",
+      "UI graphics",
+      "Wireframing",
+      "Interface design",
+      "Advanced Prototyping",
+      "Motion Design",
+      "Illustrations"
     ],
-    "skills": {
-      "languages": ["JavaScript (ES6)", "HTML5", "CSS3/Sass"],
-      "frameworks": ["ReactJS", "Redux", "Next.js", "React Native", "AngularJS"],
-      "tools": ["AWS", "REST APIs", "NPM", "GIT", "CI/CD pipelines"],
-      "uiLibraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"],
-      "methodologies": ["Agile Development", "TDD", "UX Collaboration"],
-      "softSkills": [
-        "Excellent communication",
-        "Self-direction",
-        "Adaptability to dynamic environments"
+    "research": [
+      "User interviews & surveys",
+      "Usability & Concept Testing",
+      "Task Analysis",
+      "A/B Testing",
+      "Diary study",
+      "Qualitative & quantitative analysis",
+      "Personas",
+      "Storyboarding"
+    ],
+    "programming": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "React Native",
+      "NodeJS"
+    ],
+    "tools": [
+      "Figma",
+      "Adobe Creative Cloud",
+      "Jira",
+      "VS code"
+    ],
+    "methodologies": ["Agile Development", "TDD", "UX Collaboration"],
+    "softSkills": [
+      "Excellent communication",
+      "Self-direction",
+      "Adaptability to dynamic environments"
+    ]
+  },
+  "workExperience": [
+    {
+      "title": "Associate Consultant",
+      "company": "Invincix Solution Private Limited",
+      "duration": "2022 – present",
+      "location": "Bhubaneswar, India",
+      "responsibilities": [
+        "Designed and developed intuitive user interfaces, enhancing user experience through wireframing, prototyping, and interactive design",
+        "Led the UI/UX design for carrier and business-focused portals, improving usability, engagement, and accessibility",
+        "Conducted user research and usability testing to refine designs and create seamless interactions",
+        "Collaborated with developers to ensure design consistency, accessibility, and responsiveness across web and mobile platforms",
+        "Built and implemented design systems to maintain visual coherence and improve development efficiency",
+        "Developed responsive, pixel-perfect frontend components using ReactJS, ensuring seamless user interactions",
+        "Integrated animations and micro-interactions to enhance user engagement and interface fluidity",
+        "Worked closely with cross-functional teams to align design decisions with business goals and user needs",
+        "Optimized UI performance by implementing best practices in design and frontend development"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scheduler Application",
+      "stack": ["Figma", "Protopie", "User Research", "Material Design", "React", "CSS", "NPM", "API integration"],
+      "description": [
+        "Designed an intuitive scheduling interface with Month, Day, and Week views, focusing on usability and accessibility",
+        "Conducted user research and usability testing to optimize event creation and management",
+        "Created wireframes and interactive prototypes in Figma and Protopie for seamless navigation",
+        "Implemented Material Design principles to maintain visual consistency",
+        "Developed responsive frontend components using React, ensuring smooth performance across devices"
       ]
     },
-    "workExperience": [
-      {
-        "title": "Associate Consultant",
-        "company": "Invincix Solution Private Limited",
-        "duration": "2022 – present",
-        "location": "Bhubaneswar, India",
-        "responsibilities": [
-          "Developed high-performance web applications using ReactJS, adhering to modular and scalable architecture principles.",
-          "Led the creation of user-friendly interfaces for carrier and business-focused portals, enhancing usability and engagement.",
-          "Collaborated with cross-functional teams to integrate systems and streamline workflows, ensuring reliable and seamless project execution.",
-          "Implemented CI/CD pipelines, ensuring efficient delivery cycles and optimizing application performance.",
-          "Conducted code reviews and enforced coding standards to maintain high-quality deliverables.",
-          "Developed dynamic, real-time features using AWS-based services to handle data-intensive applications.",
-          "Built responsive, cross-browser compliant designs, integrating with UX and design teams for consistent user experiences."
-        ]
-      }
-    ],
-    "projects": [
-      {
-        "name": "Scheduler Application",
-        "stack": ["React", "CSS", "NPM", "API integration"],
-        "description": [
-          "Developed a scheduling application with Month, Day, and Week views.",
-          "Features include recurring events, daily agendas, and notifications for streamlined meeting management.",
-          "Promotes collaboration and accessibility across various devices."
-        ]
-      },
-      {
-        "name": "Whiteboard Application",
-        "stack": ["React", "CSS", "NPM", "API integration", "CICD pipeline"],
-        "description": [
-          "Created a dynamic whiteboard for real-time collaboration, supporting drawing, typing, and sticky notes.",
-          "Ideal for remote teams and virtual classrooms, with continuous updates for reliability.",
-          "Enhances interactive visual communication."
-        ]
-      },
-      {
-        "name": "GDC Mapbox",
-        "stack": ["React", "CSS", "NPM", "API integration with Mapbox"],
-        "description": [
-          "Developed an interactive map showcasing global projects with real-time status monitoring.",
-          "Provides detailed data visualization and intuitive navigation for strategic project management.",
-          "Ensures regular enhancements through a CICD pipeline."
-        ]
-      },
-      {
-        "name": "Office Management System",
-        "stack": ["Next JS", "CSS", "Tailwind", "NPM", "API integration"],
-        "description": [
-          "Developed an office management system with role-based access control and graphical data representation.",
-          "Features include note addition and milestone tracking, promoting efficient communication and collaboration.",
-          "Supports a paperless office environment."
-        ]
-      },
-      {
-        "name": "Blood Donation App",
-        "stack": ["React Native", "SASS", "NPM", "API integration"],
-        "description": [
-          "Built a blood donation app for requesting and donating blood, connecting donors within a 20 km range.",
-          "Features multi-language support and seamless login authentication.",
-          "Emphasizes user-friendliness and accessibility, with unit testing for reliability."
-        ]
-      }
-    ],
-    "personalQualities": [
-      "Strong problem-solving skills",
-      "Excellent communication and teamwork abilities",
-      "Adaptability to fast-paced development environments",
-      "Detail-oriented with a focus on delivering high-quality code",
-      "Passion for continuous learning and self-improvement"
-    ]
-  }
+    {
+      "name": "Whiteboard Application",
+      "stack": ["Figma", "Protopie", "Adobe XD", "User Testing", "React", "CSS", "NPM", "API integration", "CI/CD pipeline"],
+      "description": [
+        "Designed a real-time whiteboard interface with an intuitive drawing, typing, and sticky notes system",
+        "Created high-fidelity prototypes using Protopie for realistic interaction testing",
+        "Conducted usability testing to refine collaboration workflows and improve engagement",
+        "Designed a scalable UI system ensuring a clean and accessible user experience",
+        "Assisted in frontend integration for a smooth and performant interactive whiteboard"
+      ]
+    },
+    {
+      "name": "GDC Mapbox",
+      "stack": ["Figma", "Material Design", "User Research", "React", "CSS", "NPM", "API integration with Mapbox"],
+      "description": [
+        "Designed an interactive map-based interface showcasing global projects with real-time status monitoring",
+        "Conducted user research to optimize navigation and data visualization for better decision-making",
+        "Developed wireframes and UI prototypes, ensuring a seamless and intuitive user journey",
+        "Applied Material Design guidelines to enhance accessibility and consistency",
+        "Built responsive UI components in React for dynamic map interactions"
+      ]
+    },
+    {
+      "name": "Office Management System",
+      "stack": ["Figma", "Protopie", "UX Research", "Next.js", "CSS", "Tailwind", "NPM", "API integration"],
+      "description": [
+        "Designed a modern office management system with an intuitive role-based access interface",
+        "Conducted extensive user research to understand workflow inefficiencies and improve team collaboration",
+        "Created wireframes, high-fidelity prototypes, and interactive mockups for a smooth UX",
+        "Developed an accessible UI following WCAG guidelines for inclusivity",
+        "Provided frontend support to integrate the design system with Next.js and Tailwind"
+      ]
+    },
+    {
+      "name": "Blood Donation App",
+      "stack": ["Figma", "Protopie", "User Testing", "React Native", "SASS", "NPM", "API integration"],
+      "description": [
+        "Designed an intuitive mobile experience for blood donors and recipients, ensuring ease of use",
+        "Focused on accessibility and multi-language support for a wider reach",
+        "Conducted usability testing to refine the user journey from registration to donation requests",
+        "Created wireframes and interactive UI prototypes for seamless navigation",
+        "Built React Native frontend components, ensuring a smooth and engaging mobile experience"
+      ]
+    }
+  ],
+  "personalQualities": [
+    "Strong problem-solving skills",
+    "Excellent communication and teamwork abilities",
+    "Adaptability to fast-paced development environments",
+    "Detail-oriented with a focus on delivering high-quality code",
+    "Passion for continuous learning and self-improvement"
+  ]
+}
