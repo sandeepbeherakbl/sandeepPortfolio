@@ -61,11 +61,11 @@ const MobileUiProjectView = ({ project, onBack }) => {
         </div>
 
         <div className="mob-ui-image-wrapper">
-          <img
+{/*           <img
             src={getProjectImage(project.imageFlag)}
             alt={project.name}
             className="mob-ui-project-image"
-          />
+          /> */}
           <div className="mob-ui-image-overlay" />
         </div>
 
