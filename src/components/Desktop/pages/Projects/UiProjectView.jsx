@@ -82,11 +82,11 @@ const UiProjectView = () => {
               )}
             </div>
           </div>
-          <img
+{/*           <img
             src={getProjectImage(project.imageFlag)}
             alt={project.name}
             className="ui-project-image"
-          />
+          /> */}
         </div>
 
         <div className="mt-8 project-bg">
