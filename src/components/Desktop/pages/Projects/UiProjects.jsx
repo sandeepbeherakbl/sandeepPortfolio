@@ -23,7 +23,7 @@ const UiProjects = () => {
 
   return (
     <motion.div 
-      className="project-grid"
+      className="premium-project-grid"
       variants={container}
       initial="hidden"
       animate="show"
@@ -31,37 +31,45 @@ const UiProjects = () => {
       {projectsData.projects.map((project) => (
         <motion.div
           key={project.id}
-          className="project-item"
+          className="premium-project-card"
           variants={item}
-          whileHover={{ scale: 1.02 }}
+          whileHover={{ y: -5 }}
           whileTap={{ scale: 0.98 }}
         >
-          <div className="project-content-wrapper">
-            <div className="project-header">
-              <h3 className="project-title">
-                <span><Palette color="#783fef"/></span> 
-                {project.name}
-              </h3>
-              <p className="project-subtitle">{project.shortDescription}</p>
+          <div className="premium-card-bg"></div>
+          <div className="premium-card-content">
+            <div className="premium-card-header">
+              <div className="premium-icon-box">
+                <Palette size={24} color="#b18bff" />
+              </div>
+              <h3 className="premium-title">{project.name}</h3>
             </div>
-            <div className="tech-stack-wrapper">
-              <div className="tech-stack-title">Tools Used</div>
-              <div className="project-tech">
-                {project.tools.map((tool, i) => (
-                  <span key={i} className="tech-tag">
+            <p className="premium-subtitle">{project.shortDescription}</p>
+            
+            <div className="premium-tech-container">
+              <span className="premium-tech-label">Tools Used</span>
+              <div className="premium-tech-list">
+                {project.tools.slice(0, 4).map((tool, i) => (
+                  <span key={i} className="premium-tech-tag">
                     {tool}
                   </span>
                 ))}
+                {project.tools.length > 4 && (
+                  <span className="premium-tech-tag more">+{project.tools.length - 4}</span>
+                )}
               </div>
             </div>
           </div>
-          <button
-            className="view-btn"
-            onClick={() => navigate(`/projects/ui/${project.id}`)}
-          >
-            View Project
-            <span className="arrow">→</span>
-          </button>
+          
+          <div className="premium-card-footer">
+            <button
+              className="premium-view-btn"
+              onClick={() => navigate(`/projects/ui/${project.id}`)}
+            >
+              View Project
+              <span className="arrow">→</span>
+            </button>
+          </div>
         </motion.div>
       ))}
     </motion.div>

@@ -1,0 +1,73 @@
+[
+    {
+        "title": "AI-Powered Voice Automation for Car Service Centers",
+        "techStack": [
+            "React.js",
+            "FastAPI",
+            "Python",
+            "Azure OpenAI",
+            "ElevenLabs",
+            "Keycloak",
+            "WebSockets"
+        ],
+        "subtitle": "An AI-powered voice automation platform designed to automate customer engagement workflows for car service centers.",
+        "about": "The AI-Powered Voice Automation platform was developed to streamline customer engagement and automate service reminder workflows for automobile service centers. The system automatically identifies customers with upcoming servicing schedules and initiates AI-driven outbound calls using natural conversational voice interactions. Integrated with Azure OpenAI and ElevenLabs, the application enables human-like multilingual conversations, automated appointment booking, and real-time customer interaction management. The platform also provides analytics dashboards, campaign monitoring, conversation logging, and workflow management tools for service center operations.",
+        "details": [
+            "Led the end-to-end development of an LLM-powered automation platform reducing manual customer outreach efforts by nearly 70%.",
+            "Integrated Azure OpenAI for conversational AI workflows enabling contextual and human-like customer interactions.",
+            "Implemented multilingual AI voice support using ElevenLabs for English and Hindi communication.",
+            "Developed scalable backend services using FastAPI and Python for scheduling workflows, call orchestration, and real-time interaction handling.",
+            "Implemented real-time barge-in functionality to allow natural interruptions and seamless conversation flow during AI calls.",
+            "Built React.js dashboards for campaign management, analytics visualization, workflow monitoring, and operational tracking.",
+            "Implemented secure authentication and role-based access control using Keycloak.",
+            "Developed analytics modules to track call success rates, booking conversions, and customer engagement metrics."
+        ],
+        "shortDescription": "An AI-driven voice automation platform that automates customer engagement and appointment booking for car service centers."
+    },
+    {
+        "title": "AI-Powered UPSC Learning Assistant",
+        "techStack": [
+            "React.js",
+            "FastAPI",
+            "SQL",
+            "Azure OpenAI",
+            "Pinecone",
+            "Python"
+        ],
+        "subtitle": "An AI-powered learning platform designed to deliver intelligent content generation and personalized UPSC preparation assistance.",
+        "about": "The AI-Powered UPSC Learning Assistant is a scalable educational platform built to enhance learning experiences using Generative AI technologies. The platform enables students to interact with AI-powered workflows for content generation, answer explanations, contextual assistance, and personalized learning support. Integrated with Azure OpenAI and Pinecone vector database, the application uses Retrieval-Augmented Generation (RAG) pipelines to provide accurate and context-aware responses from large educational datasets. The system also supports responsive web interfaces, real-time workflows, and scalable backend services for efficient learning management.",
+        "details": [
+            "Developed a scalable React.js frontend with reusable components and responsive user interfaces for seamless learning experience.",
+            "Built backend services using FastAPI and Python to manage AI workflows, REST APIs, authentication, and content delivery.",
+            "Implemented LLM-powered features using Azure OpenAI for contextual content generation and conversational assistance.",
+            "Designed and implemented a complete RAG pipeline using Pinecone vector database for semantic search and contextual AI responses.",
+            "Developed efficient data ingestion and processing pipelines for structured and unstructured educational content.",
+            "Integrated real-time workflows and streaming AI responses for interactive user engagement.",
+            "Optimized frontend and backend performance to ensure low-latency responses and scalable application behavior."
+        ],
+        "shortDescription": "An AI-powered UPSC learning platform with LLM-based assistance and RAG-powered contextual learning workflows."
+    },
+    {
+        "title": "Enterprise Knowledge AI Assistant",
+        "techStack": [
+            "React.js",
+            "FastAPI",
+            "OpenAI",
+            "SQL",
+            "WebSockets",
+            "REST APIs"
+        ],
+        "subtitle": "A conversational enterprise AI assistant integrating Jira, Confluence, and Git systems for intelligent workflow management.",
+        "about": "The Enterprise Knowledge AI Assistant is a conversational AI platform designed to integrate enterprise tools and knowledge systems into a unified intelligent interface. The application enables users to interact with Jira, Confluence, Git repositories, and enterprise data sources using natural language conversations. Users can retrieve project details, update tickets, add comments, manage workflows, and access enterprise knowledge through AI-powered conversational interfaces. The platform combines scalable frontend architecture, FastAPI backend services, real-time communication, and LLM-driven workflows to improve operational efficiency and knowledge accessibility.",
+        "details": [
+            "Developed a conversational AI platform integrating Jira, Confluence, Git repositories, and enterprise systems using REST APIs.",
+            "Built scalable React.js frontend architecture with reusable components and real-time conversational interfaces.",
+            "Implemented FastAPI backend services and WebSocket workflows to support live interactions and contextual query handling.",
+            "Enabled users to perform enterprise actions such as ticket updates, adding comments, workflow tracking, and knowledge retrieval through conversational AI.",
+            "Integrated OpenAI-powered conversational workflows for intelligent response generation and contextual understanding.",
+            "Optimized application performance using efficient state management, asynchronous communication, and scalable backend workflows.",
+            "Improved enterprise productivity by centralizing workflow management and knowledge retrieval into a unified AI-driven platform."
+        ],
+        "shortDescription": "An enterprise conversational AI assistant integrating Jira, Confluence, and Git systems for intelligent workflow automation."
+    }
+]

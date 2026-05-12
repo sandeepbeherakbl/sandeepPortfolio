@@ -134,151 +134,155 @@
   text-align: center;
   margin-top: 5px;
 }
-.skills-list {
+/* --- PREMIUM SKILLS GRID --- */
+.skills-list-premium {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
   padding: 2rem;
 }
 
-.skill-category {
+.premium-skill-category {
   position: relative;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  overflow: visible; /* Changed from hidden to visible */
-  margin-top: 1rem; /* Add space for the badge */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
 }
 
-.category-badge {
+.premium-skill-category:hover {
+  transform: translateY(-5px);
+  border-color: rgba(120, 63, 239, 0.4);
+  box-shadow: 0 15px 40px -10px rgba(120, 63, 239, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.skill-card-glow {
   position: absolute;
   top: 0;
-  left: 1rem;
-  transform: translateY(-50%);
-  padding: 0.2rem 1rem;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  color: white;
-  /* background-color: #783fef; */
-  background: linear-gradient(90deg, #783fef, #b997ff, #783fef);
-  background-size: 200% 100%;
-  animation: gradientMove 3s linear infinite;
-  /* box-shadow: 0 4px 15px rgba(120, 63, 239, 0.3); */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-transform: uppercase;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(120, 63, 239, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.premium-skill-category:hover .skill-card-glow {
+  opacity: 1;
+}
+
+.skill-category-header {
+  position: relative;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.skill-category-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  font-weight: 500;
-  /* z-index: ;  */
+  color: #fff;
+  text-transform: uppercase;
 }
 
-.category-badge::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  z-index: -1;
-  border-radius: 21px;
-  background-color: #b997ff;
-  /* background: linear-gradient(
-    90deg,
-    #783fef,
-    #b997ff,
-    #783fef
-  ); */
-  background-size: 200% 100%;
-  animation: gradientMove 3s linear infinite;
-  opacity: 0.5;
-  filter: blur(8px);
+.skill-category-line {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #783fef, transparent);
+  margin-top: 8px;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 100% 0%;
-  }
-  100% {
-    background-position: -100% 0%;
-  }
+.premium-skill-category:hover .skill-category-line {
+  width: 80px;
 }
 
-/* Remove the existing category title */
-.skill-category p:first-child {
-  display: none;
-}
-
-.skill-sets {
-  margin-top: 0.5rem;
-}
-
-.skill-sets {
+.premium-skill-sets {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  position: relative;
+  gap: 12px;
+  z-index: 2;
 }
 
-.skill-item {
+.premium-skill-item {
   position: relative;
-  padding: 0.5rem 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  font-size: 0.7rem;
-  color: #fff;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
   transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
 }
 
-/* Specific colors for different skills */
-.skill-item[data-skill="React JS"] {
-  --glow-color: rgb(97, 218, 251);
-}
-
-.skill-item[data-skill="JavaScript (ES6)"] {
-  --glow-color: rgb(247, 223, 30);
-}
-
-.skill-item[data-skill="TypeScript"] {
-  --glow-color: rgb(49, 120, 198);
-}
-
-.skill-item[data-skill="HTML"] {
-  --glow-color: rgb(241, 101, 41);
-}
-
-.skill-item[data-skill="CSS"] {
-  --glow-color: rgb(41, 101, 241);
-}
-
-.skill-item[data-skill="CSS/Sass"] {
-  --glow-color: rgb(204, 102, 153);
-}
-
-.skill-item[data-skill="Next JS"] {
-  --glow-color: rgb(0, 0, 0);
-}
-
-/* Default glow color for other skills */
-.skill-item {
+/* Base specific glowing accent per skill item */
+.premium-skill-item {
   --glow-color: rgb(120, 63, 239);
 }
 
-.skill-item::before {
+.premium-skill-item[data-skill*="React"],
+.premium-skill-item[data-skill*="Tailwind"] {
+  --glow-color: rgb(97, 218, 251);
+}
+
+.premium-skill-item[data-skill*="JavaScript"],
+.premium-skill-item[data-skill*="Python"] {
+  --glow-color: rgb(247, 223, 30);
+}
+
+.premium-skill-item[data-skill*="TypeScript"],
+.premium-skill-item[data-skill*="CSS"] {
+  --glow-color: rgb(49, 120, 198);
+}
+
+.premium-skill-item[data-skill*="HTML"],
+.premium-skill-item[data-skill*="Git"] {
+  --glow-color: rgb(241, 101, 41);
+}
+
+.premium-skill-item[data-skill*="Node"],
+.premium-skill-item[data-skill*="Mongo"] {
+  --glow-color: rgb(68, 156, 69);
+}
+
+.premium-skill-item[data-skill*="AI"],
+.premium-skill-item[data-skill*="LLM"],
+.premium-skill-item[data-skill*="Prompt"] {
+  --glow-color: rgb(219, 112, 245);
+}
+
+.premium-skill-item::before {
   content: "";
   position: absolute;
   inset: 0;
   background: var(--glow-color);
   opacity: 0;
   transition: opacity 0.3s ease;
-  filter: blur(12px);
   z-index: -1;
 }
 
-.skill-item:hover {
-  color: var(--glow-color);
-  text-shadow: 0 0 10px var(--glow-color);
-  background: rgba(255, 255, 255, 0.1);
+.premium-skill-item:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.skill-item:hover::before {
+.premium-skill-item:hover::before {
   opacity: 0.15;
 }
 
@@ -447,24 +451,26 @@ link {
 .intro-main-div {
   width: 96%;
   margin-left: 2%;
-  height: calc(100vh - 65vh);
+  flex: 1; /* Takes the remaining vertical space */
+  margin-bottom: 2%; /* Prevents it from touching the absolute bottom edge */
   background: rgba(46, 50, 58, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   position: relative;
   border: 1px solid rgba(120, 63, 239, 0.1);
+  overflow: hidden; /* Ensures child scrollbars don't clip through border radius */
 }
 
 .intro-content-wrapper {
   position: relative;
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .intro-heading {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .digital-text {
@@ -493,21 +499,38 @@ link {
 }
 
 .intro-content {
-  /* position: relative; */
-  /* height: 50%; */
-  padding: 1rem 0;
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* border-radius: 8px; */
-  /* overflow-y: scroll; */
+  flex: 1;
+  overflow-y: auto; /* Allow text to scroll if it exceeds container height */
+  padding-right: 15px; /* Prevent text from hugging the scrollbar */
+}
+
+/* Custom scrollbar for intro-content */
+.intro-content::-webkit-scrollbar {
+  width: 6px;
+}
+.intro-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+.intro-content::-webkit-scrollbar-thumb {
+  background: rgba(120, 63, 239, 0.3);
+  border-radius: 4px;
+}
+.intro-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 63, 239, 0.6);
 }
 
 .intro-content p {
-  margin: 0;
+  margin-bottom: 1.2rem;
   font-size: 18px;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: justify;
   color: rgba(255, 255, 255, 0.85);
+}
+
+.intro-content p:last-child {
+  margin-bottom: 0;
 }
 
 /* Remove all animation related styles */

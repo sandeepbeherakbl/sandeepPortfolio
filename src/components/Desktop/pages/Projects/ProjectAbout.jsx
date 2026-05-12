@@ -31,10 +31,11 @@ export const ProjectDetails = ({ project }) => {
       <div className="project-body">
         <div className="project-body-content">
           {/* About Section */}
-          <div className="project-body-about">
+          <div className="project-body-about premium-detail-card">
+            <div className="detail-card-glow"></div>
             <div className="About-container">
               <div className="about-header">
-                <Info size={20} color="#783fef" />
+                <Info size={24} color="#b997ff" />
                 <h3>About</h3>
               </div>
               <div className="about-div">
@@ -44,10 +45,11 @@ export const ProjectDetails = ({ project }) => {
           </div>
 
           {/* Tech Stack Section */}
-          <div className="project-body-tech">
+          <div className="project-body-tech premium-detail-card">
+            <div className="detail-card-glow"></div>
             <div className="tech-container">
               <div className="tech-header">
-                <Code size={20} color="#783fef" />
+                <Code size={24} color="#b997ff" />
                 <h3>Tech Stack</h3>
               </div>
               <div className="tech-div">
@@ -61,10 +63,11 @@ export const ProjectDetails = ({ project }) => {
           </div>
 
           {/* Features Section */}
-          <div className="project-feature">
+          <div className="project-feature premium-detail-card">
+            <div className="detail-card-glow"></div>
             <div className="feature-container">
               <div className="feature-header">
-                <Layers size={20} color="#783fef" />
+                <Layers size={24} color="#b997ff" />
                 <h3>Features</h3>
               </div>
               <div className="feature-list">

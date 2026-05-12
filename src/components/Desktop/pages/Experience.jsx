@@ -17,7 +17,7 @@ export const Experience = () => {
           {professionalExperience.professionalExperience.map((experience, index) => (
             <motion.div 
               key={index} 
-              className="experience-card"
+              className="experience-card premium-exp-card"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ 
@@ -25,55 +25,54 @@ export const Experience = () => {
                 delay: index * 0.1,
                 ease: "easeOut"
               }}
-              whileHover={{ y: -2 }}
             >
-              <div className="exp-header-wrapper">
-                <div className="exp-title-section">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    <BsBriefcase className="exp-icon" />
-                  </motion.div>
-                  <div>
-                    <h3>{experience.title}</h3>
-                    <p className="company-name">{experience.company}</p>
+              <div className="company-watermark">{experience.company}</div>
+              <div className="exp-card-glow"></div>
+
+              <div className="premium-exp-layout">
+                <div className="exp-left-column">
+                  <div className="exp-role-header">
+                    <motion.div
+                      className="exp-icon-container"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      <BsBriefcase className="exp-icon-lux" />
+                    </motion.div>
+                    <div className="exp-role-titles">
+                      <h3 className="exp-role">{experience.title}</h3>
+                      <h4 className="exp-company-name-lux">{experience.company}</h4>
+                    </div>
+                  </div>
+                  <div className="exp-meta-badges">
+                    <div className="exp-badge">
+                      <BiTime /> <span>{experience.duration}</span>
+                    </div>
+                    <div className="exp-badge">
+                      <HiOutlineLocationMarker /> <span>{experience.location}</span>
+                    </div>
                   </div>
                 </div>
-                <div className="exp-meta-info">
-                  <motion.span 
-                    className="duration"
-                    whileHover={{ x: -5 }}
-                  >
-                    <BiTime /> {experience.duration}
-                  </motion.span>
-                  <motion.span 
-                    className="location"
-                    whileHover={{ x: -5 }}
-                  >
-                    <HiOutlineLocationMarker /> {experience.location}
-                  </motion.span>
+
+                <div className="exp-divider"></div>
+
+                <div className="exp-right-column">
+                  <div className="exp-responsibilities-list">
+                    {experience.responsibilities.map((responsibility, idx) => (
+                      <motion.div 
+                        key={idx}
+                        className="exp-resp-item"
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 + idx * 0.05 }}
+                      >
+                        <div className="exp-bullet-lux"></div>
+                        <p>{responsibility}</p>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
               </div>
-              
-              <motion.div 
-                className="exp-responsibilities"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.1 + 0.2 }}
-              >
-                {experience.responsibilities.map((responsibility, idx) => (
-                  <motion.p 
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 + idx * 0.05 }}
-                  >
-                    <span className="bullet">•</span>
-                    {responsibility}
-                  </motion.p>
-                ))}
-              </motion.div>
             </motion.div>
           ))}
         </div>

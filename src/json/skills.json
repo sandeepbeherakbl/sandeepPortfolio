@@ -1,13 +1,63 @@
 {
-  "UI/UX": ["Figma", "Wireframing", "Prototyping", "User Research"],
-  "Programming Languages": ["JavaScript (ES6)", "HTML", "CSS/Sass"],
-  "Libraries & Frameworks": [
-    "React JS",
-    "Redux",
-    "Next JS",
-    "React Native",
-    "REST APIs"
+  "Programming Languages": [
+    "JavaScript (ES6+)",
+    "TypeScript",
+    "Python",
+    "HTML5",
+    "CSS3",
+    "Sass",
+    "SQL"
   ],
-  "Tools & Platforms": ["NPM", "GIT Version Control", "Jira", "Postman"],
-  "UI Libraries": ["Material Design", "Chakra UI", "Tailwind", "Bootstrap"]
+  "UI/UX": [
+    "Figma",
+    "Wireframing",
+    "Prototyping",
+    "User Research",
+    "Responsive Design",
+    "Component-Driven UI Architecture",
+    "Cross-Browser Compatibility"
+  ],
+  "Libraries & Frameworks": [
+    "React.js",
+    "Next.js",
+    "React Native",
+    "Redux",
+    "React Hooks",
+    "FastAPI",
+    "Node.js",
+    "Express.js",
+    "REST APIs",
+    "WebSockets"
+  ],
+  "AI & GenAI": [
+    "Azure OpenAI",
+    "OpenAI APIs",
+    "LLMs",
+    "RAG Pipelines",
+    "Pinecone Vector Database",
+    "Conversational AI",
+    "AI Workflow Automation",
+    "Prompt Engineering"
+  ],
+  "Databases": [
+    "MongoDB",
+    "PostgreSQL",
+    "SQL"
+  ],
+  "Tools & Platforms": [
+    "Git",
+    "GitHub",
+    "NPM",
+    "Postman",
+    "Jira",
+    "Docker",
+    "CI/CD Pipelines",
+    "Azure"
+  ],
+  "UI Libraries": [
+    "Material UI (MUI)",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Chakra UI"
+  ]
 }

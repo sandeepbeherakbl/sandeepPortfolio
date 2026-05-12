@@ -1,5 +1,6 @@
-import { FileCode, Palette } from "lucide-react";
+import { FileCode, Palette, BrainCircuit } from "lucide-react";
 import projectsData from "../../../../json/project.json";
+import aiProjectsData from "../../../../json/Aiproject.json";
 import "./ProjectPage.css";
 import PropTypes from "prop-types";
 import Typewriter from "typewriter-effect";
@@ -36,21 +37,34 @@ export const ProjectPage = ({ setSelectedProject }) => {
   };
 
   const getHeaderContent = () => {
-    return activeTab === 'ui' ? {
-      icon: <Palette width={50} height={50} color="#ffffff" />,
-      title: "UI Artistry",
-      description: [
-        "Explore my UI/UX design portfolio showcasing creative and intuitive interfaces.",
-        "Each design tells a unique story of user-centered experiences and visual innovation."
-      ]
-    } : {
-      icon: <FileCode width={50} height={50} color="#ffffff" />,
-      title: "Code Ventures",
-      description: [
-        "Explore a gallery of my projects, each reflecting my dedication and skill.",
-        "Delve into my body of work, where each project is a unique digital journey."
-      ]
-    };
+    if (activeTab === 'ui') {
+      return {
+        icon: <Palette width={50} height={50} color="#ffffff" />,
+        title: "UI Artistry",
+        description: [
+          "Explore my UI/UX design portfolio showcasing creative and intuitive interfaces.",
+          "Each design tells a unique story of user-centered experiences and visual innovation."
+        ]
+      };
+    } else if (activeTab === 'ai') {
+      return {
+        icon: <BrainCircuit width={50} height={50} color="#ffffff" />,
+        title: "AI Innovations",
+        description: [
+          "Discover my cutting-edge AI projects and generative solutions.",
+          "Exploring the boundaries of artificial intelligence and machine learning."
+        ]
+      };
+    } else {
+      return {
+        icon: <FileCode width={50} height={50} color="#ffffff" />,
+        title: "Code Ventures",
+        description: [
+          "Explore a gallery of my projects, each reflecting my dedication and skill.",
+          "Delve into my body of work, where each project is a unique digital journey."
+        ]
+      };
+    }
   };
 
   const headerContent = getHeaderContent();
@@ -80,16 +94,23 @@ export const ProjectPage = ({ setSelectedProject }) => {
           </p>
         </div>
       </div>
-      
+
       <div className="project-tabs">
-        <button 
+        <button
           className={`tab-button ${activeTab === 'ui' ? 'active' : ''}`}
           onClick={() => handleTabClick('ui')}
         >
           <Palette width={20} height={20} />
           <span>UI Artistry</span>
         </button>
-        <button 
+        <button
+          className={`tab-button ${activeTab === 'ai' ? 'active' : ''}`}
+          onClick={() => handleTabClick('ai')}
+        >
+          <BrainCircuit width={20} height={20} />
+          <span>AI Innovations</span>
+        </button>
+        <button
           className={`tab-button ${activeTab === 'dev' ? 'active' : ''}`}
           onClick={() => handleTabClick('dev')}
         >
@@ -101,34 +122,69 @@ export const ProjectPage = ({ setSelectedProject }) => {
       <div className="tab-content">
         {activeTab === 'ui' ? (
           <UiProjects />
-        ) : (
-          <div className="project-grid">
-            {projectsData.map((project, index) => (
-              <div key={index} className="project-item">
-                <div className="project-content-wrapper">
-                  <div className="project-header">
-                    <h3 className="project-title"> <span><FileCode color="#783fef"/> </span> {project.title}</h3>
-                    <p className="project-subtitle">{project.subtitle}</p>
+        ) : activeTab === 'ai' ? (
+          <div className="premium-project-grid">
+            {aiProjectsData.map((project, index) => (
+              <div key={index} className="premium-project-card">
+                <div className="premium-card-bg"></div>
+                <div className="premium-card-content">
+                  <div className="premium-card-header">
+                    <div className="premium-icon-box">
+                      <BrainCircuit size={24} color="#b18bff" />
+                    </div>
+                    <h3 className="premium-title">{project.title}</h3>
                   </div>
-                  <div className="tech-stack-wrapper">
-                    <div className="tech-stack-title">Technologies</div>
-                    <div className="project-tech">
-                      {project.techStack.map((tech, i) => (
-                        <span key={i} className="tech-tag">
-                          {tech}
-                        </span>
+                  <p className="premium-subtitle">{project.subtitle}</p>
+                  <div className="premium-tech-container">
+                    <span className="premium-tech-label">Technologies</span>
+                    <div className="premium-tech-list">
+                      {project.techStack.slice(0, 3).map((tech, i) => (
+                        <span key={i} className="premium-tech-tag">{tech}</span>
                       ))}
+                      {project.techStack.length > 4 && (
+                        <span className="premium-tech-tag more">+{project.techStack.length - 4}</span>
+                      )}
                     </div>
                   </div>
                 </div>
-                <button
-                  className="view-btn"
-                  onClick={() => handleProjectClick(project)}
-                >
-                  View Project 
-                  {/* <ArrowRight size={16} /> */}
-                  <span className="arrow">→</span>
-                </button>
+                <div className="premium-card-footer">
+                  <button className="premium-view-btn" onClick={() => handleProjectClick(project)}>
+                    View Project <span className="arrow">→</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="premium-project-grid">
+            {projectsData.map((project, index) => (
+              <div key={index} className="premium-project-card">
+                <div className="premium-card-bg"></div>
+                <div className="premium-card-content">
+                  <div className="premium-card-header">
+                    <div className="premium-icon-box">
+                      <FileCode size={24} color="#b18bff" />
+                    </div>
+                    <h3 className="premium-title">{project.title}</h3>
+                  </div>
+                  <p className="premium-subtitle">{project.subtitle}</p>
+                  <div className="premium-tech-container">
+                    <span className="premium-tech-label">Technologies</span>
+                    <div className="premium-tech-list">
+                      {project.techStack.slice(0, 4).map((tech, i) => (
+                        <span key={i} className="premium-tech-tag">{tech}</span>
+                      ))}
+                      {project.techStack.length > 4 && (
+                        <span className="premium-tech-tag more">+{project.techStack.length - 4}</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className="premium-card-footer">
+                  <button className="premium-view-btn" onClick={() => handleProjectClick(project)}>
+                    View Project <span className="arrow">→</span>
+                  </button>
+                </div>
               </div>
             ))}
           </div>

@@ -54,9 +54,8 @@ export const About = () => {
 
   return (
     <div
-      className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${
-        fadeIn ? "fade-in" : ""
-      }`}
+      className={`about-mian-div ${showResumePopup ? "blurred" : ""} ${fadeIn ? "fade-in" : ""
+        }`}
     >
       <div className="about-profile-section">
         <div className="about-profile-image">
@@ -65,9 +64,8 @@ export const About = () => {
         <div className="about-container">
           <p>Sandeep Kumar Behera</p>
           <div className="title-tag">
-            <span className="role">UI/UX Designer</span>
-            <span className="separator">|</span>
-            <span className="role">Frontend Developer</span>
+            <span className="role">Full Stack & Generative AI Engineer</span>
+
           </div>
         </div>
         <div className="resume-download" onClick={openResumePopup}>
@@ -84,13 +82,17 @@ export const About = () => {
       </div>
 
       <div className="main-skills-section">
-        <div className="skills-list">
+        <div className="skills-list-premium">
           {Object.keys(skillsData).map((category) => (
-            <div key={category} className="skill-category">
-              <div className="category-badge">{category}</div>
-              <div className="skill-sets">
+            <div key={category} className="premium-skill-category">
+              <div className="skill-card-glow"></div>
+              <div className="skill-category-header">
+                <h3 className="skill-category-title">{category}</h3>
+                <div className="skill-category-line"></div>
+              </div>
+              <div className="premium-skill-sets">
                 {skillsData[category].map((skill, index) => (
-                  <div key={index} className="skill-item" data-skill={skill}>
+                  <div key={index} className="premium-skill-item" data-skill={skill}>
                     {skill}
                   </div>
                 ))}
