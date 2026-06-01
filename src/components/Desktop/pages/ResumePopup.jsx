@@ -1,9 +1,10 @@
+import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
 import PdfViewer from "../../Mobile/Pages/PdfViewer";
 import { CircleX } from "lucide-react";
 import { DesktopPDFViewer } from "./DesktopPDFViewer";
 
-const ResumePopup = ({ onClose }) => (
+const ResumePopup = ({ onClose }) => createPortal(
   <div className="resume-popup-overlay">
     <div className="resume-popup">
       <button onClick={onClose} className="resume-close-button">
@@ -12,7 +13,8 @@ const ResumePopup = ({ onClose }) => (
       {/* <PdfViewer /> */}
       <DesktopPDFViewer/>
     </div>
-  </div>
+  </div>,
+  document.body
 );
 
 ResumePopup.propTypes = {

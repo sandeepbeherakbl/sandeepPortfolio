@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "../styles/popup.css";
 import PropTypes from "prop-types";
 import {
@@ -107,7 +108,7 @@ const ContactPopup = ({ onClose }) => {
     setTimeout(() => onClose(), 300);
   };
 
-  return (
+  return createPortal(
     <>
       <div className={`popup-overlay ${isVisible ? "show" : ""}`}>
         <div className="popup-main">
@@ -233,7 +234,7 @@ const ContactPopup = ({ onClose }) => {
               </div>
               <div className="form-div">
                 <form style={{ width: "450px" }} onSubmit={handleSubmit}>
-                  <h3>Contact Me</h3>
+                  <h3 className="sans-normal">Contact <span className="serif-italic">Me</span></h3>
                   <h1>
                     Curious about my work or interested in a collaboration? Get
                     in touch – I&apos; d love to hear from you!
@@ -287,7 +288,8 @@ const ContactPopup = ({ onClose }) => {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.body
   );
 };
 

@@ -1,7 +1,9 @@
 .project-main-div {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -14,11 +16,9 @@
   margin-top: 30px;
   margin-left: 2%;
   border-radius: 12px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.831)
-    ),
+      rgba(0, 0, 0, 0.831)),
     url(../../../../assets/projectTitle.png);
   background-size: cover;
   background-position: 0% 50%;
@@ -57,7 +57,7 @@
 .project-cards-main {
   width: 96%;
   margin-left: 2%;
-  background-color: #22252d;
+  background-color: transparent;
   border-radius: 12px;
   position: relative;
   height: calc(100vh - 40vh);
@@ -86,11 +86,9 @@
 
 .project-card-img {
   height: 100px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.831)
-    ),
+      rgba(0, 0, 0, 0.831)),
     url(../../../../assets/proCardHead.jpg);
   background-size: cover;
   background-position: center;
@@ -181,7 +179,9 @@
 .project-details-main {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -259,24 +259,6 @@
 .premium-detail-card:hover {
   transform: translateY(-4px);
   border-color: rgba(120, 63, 239, 0.4);
-  box-shadow: 0 15px 40px -10px rgba(120, 63, 239, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-.detail-card-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top left, rgba(120, 63, 239, 0.15) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.premium-detail-card:hover .detail-card-glow {
-  opacity: 1;
 }
 
 .project-body-about {
@@ -293,13 +275,17 @@
   align-self: start;
 }
 
-.About-container, .tech-container, .feature-container {
+.About-container,
+.tech-container,
+.feature-container {
   padding: 2.5rem;
   position: relative;
   z-index: 2;
 }
 
-.about-header, .tech-header, .feature-header {
+.about-header,
+.tech-header,
+.feature-header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -308,7 +294,9 @@
   padding-bottom: 1rem;
 }
 
-.about-header h3, .tech-header h3, .feature-header h3 {
+.about-header h3,
+.tech-header h3,
+.feature-header h3 {
   font-size: 1.4rem;
   background: linear-gradient(90deg, #fff, #d3c4ff);
   -webkit-background-clip: text;
@@ -350,7 +338,7 @@
   background: rgba(120, 63, 239, 0.15);
   border-color: rgba(120, 63, 239, 0.4);
   color: #fff;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-list {
@@ -439,11 +427,9 @@
   height: 40px;
   width: 40px;
   border-radius: 5px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.831)
-    ),
+      rgba(0, 0, 0, 0.831)),
     url(../../../../assets/proCardHead.jpg);
   background-size: cover;
   position: absolute;
@@ -514,9 +500,11 @@
 .premium-project-grid::-webkit-scrollbar {
   width: 6px;
 }
+
 .premium-project-grid::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.02);
 }
+
 .premium-project-grid::-webkit-scrollbar-thumb {
   background: rgba(120, 63, 239, 0.3);
   border-radius: 4px;
@@ -530,8 +518,10 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100%; /* Stretch to row height */
-  min-height: 380px; /* Provide enough room for varying content */
+  height: 100%;
+  /* Stretch to row height */
+  min-height: 380px;
+  /* Provide enough room for varying content */
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
@@ -561,7 +551,8 @@
 
 .premium-card-content {
   padding: 1.8rem 1.8rem 0 1.8rem;
-  flex: 1; /* Pushes the footer down uniformly */
+  flex: 1;
+  /* Pushes the footer down uniformly */
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -584,7 +575,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: inset 0 2px 10px rgba(255,255,255,0.05);
+  box-shadow: inset 0 2px 10px rgba(255, 255, 255, 0.05);
 }
 
 .premium-title {
@@ -598,7 +589,7 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .premium-subtitle {
@@ -613,7 +604,8 @@
 }
 
 .premium-tech-container {
-  margin-top: auto; /* Pushes itself to the bottom of the content area */
+  margin-top: auto;
+  /* Pushes itself to the bottom of the content area */
   margin-bottom: 1.5rem;
 }
 
@@ -765,6 +757,14 @@
   transform: rotateX(0);
 }
 
+.project-view-container {
+  padding: 2rem;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
 .laptop-keyboard {
   height: 20px;
   background: #2a2a2a;
@@ -858,13 +858,12 @@
   left: 2rem;
   width: calc(100% - 4rem);
   height: 1px;
-  background: linear-gradient(90deg, 
-    transparent,
-    rgba(120, 63, 239, 0.3),
-    rgba(120, 63, 239, 0.5),
-    rgba(120, 63, 239, 0.3),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(120, 63, 239, 0.3),
+      rgba(120, 63, 239, 0.5),
+      rgba(120, 63, 239, 0.3),
+      transparent);
 }
 
 /* Add animation for tab switching */
@@ -873,13 +872,14 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.tab-content > div {
+.tab-content>div {
   animation: tabFadeIn 0.5s ease-out forwards;
 }
 

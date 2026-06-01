@@ -13,14 +13,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-bottom: 2px solid #2e323a; */
-  /* background: #181525; */
-  background: url(../../../assets/HeroPage.svg);
+  background: url(../../../assets/HeroPage.svg) rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 12px;
 }
+
 .about-profile-image {
   width: 80px;
   height: 80px;
@@ -52,13 +53,13 @@
   0% {
     box-shadow: 0 0 0 0px rgba(0, 249, 30, 0.5);
   }
+
   100% {
     box-shadow: 0 0 0 10px rgba(249, 179, 0, 0);
   }
 }
 
-.about-profile-image {
-}
+.about-profile-image {}
 
 .about-container {
   display: flex;
@@ -95,25 +96,20 @@
   box-sizing: border-box;
   padding: 5px 10px;
   margin-bottom: 20px;
-  background: radial-gradient(
-      83.26% 148.71% at 83.26% 142.62%,
+  background: radial-gradient(83.26% 148.71% at 83.26% 142.62%,
       rgba(255, 255, 255, 0.00116801) 79.1%,
-      rgba(255, 255, 255, 0.1) 100%
-    )
-    rgba(0, 0, 0, 0.35);
+      rgba(255, 255, 255, 0.1) 100%) rgba(0, 0, 0, 0.35);
   border-radius: 8px;
   border: 2px solid;
 
-  border-image-source: conic-gradient(
-    from 202.62deg at 50% 50%,
-    rgba(255, 255, 255, 0.2) -0.14deg,
-    #ffffff 44.61deg,
-    #ffffff 153.81deg,
-    rgba(255, 255, 255, 0.2) 180deg,
-    #ffffff 252deg,
-    rgba(255, 255, 255, 0.2) 359.86deg,
-    #ffffff 404.61deg
-  );
+  border-image-source: conic-gradient(from 202.62deg at 50% 50%,
+      rgba(255, 255, 255, 0.2) -0.14deg,
+      #ffffff 44.61deg,
+      #ffffff 153.81deg,
+      rgba(255, 255, 255, 0.2) 180deg,
+      #ffffff 252deg,
+      rgba(255, 255, 255, 0.2) 359.86deg,
+      #ffffff 404.61deg);
 }
 
 .resume-flex-div p {
@@ -126,7 +122,9 @@
   height: 100%;
   overflow-y: scroll;
   border-radius: 12px;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .skills-title {
@@ -134,6 +132,7 @@
   text-align: center;
   margin-top: 5px;
 }
+
 /* --- PREMIUM SKILLS GRID --- */
 .skills-list-premium {
   display: grid;
@@ -158,23 +157,6 @@
 .premium-skill-category:hover {
   transform: translateY(-5px);
   border-color: rgba(120, 63, 239, 0.4);
-  box-shadow: 0 15px 40px -10px rgba(120, 63, 239, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-.skill-card-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top right, rgba(120, 63, 239, 0.15) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 0;
-}
-
-.premium-skill-category:hover .skill-card-glow {
-  opacity: 1;
 }
 
 .skill-category-header {
@@ -287,10 +269,12 @@
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
@@ -310,7 +294,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   text-decoration: none;
 }
@@ -336,7 +322,9 @@
 .right-bar-head {
   padding: 20% 10%;
   border-bottom: 5px solid #2e323a;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
 }
 
@@ -370,7 +358,9 @@ link {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
 }
 
@@ -390,6 +380,7 @@ link {
 .nav-icons a.active-tab p {
   border-left: 1px solid #783fef;
 }
+
 /* ********************* */
 /*  dashboard */
 /* ********************* */
@@ -397,7 +388,9 @@ link {
 .dashboard-main-div {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -409,11 +402,9 @@ link {
   margin-left: 2%;
   margin-top: 30px;
   height: 50vh;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.831)
-    ),
+      rgba(0, 0, 0, 0.831)),
     url(../../../assets/DashWallpaper.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -451,14 +442,17 @@ link {
 .intro-main-div {
   width: 96%;
   margin-left: 2%;
-  flex: 1; /* Takes the remaining vertical space */
-  margin-bottom: 2%; /* Prevents it from touching the absolute bottom edge */
-  background: rgba(46, 50, 58, 0.95);
-  backdrop-filter: blur(10px);
+  flex: 1;
+  /* Takes the remaining vertical space */
+  margin-bottom: 2%;
+  /* Prevents it from touching the absolute bottom edge */
+  background: transparent;
+  backdrop-filter: none;
   border-radius: 12px;
   position: relative;
-  border: 1px solid rgba(120, 63, 239, 0.1);
-  overflow: hidden; /* Ensures child scrollbars don't clip through border radius */
+  border: none;
+  overflow: hidden;
+  /* Ensures child scrollbars don't clip through border radius */
 }
 
 .intro-content-wrapper {
@@ -500,22 +494,27 @@ link {
 
 .intro-content {
   flex: 1;
-  overflow-y: auto; /* Allow text to scroll if it exceeds container height */
-  padding-right: 15px; /* Prevent text from hugging the scrollbar */
+  overflow-y: auto;
+  /* Allow text to scroll if it exceeds container height */
+  padding-right: 15px;
+  /* Prevent text from hugging the scrollbar */
 }
 
 /* Custom scrollbar for intro-content */
 .intro-content::-webkit-scrollbar {
   width: 6px;
 }
+
 .intro-content::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
 }
+
 .intro-content::-webkit-scrollbar-thumb {
   background: rgba(120, 63, 239, 0.3);
   border-radius: 4px;
 }
+
 .intro-content::-webkit-scrollbar-thumb:hover {
   background: rgba(120, 63, 239, 0.6);
 }
@@ -540,10 +539,12 @@ link {
     transform: translate(0, 0) scale(1);
     opacity: 0.5;
   }
+
   50% {
     transform: translate(50px, 25px) scale(1.2);
     opacity: 0.8;
   }
+
   100% {
     transform: translate(100px, 50px) scale(1);
     opacity: 0.5;
@@ -554,16 +555,19 @@ link {
   0% {
     background-position: 200% center;
   }
+
   100% {
     background-position: -200% center;
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
@@ -575,11 +579,9 @@ link {
 }
 
 .title-tag {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0.05) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
   padding: 6px 16px;
   border-radius: 20px;
   backdrop-filter: blur(5px);
@@ -631,8 +633,10 @@ link {
 }
 
 .resume-popup {
-  background: #181525;
+  background: rgba(24, 21, 37, 0.6);
+  backdrop-filter: blur(25px);
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 80%;
   height: 90vh;
   /* max-width: 500px; */
@@ -968,7 +972,7 @@ section {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.project-bg{
+.project-bg {
   padding: 10px;
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
@@ -980,12 +984,12 @@ section {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.project-bg h2{
+.project-bg h2 {
   padding: 10px 0;
-  border-bottom:1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.nda-section{
+.nda-section {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -998,7 +1002,7 @@ section {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-.nda-section p{
+.nda-section p {
   margin: 0;
   padding: 0;
 }

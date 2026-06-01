@@ -1,7 +1,9 @@
 .experience-div-main {
   height: calc(100vh - 20px);
   width: 100%;
-  background: #181525;
+  background: rgba(24, 21, 37, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -32,12 +34,15 @@
 }
 
 .exp-header-content h1 {
-  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin: 0;
-  background: linear-gradient(45deg, #fff, #fff);
+  background: linear-gradient(45deg, #fff, #e6daff);
   padding: 40px 40px;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
 }
 
 .header-underline {
@@ -52,7 +57,7 @@
   position: relative;
   overflow-y: auto;
   flex: 1;
-  background-color: #22252D;
+  background-color: transparent;
   width: 96%;
   margin-left: 2%;
   border-radius: 12px;
@@ -65,7 +70,8 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: rgba(120, 63, 239, 0.2);
+  background: linear-gradient(to bottom, transparent, rgba(120, 63, 239, 0.5), transparent);
+  z-index: 0;
 }
 
 .body-container {
@@ -81,7 +87,6 @@
   margin-bottom: 20px;
 }
 
-/* --- PREMIUM EXPERIENCE CARDS --- */
 .premium-exp-card {
   position: relative;
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
@@ -89,34 +94,35 @@
   padding: 2.5rem;
   margin-bottom: 25px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05), 0 4px 6px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(12px);
-  overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease;
   z-index: 1;
-  flex-shrink: 0; /* Prevents the card from shrinking and hiding text */
+  flex-shrink: 0;
+  margin-left: 30px;
 }
 
-.exp-card-glow {
+.timeline-dot {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top left, rgba(120, 63, 239, 0.15) 0%, transparent 60%);
-  opacity: 0.5;
-  transition: opacity 0.5s ease;
-  z-index: 0;
+  left: -43px;
+  top: 40px;
+  width: 18px;
+  height: 18px;
+  background: #783fef;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.premium-exp-card:hover .timeline-dot {
+  transform: scale(1.1);
 }
 
 .premium-exp-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(120, 63, 239, 0.4);
-  box-shadow: 0 15px 40px -10px rgba(120, 63, 239, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
-}
-
-.premium-exp-card:hover .exp-card-glow {
-  opacity: 1;
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Company Watermark */
@@ -194,8 +200,9 @@
 }
 
 .exp-role {
+  font-family: "Playfair Display", serif;
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: -0.5px;
   background: linear-gradient(90deg, #ffffff, #d3c4ff);
@@ -205,12 +212,23 @@
 }
 
 .exp-company-name-lux {
+  font-family: "Inter", sans-serif;
   margin: 0;
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+}
+
+.italic-text {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #b18bff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-right: 4px;
 }
 
 .exp-meta-badges {
@@ -269,7 +287,6 @@
   border-radius: 50%;
   background: #783fef;
   margin-top: 8px;
-  box-shadow: 0 0 10px rgba(120, 63, 239, 0.8);
 }
 
 .exp-resp-item p {

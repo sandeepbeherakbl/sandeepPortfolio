@@ -40,7 +40,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
     if (activeTab === 'ui') {
       return {
         icon: <Palette width={50} height={50} color="#ffffff" />,
-        title: "UI Artistry",
+        title: <span className="sans-normal">UI <span className="serif-italic">Artistry</span></span>,
         description: [
           "Explore my UI/UX design portfolio showcasing creative and intuitive interfaces.",
           "Each design tells a unique story of user-centered experiences and visual innovation."
@@ -49,7 +49,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
     } else if (activeTab === 'ai') {
       return {
         icon: <BrainCircuit width={50} height={50} color="#ffffff" />,
-        title: "AI Innovations",
+        title: <span className="sans-normal">AI <span className="serif-italic">Innovations</span></span>,
         description: [
           "Discover my cutting-edge AI projects and generative solutions.",
           "Exploring the boundaries of artificial intelligence and machine learning."
@@ -58,7 +58,7 @@ export const ProjectPage = ({ setSelectedProject }) => {
     } else {
       return {
         icon: <FileCode width={50} height={50} color="#ffffff" />,
-        title: "Code Ventures",
+        title: <span className="sans-normal">Code <span className="serif-italic">Ventures</span></span>,
         description: [
           "Explore a gallery of my projects, each reflecting my dedication and skill.",
           "Delve into my body of work, where each project is a unique digital journey."

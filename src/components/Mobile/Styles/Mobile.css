@@ -10,7 +10,7 @@
   justify-content: flex-start;
 }
 
-.linkAnnotation{
+.linkAnnotation {
   display: none;
 }
 
@@ -124,11 +124,9 @@
   margin-top: 10px;
   margin-bottom: 20px;
   height: 150px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.264),
-      rgba(0, 0, 0, 0.45)
-    ),
+      rgba(0, 0, 0, 0.45)),
     url(../../../assets/DashWallpaper.png);
   background-size: cover;
   border-radius: 8px;
@@ -150,7 +148,7 @@
   gap: 10px;
 }
 
-.mob-home-main-container{
+.mob-home-main-container {
   width: 100%;
 }
 
@@ -187,6 +185,7 @@
   0% {
     box-shadow: 0 0 0 0px rgba(0, 249, 30, 0.5);
   }
+
   100% {
     box-shadow: 0 0 0 10px rgba(249, 179, 0, 0);
   }
@@ -428,11 +427,9 @@
   margin-top: 10px;
   height: 20vh;
   border-radius: 12px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.817)
-    ),
+      rgba(0, 0, 0, 0.817)),
     url(../../../assets/exp3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -512,11 +509,9 @@
   height: 15vh;
   margin-left: 3%;
   border-radius: 12px;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.238),
-      rgba(0, 0, 0, 0.831)
-    ),
+      rgba(0, 0, 0, 0.831)),
     url(../../../assets/projectTitle.png);
   background-size: cover;
   background-position: 0% 50%;
@@ -549,11 +544,9 @@
 
 .mob-project-card {
   position: relative;
-  background: linear-gradient(
-    145deg,
-    rgba(46, 50, 58, 0.95),
-    rgba(28, 30, 35, 0.95)
-  );
+  background: linear-gradient(145deg,
+      rgba(46, 50, 58, 0.95),
+      rgba(28, 30, 35, 0.95));
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -617,15 +610,13 @@
 .gradient-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    125deg,
-    #ff7b00,
-    #ff006a,
-    #a94dff,
-    #4d79ff,
-    #05c1ff,
-    #00ffd5
-  );
+  background: linear-gradient(125deg,
+      #ff7b00,
+      #ff006a,
+      #a94dff,
+      #4d79ff,
+      #05c1ff,
+      #00ffd5);
   background-size: 400% 400%;
   filter: blur(20px);
   opacity: 0.5;
@@ -644,7 +635,8 @@
   z-index: 1;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-weight: 600;
-  margin-top: 28px; /* Space for header bar */
+  margin-top: 28px;
+  /* Space for header bar */
 }
 
 @keyframes gradientMove {
@@ -652,10 +644,12 @@
     background-position: 0% 50%;
     transform: scale(1);
   }
+
   50% {
     background-position: 100% 50%;
     transform: scale(1.1);
   }
+
   100% {
     background-position: 0% 50%;
     transform: scale(1);
@@ -715,7 +709,8 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
-  z-index: 999; /* Make sure it's below the modal's z-index */
+  z-index: 999;
+  /* Make sure it's below the modal's z-index */
 }
 
 .container-height {
@@ -723,11 +718,9 @@
 }
 
 .mob-project-details-head {
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.219),
-      rgba(0, 0, 0, 0.606)
-    ),
+      rgba(0, 0, 0, 0.606)),
     url(../../../assets/proAbout.png);
   width: 96%;
   margin-left: 2%;
@@ -770,6 +763,7 @@
   overflow-y: scroll;
   margin-top: 20px;
 }
+
 .mob-project-sub {
   width: 96%;
   margin-left: 2%;
@@ -806,6 +800,7 @@
 .mob-project-about p {
   font-size: 12px;
 }
+
 .mob-project-about button {
   margin-bottom: 10px;
   background-color: transparent;
@@ -815,13 +810,16 @@
 }
 
 .more-text {
-  margin-right: 5px; /* Adjust spacing between ellipsis and button */
+  margin-right: 5px;
+  /* Adjust spacing between ellipsis and button */
 }
 
 .view-more-btn {
-  background-color: transparent; /* or any color you prefer */
+  background-color: transparent;
+  /* or any color you prefer */
   border: none;
-  color: #007bff; /* button color */
+  color: #007bff;
+  /* button color */
   cursor: pointer;
 }
 
@@ -877,20 +875,25 @@
 /* ****************** */
 
 ::-webkit-scrollbar {
-  width: 0; /* Width of the scrollbar */
+  width: 0;
+  /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Background of the scrollbar track */
+  background: transparent;
+  /* Background of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent; /* Color of the scrollbar thumb */
-  border-radius: 0; /* Rounded corners */
+  background: transparent;
+  /* Color of the scrollbar thumb */
+  border-radius: 0;
+  /* Rounded corners */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: transparent; /* Color of the scrollbar thumb on hover */
+  background: transparent;
+  /* Color of the scrollbar thumb on hover */
 }
 
 /* ****************** */
@@ -1026,7 +1029,7 @@
   margin-bottom: 16px;
 }
 
-.mob-project-bg{
+.mob-project-bg {
   padding: 10px;
   margin-bottom: 20px;
   backdrop-filter: blur(10px);
@@ -1166,7 +1169,7 @@
   line-height: 1.5;
 }
 
-.mob-ui-nda-notice p{
+.mob-ui-nda-notice p {
   margin: 0;
 }
 
@@ -1179,7 +1182,8 @@
   border-radius: 12px;
   border: 1px solid rgba(120, 63, 239, 0.2);
 }
-.mob-tabs{
+
+.mob-tabs {
   margin: 0 10px;
 }
 

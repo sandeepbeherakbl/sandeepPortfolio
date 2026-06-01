@@ -62,17 +62,16 @@ export const About = () => {
           <div className="active-circle"></div>
         </div>
         <div className="about-container">
-          <p>Sandeep Kumar Behera</p>
+          <p className="sans-normal" style={{ fontSize: '24px' }}>Sandeep Kumar <span className="serif-italic" style={{ fontSize: '26px' }}>Behera</span></p>
           <div className="title-tag">
-            <span className="role">Full Stack & Generative AI Engineer</span>
-
+            <span className="role sans-normal">Full Stack & Generative AI <span className="serif-italic">Engineer</span></span>
           </div>
         </div>
         <div className="resume-download" onClick={openResumePopup}>
-          <div className="resume-flex-div">
+          {/* <div className="resume-flex-div">
             <p>Download Resume </p>
             <Download color="#ffffff" width={12} height={12} />
-          </div>
+          </div> */}
         </div>
         {showResumePopup && <ResumePopup onClose={closeResumePopup} />}
       </div>
@@ -85,7 +84,7 @@ export const About = () => {
         <div className="skills-list-premium">
           {Object.keys(skillsData).map((category) => (
             <div key={category} className="premium-skill-category">
-              <div className="skill-card-glow"></div>
+
               <div className="skill-category-header">
                 <h3 className="skill-category-title">{category}</h3>
                 <div className="skill-category-line"></div>

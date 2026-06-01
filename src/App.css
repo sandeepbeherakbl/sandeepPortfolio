@@ -1,25 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 * {
-  font-family: "Bitter", serif;
-    font-optical-sizing: auto;
+  font-family: "Inter", sans-serif;
   color: white;
-  
+}
+
+h1,
+h2,
+h3,
+.serif-font {
+  font-family: "Playfair Display", serif;
+}
+
+.serif-italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.sans-normal {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 body {
   padding: 0;
   margin: 0;
-  background-color: #2e323a !important;
+  background: url("./assets/DashWallpaper.png") no-repeat center center fixed !important;
+  background-size: cover !important;
+  background-color: #0f0a1f !important;
+}
+
+/* Global Glassmorphism Utility */
+.glass-panel {
+  background: rgba(24, 21, 37, 0.4) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
 }
 
 .home_main {
   padding: 10px;
-  /* display: flex; */
-}
-
-.home_main {
   display: flex;
   gap: 10px;
 }
@@ -37,11 +61,7 @@ body {
 }
 
 /* Media query for tablets */
-@media (max-width: 768px) {
-  
-}
+@media (max-width: 768px) {}
 
 /* Media query for mobile phones */
-@media (max-width: 480px) {
-  
-}
+@media (max-width: 480px) {}

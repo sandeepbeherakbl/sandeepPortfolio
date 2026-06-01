@@ -47,8 +47,8 @@ export const Dashboard = () => {
       {/* header */}
       <div className="dash-header-section">
         <div className="dash-header-content">
-          <h1>
-          Building Intelligent Systems: Full Stack & Generative AI Engineer
+          <h1 className="sans-normal">
+            Building Intelligent Systems: <br/>Full Stack & Generative AI <span className="serif-italic">Engineer</span>
           </h1>
           <p>
             <Typewriter
@@ -73,24 +73,10 @@ export const Dashboard = () => {
         initial="hidden"
         animate="visible"
       >
-        <div className="intro-background-effects">
-          <motion.div
-            className="glow-effect"
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0.8, 0.5],
-            }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        </div>
 
         <div className="intro-content-wrapper">
           <motion.div className="intro-heading" variants={itemVariants}>
-            <h2 className="digital-text">My Digital Journey</h2>
+            <h2 className="digital-text sans-normal">My Digital <span className="serif-italic">Journey</span></h2>
             <p className="subtitle">
               Empowering Innovation as a Full Stack & Generative AI Engineer
             </p>

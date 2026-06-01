@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 import { Clock, Wifi, Battery, Lock } from "lucide-react";
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./MacBook.css";
 
 const MacBook = ({ isOpen, onClose, children }) => {
@@ -24,7 +25,7 @@ const MacBook = ({ isOpen, onClose, children }) => {
     }
   }, [isOpen]);
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
         <motion.div
@@ -112,7 +113,8 @@ const MacBook = ({ isOpen, onClose, children }) => {
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
